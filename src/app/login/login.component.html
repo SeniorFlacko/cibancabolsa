@@ -1,14 +1,36 @@
-<div class="contenedor">
-  <img src="../../assets/img/logo.png">
-  <h2>Ingresar</h2>
-
-  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-    <input type="text" placeholder="NOMBRE DE USUARIO" formControlName="name">
-    <input type="password" placeholder="CONTRASEÑA" formControlName="password">
-    <button type="submit" [disabled]="!loginForm.valid">Continuar</button>
-  </form>
-
-  <!--<p>Form value: {{ loginForm.value | json }}</p>
-  <p>Form status: {{ loginForm.status | json }}</p>
-  <p>Form status: {{ loginForm.valid | json }}</p>-->
+<div *ngIf="!showtokenscreen">
+  <div class="contenedor">
+    <img src="../../assets/img/logo.png">
+    <h2>Ingresar</h2>
+  
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <input type="text" placeholder="NOMBRE DE USUARIO" formControlName="name">
+      <input type="password" placeholder="CONTRASEÑA" formControlName="password">
+      <button type="submit" [disabled]="!loginForm.valid">Continuar</button>
+    </form>
+  
+    <!--<p>Form value: {{ loginForm.value | json }}</p>
+    <p>Form status: {{ loginForm.status | json }}</p>
+    <p>Form status: {{ loginForm.valid | json }}</p>-->
+  </div>
 </div>
+
+<div *ngIf="showtokenscreen">
+  <div class="contenedor">
+    <img src="../../assets/img/logo.png">
+    <h2>Ingresar</h2>
+
+    <h3>Introduce la clave dinámica de tu Token</h3>
+  
+    <form [formGroup]="tokenForm" (ngSubmit)="onTokenSubmit()">
+      <input type="text" placeholder="CLAVE DINÁMICA" formControlName="value">
+      <button type="submit" [disabled]="!tokenForm.valid">Ingresar</button>
+    </form>
+  
+    <!--<p>Form value: {{ loginForm.value | json }}</p>
+    <p>Form status: {{ loginForm.status | json }}</p>
+    <p>Form status: {{ loginForm.valid | json }}</p>-->
+  </div>
+</div>
+
+
