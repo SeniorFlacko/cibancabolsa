@@ -16,7 +16,10 @@ export class LoginComponent implements OnInit {
   tokenForm: FormGroup;
   showtokenscreen:boolean;
 
-  constructor(private fb: FormBuilder, private auth: AuthService, private router: Router) { 
+  constructor(private fb: FormBuilder, private auth: AuthService, private router: Router) {
+    if(auth.isAuthenticated)
+      this.router.navigate(['/home']);
+     
     this.createLoginForm();
     this.createTokenForm();
     this.showtokenscreen = false;
