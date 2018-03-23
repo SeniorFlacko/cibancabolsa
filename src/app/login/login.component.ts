@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { User } from '../models/user';
-import { LoginService } from '../services/login.service';
 import { Token } from '../models/token';
+import { AuthService } from '../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +16,7 @@ export class LoginComponent implements OnInit {
   tokenForm: FormGroup;
   showtokenscreen:boolean;
 
-  constructor(private fb: FormBuilder, private ls: LoginService) { 
+  constructor(private fb: FormBuilder, private auth: AuthService, private router: Router) { 
     this.createLoginForm();
     this.createTokenForm();
     this.showtokenscreen = false;
@@ -40,7 +41,7 @@ export class LoginComponent implements OnInit {
 
   onSubmit(){
     let user:User = this.loginForm.value;
-    this.ls.login(user)
+    this.auth.login(user)
       .subscribe(response => {
         console.log(response);
         if(response)
@@ -51,7 +52,7 @@ export class LoginComponent implements OnInit {
   onTokenSubmit(){
     let token:Token = this.tokenForm.value;
     
-    this.ls.aproveToken(token)
+    this.auth.aproveToken(token)
       .subscribe(response => {
         if (response)
           this.moveToHome();
@@ -64,6 +65,6 @@ export class LoginComponent implements OnInit {
   }
 
   moveToHome(){
-    console.log('Ir a Home');
+    this.router.navigate(['/home']);
   }
 }
