@@ -3,11 +3,21 @@
     <img src="../../assets/img/logo.png">
     <h2>Ingresar</h2>
   
-    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-      <input type="text" placeholder="NOMBRE DE USUARIO" formControlName="name">
-      <input type="password" placeholder="CONTRASEÑA" formControlName="password">
-      <button type="submit" [disabled]="!loginForm.valid">Continuar</button>
-    </form>
+
+    <div *ngIf="loading">
+      Cargando...
+    </div>
+    
+    <div *ngIf="!loading">
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <input type="text" placeholder="NOMBRE DE USUARIO" formControlName="name">
+        <input type="password" placeholder="CONTRASEÑA" formControlName="password">
+        <button type="submit" [disabled]="!loginForm.valid">Continuar</button>
+      </form>
+    </div>
+
+    
+    
   
     <!--<p>Form value: {{ loginForm.value | json }}</p>
     <p>Form status: {{ loginForm.status | json }}</p>

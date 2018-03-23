@@ -3,6 +3,7 @@ import { User } from '../models/user';
 import { Token } from '../models/token';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
+import 'rxjs/add/operator/delay';
 import { SessionService } from './session.service';
 import { Router } from '@angular/router';
 
@@ -29,7 +30,7 @@ export class AuthService {
       this.user = user;
     }
 
-    return of(response);
+    return of(response).delay(3000);
   }
 
   aproveToken( token:Token ): Observable<boolean> {

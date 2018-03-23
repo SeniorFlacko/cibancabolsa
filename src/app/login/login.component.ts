@@ -16,6 +16,8 @@ export class LoginComponent implements OnInit {
   tokenForm: FormGroup;
   showtokenscreen:boolean;
 
+  loading:boolean = false;
+
   constructor(private fb: FormBuilder, private auth: AuthService, private router: Router) {
     if(auth.isAuthenticated)
       this.router.navigate(['/home']);
@@ -44,9 +46,10 @@ export class LoginComponent implements OnInit {
 
   onSubmit(){
     let user:User = this.loginForm.value;
+    this.loading = true;
     this.auth.login(user)
       .subscribe(response => {
-        console.log(response);
+        this.loading = false;
         if(response)
           this.showTokenScreen();
       });
@@ -54,7 +57,6 @@ export class LoginComponent implements OnInit {
 
   onTokenSubmit(){
     let token:Token = this.tokenForm.value;
-    
     this.auth.aproveToken(token)
       .subscribe(response => {
         if (response)
