@@ -6,7 +6,7 @@ export class SessionService {
   constructor() { }
 
   getUser(){
-    let user = localStorage.getItem('currentUser'); 
+    let user = JSON.parse( localStorage.getItem('currentUser') ); 
     return user;
   }
 
