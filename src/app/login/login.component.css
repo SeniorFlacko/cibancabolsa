@@ -80,3 +80,11 @@ input{
     font-family: sans-serif;
   }
   
+
+  .error{
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #9e0906;
+    text-align: center;
+  }
