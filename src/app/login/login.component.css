@@ -59,7 +59,8 @@ input:focus~label,input:valid~label{
   }
 .group{
     position:relative; 
-    margin-bottom:35px; 
+    margin-bottom:35px;
+    max-width: 230px;
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
