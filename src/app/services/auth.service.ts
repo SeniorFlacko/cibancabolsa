@@ -35,7 +35,7 @@ export class AuthService {
 
   aproveToken( token:Token ): Observable<boolean> {
     let response:boolean = false;
-    if(token.value==="1234"){
+    if(token.value==="12345678"){
       response = true;
       this.session.setUser(this.user);
     }

@@ -6,10 +6,17 @@ import { PortafolioComponent } from './portafolio/portafolio.component';
 import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
-  { path:'', component: LoginComponent},
+  { 
+    path:'', 
+    component: TemplateComponent,
+    canActivate: [AuthGuard],
+    children: [
+        { path: 'home', component: PortafolioComponent }, 
+        { path: '', redirectTo: 'home', pathMatch: 'full' }
+    ]
+  },
   { path:'login', component: LoginComponent},
-  { path:'home', component: PortafolioComponent, canActivate: [AuthGuard]},
-  { path: '**', pathMatch: 'full', redirectTo: 'login' }
+  { path: '**', component: LoginComponent }
 ];
 
 @NgModule({
