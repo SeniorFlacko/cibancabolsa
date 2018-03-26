@@ -28,7 +28,8 @@ form{
 
 input{
     margin: 10px 0px;
-    background: none;
+    display: block;
+    background: transparent;
     border: none;
     border-bottom: 1px solid white;
     outline: none;
@@ -38,6 +39,27 @@ input{
     font-family: sans-serif;
     font-size: 16px;
     margin-bottom: 25px;
+}
+
+input:focus     { outline:none; }
+label{
+    color: white;
+    font-size: 18px;
+    position:absolute;
+    pointer-events:none;
+    left:0px;
+    top:15px;
+    transition:0.2s ease all; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+input:focus~label,input:valid~label{
+    top:5px;
+    font-size:12px;
+    color:white;
+  }
+.group{
+    position:relative; 
+    margin-bottom:35px; 
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */

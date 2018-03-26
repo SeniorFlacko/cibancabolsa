@@ -10,20 +10,26 @@
     
     <div *ngIf="!loading">
       <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-        <input type="text" placeholder="NOMBRE DE USUARIO" (keydown)="filterAlpha($event)" (paste)="pasteNumber($event)" formControlName="name">
-        <div *ngIf="name.invalid && (name.dirty || name.touched)">
-            <div *ngIf="name.errors.required" class="error">
-              El nombre es requerido.
-            </div>
-            <div *ngIf="name.errors.maxlength" class="error">
-              El nombre no puede tener mas de 20 caracteres.
-            </div>
+        <div class="group">
+          <input type="text" required  (keydown)="filterAlpha($event)" (paste)="pasteNumber($event)" formControlName="name">
+          <label >NOMBRE DE USUARIO</label>
+          <div *ngIf="name.invalid && (name.dirty || name.touched)">
+              <div *ngIf="name.errors.required" class="error">
+                El nombre es requerido.
+              </div>
+              <div *ngIf="name.errors.maxlength" class="error">
+                El nombre no puede tener mas de 20 caracteres.
+              </div>
+          </div>
         </div>
-        <input type="password" placeholder="CONTRASEÑA" formControlName="password">
-        <div *ngIf="password.invalid && (password.dirty || password.touched)">
-            <div *ngIf="password.errors.required" class="error">
-              El password es requerido.
-            </div>
+        <div class="group">
+          <input type="password"  required formControlName="password">
+          <label >CONTRASEÑA</label>
+          <div *ngIf="password.invalid && (password.dirty || password.touched)">
+              <div *ngIf="password.errors.required" class="error">
+                El password es requerido.
+              </div>
+          </div>
         </div>
         <button type="submit" [disabled]="!loginForm.valid">Continuar</button>
       </form>
@@ -43,14 +49,17 @@
     <h3>Introduce la clave dinámica de tu Token</h3>
   
     <form [formGroup]="tokenForm" (ngSubmit)="onTokenSubmit()">
-      <input type="text" placeholder="CLAVE DINÁMICA" (keydown)="filterNumber($event)" formControlName="value">
-      <div *ngIf="token.invalid && (token.dirty || token.touched)">
-          <div *ngIf="token.errors.required" class="error">
-            El token es requerido.
-          </div>
-          <div *ngIf="token.errors.maxlength || token.errors.minlength" class="error">
-            El token debe tener 8 numeros.
-          </div>
+      <div class="group">
+        <input type="text"  required (keydown)="filterNumber($event)" formControlName="value">
+        <label >CONTRASEÑA</label>
+        <div *ngIf="token.invalid && (token.dirty || token.touched)">
+            <div *ngIf="token.errors.required" class="error">
+              El token es requerido.
+            </div>
+            <div *ngIf="token.errors.maxlength || token.errors.minlength" class="error">
+              El token debe tener 8 numeros.
+            </div>
+        </div>
       </div>
       <button type="submit" [disabled]="!tokenForm.valid">Ingresar</button>
     </form>
