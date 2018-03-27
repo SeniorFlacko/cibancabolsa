@@ -11,6 +11,7 @@ import { TemplateComponent } from './template/template.component';
 import { PortafolioComponent } from './portafolio/portafolio.component';
 import { AuthGuard } from './auth.guard';
 import { AuthService,SessionService } from './services/index.services';
+import { AlertComponent } from './helpers/alert/alert.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { AuthService,SessionService } from './services/index.services';
     LoginComponent,
     TemplateComponent,
     PortafolioComponent,
-    HeaderComponent
+    HeaderComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,
