@@ -27,6 +27,11 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
+    // $(document).ready(function(){
+    //   $(".miboton").click(function(){
+    //     alert('Mi boton');
+    //   });
+    // });
   }
 
 
