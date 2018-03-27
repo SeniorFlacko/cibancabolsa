@@ -1,6 +1,6 @@
 <div *ngIf="!showtokenscreen">
   <div class="contenedor">
-    <img src="../../assets/img/logo.png">
+    <img class="logo" src="../../assets/img/logo.png">
     <h2>Ingresar</h2>
   
 
@@ -44,7 +44,7 @@
 
 <div *ngIf="showtokenscreen">
   <div class="contenedor">
-    <img src="../../assets/img/logo.png">
+    <img class="logo" src="../../assets/img/logo.png">
     <h2>Ingresar</h2>
 
     <h3>Introduce la clave dinámica de tu Token</h3>
@@ -52,13 +52,13 @@
     <form [formGroup]="tokenForm" (ngSubmit)="onTokenSubmit()">
       <div class="group">
         <input type="text"  required (keydown)="filterNumber($event)" formControlName="value">
-        <label >CONTRASEÑA</label>
+        <label class="label_light">CLAVE DINÁMICA</label>
         <div *ngIf="token.invalid && (token.dirty || token.touched)">
             <div *ngIf="token.errors.required" class="error">
-              El token es requerido.
+              La clave dinámica es requerida.
             </div>
             <div *ngIf="token.errors.maxlength || token.errors.minlength" class="error">
-              El token debe tener 8 numeros.
+              La clave dinámica debe tener 8 numeros.
             </div>
         </div>
       </div>
