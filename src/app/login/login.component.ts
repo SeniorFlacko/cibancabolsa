@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ViewChild } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { User, Token } from '../models/index.models';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/index.services';
+import { AlertComponent } from '../helpers/alert/alert.component';
 import * as $ from 'jquery';
 @Component({
   selector: 'app-login',
@@ -16,6 +17,8 @@ export class LoginComponent implements OnInit {
   showtokenscreen:boolean;
 
   loading:boolean = false;
+
+  @ViewChild(AlertComponent) alertComponent: AlertComponent;
 
   constructor(private fb: FormBuilder, private auth: AuthService, private router: Router) {
     if(auth.isAuthenticated)
@@ -56,6 +59,8 @@ export class LoginComponent implements OnInit {
         this.loading = false;
         if(response)
           this.showTokenScreen();
+        else
+          this.alertComponent.show( 'Error','Usuario o contraseña incorrectos.',[],'¿Deseas continuar?');
       });
   }
 
@@ -65,7 +70,8 @@ export class LoginComponent implements OnInit {
       .subscribe(response => {
         if (response)
           this.moveToHome();
-        
+        else
+          this.alertComponent.show( 'Error','Clave dinámica incorrecta.',[],'¿Deseas continuar?');
       });
   }
 
