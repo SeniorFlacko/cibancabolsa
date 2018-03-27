@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LoaderService } from './services/index.services';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  showLoader: boolean;
+  constructor(private loaderService: LoaderService) {}
+
+  ngOnInit() {
+    this.loaderService.status.subscribe((val: boolean) => {
+        this.showLoader = val;
+    });
+  }
 }

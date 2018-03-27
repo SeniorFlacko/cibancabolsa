@@ -2,7 +2,7 @@ import { Component, OnInit,ViewChild } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { User, Token } from '../models/index.models';
 import { Router } from '@angular/router';
-import { AuthService } from '../services/index.services';
+import { AuthService, LoaderService } from '../services/index.services';
 import { AlertComponent } from '../helpers/alert/alert.component';
 import * as $ from 'jquery';
 @Component({
@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
 
   @ViewChild(AlertComponent) alertComponent: AlertComponent;
 
-  constructor(private fb: FormBuilder, private auth: AuthService, private router: Router) {
+  constructor(private fb: FormBuilder, private auth: AuthService, private router: Router, private loaderService: LoaderService) {
     if(auth.isAuthenticated)
       this.router.navigate(['/home']);
      
@@ -53,10 +53,10 @@ export class LoginComponent implements OnInit {
 
   onSubmit(){
     let user:User = this.loginForm.value;
-    this.loading = true;
+    this.loaderService.display(true);
     this.auth.login(user)
       .subscribe(response => {
-        this.loading = false;
+        this.loaderService.display(false);
         if(response)
           this.showTokenScreen();
         else
@@ -66,8 +66,10 @@ export class LoginComponent implements OnInit {
 
   onTokenSubmit(){
     let token:Token = this.tokenForm.value;
+    this.loaderService.display(true);
     this.auth.aproveToken(token)
       .subscribe(response => {
+        this.loaderService.display(false);
         if (response)
           this.moveToHome();
         else

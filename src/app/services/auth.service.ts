@@ -30,7 +30,7 @@ export class AuthService {
       this.user = user;
     }
 
-    return of(response).delay(3000);
+    return of(response).delay(1500);
   }
 
   aproveToken( token:Token ): Observable<boolean> {
@@ -39,7 +39,7 @@ export class AuthService {
       response = true;
       this.session.setUser(this.user);
     }
-    return of(response);
+    return of(response).delay(1500);
   }
 
   logout(){

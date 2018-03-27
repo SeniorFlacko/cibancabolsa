@@ -10,7 +10,7 @@ import { HeaderComponent } from './template/header/header.component';
 import { TemplateComponent } from './template/template.component';
 import { PortafolioComponent } from './portafolio/portafolio.component';
 import { AuthGuard } from './auth.guard';
-import { AuthService,SessionService } from './services/index.services';
+import { AuthService,SessionService, LoaderService } from './services/index.services';
 import { AlertComponent } from './helpers/alert/alert.component';
 
 
@@ -28,7 +28,7 @@ import { AlertComponent } from './helpers/alert/alert.component';
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [AuthService,SessionService,AuthGuard],
+  providers: [AuthService,SessionService,AuthGuard,LoaderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
