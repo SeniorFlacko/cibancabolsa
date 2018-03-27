@@ -3,7 +3,7 @@ import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms'
 import { User, Token } from '../models/index.models';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/index.services';
-
+import * as $ from 'jquery';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
