@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { TemplateComponent } from './template/template.component';
 import { AuthGuard } from './auth.guard';
 import { PortafolioComponent } from './template/portafolio/portafolio.component';
+import { MercadocapitalesComponent } from './template/mercadocapitales/mercadocapitales.component';
 
 const routes: Routes = [
   { 
@@ -12,6 +13,7 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     children: [
         { path: 'portafolio', component: PortafolioComponent }, 
+        { path: 'capitales', component: MercadocapitalesComponent }, 
         { path: '', redirectTo: 'portafolio', pathMatch: 'full' }
     ]
   },
