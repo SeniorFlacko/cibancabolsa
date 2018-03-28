@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
 
   constructor(private fb: FormBuilder, private auth: AuthService, private router: Router, private loaderService: LoaderService) {
     if(auth.isAuthenticated)
-      this.router.navigate(['/home']);
+      this.router.navigate(['/portafolio']);
      
     this.createLoginForm();
     this.createTokenForm();
@@ -82,7 +82,7 @@ export class LoginComponent implements OnInit {
   }
 
   moveToHome(){
-    this.router.navigate(['/home']);
+    this.router.navigate(['/portafolio']);
   }
 
 

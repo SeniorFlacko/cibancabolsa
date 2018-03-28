@@ -8,10 +8,10 @@ import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule } from '@angular/forms'; 
 import { HeaderComponent } from './template/header/header.component';
 import { TemplateComponent } from './template/template.component';
-import { PortafolioComponent } from './portafolio/portafolio.component';
 import { AuthGuard } from './auth.guard';
 import { AuthService,SessionService, LoaderService } from './services/index.services';
 import { AlertComponent } from './helpers/alert/alert.component';
+import { PortafolioComponent } from './template/portafolio/portafolio.component';
 
 
 @NgModule({

@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { TemplateComponent } from './template/template.component';
-import { PortafolioComponent } from './portafolio/portafolio.component';
 import { AuthGuard } from './auth.guard';
+import { PortafolioComponent } from './template/portafolio/portafolio.component';
 
 const routes: Routes = [
   { 
@@ -11,8 +11,8 @@ const routes: Routes = [
     component: TemplateComponent,
     canActivate: [AuthGuard],
     children: [
-        { path: 'home', component: PortafolioComponent }, 
-        { path: '', redirectTo: 'home', pathMatch: 'full' }
+        { path: 'portafolio', component: PortafolioComponent }, 
+        { path: '', redirectTo: 'portafolio', pathMatch: 'full' }
     ]
   },
   { path:'login', component: LoginComponent},
