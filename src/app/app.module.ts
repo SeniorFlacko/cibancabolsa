@@ -12,6 +12,7 @@ import { AuthGuard } from './auth.guard';
 import { AuthService,SessionService, LoaderService } from './services/index.services';
 import { AlertComponent } from './helpers/alert/alert.component';
 import { PortafolioComponent, MercadocapitalesComponent } from './template/index.templatecmpts';
+import { MercadodineroComponent } from './template/mercadodinero/mercadodinero.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { PortafolioComponent, MercadocapitalesComponent } from './template/index
     HeaderComponent,
     AlertComponent,
     PortafolioComponent,
-    MercadocapitalesComponent
+    MercadocapitalesComponent,
+    MercadodineroComponent
   ],
   imports: [
     BrowserModule,
