@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { TemplateComponent } from './template/template.component';
 import { AuthGuard } from './auth.guard';
-import { PortafolioComponent, MercadocapitalesComponent, MercadodineroComponent } from './template/index.templatecmpts';
+import { PortafolioComponent, MercadocapitalesComponent, MercadodineroComponent, FondoinversionComponent, OrdenesComponent, ReportefinancieroComponent } from './template/index.templatecmpts';
 
 const routes: Routes = [
   { 
@@ -14,6 +14,9 @@ const routes: Routes = [
         { path: 'portafolio', component: PortafolioComponent }, 
         { path: 'capitales', component: MercadocapitalesComponent }, 
         { path: 'dinero', component: MercadodineroComponent }, 
+        { path: 'inversion', component: FondoinversionComponent }, 
+        { path: 'ordenes', component: OrdenesComponent }, 
+        { path: 'reportes', component: ReportefinancieroComponent }, 
         { path: '', redirectTo: 'portafolio', pathMatch: 'full' }
     ]
   },

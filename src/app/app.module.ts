@@ -13,6 +13,9 @@ import { AuthService,SessionService, LoaderService } from './services/index.serv
 import { AlertComponent } from './helpers/alert/alert.component';
 import { PortafolioComponent, MercadocapitalesComponent } from './template/index.templatecmpts';
 import { MercadodineroComponent } from './template/mercadodinero/mercadodinero.component';
+import { FondoinversionComponent } from './template/fondoinversion/fondoinversion.component';
+import { OrdenesComponent } from './template/ordenes/ordenes.component';
+import { ReportefinancieroComponent } from './template/reportefinanciero/reportefinanciero.component';
 
 
 @NgModule({
@@ -24,7 +27,10 @@ import { MercadodineroComponent } from './template/mercadodinero/mercadodinero.c
     AlertComponent,
     PortafolioComponent,
     MercadocapitalesComponent,
-    MercadodineroComponent
+    MercadodineroComponent,
+    FondoinversionComponent,
+    OrdenesComponent,
+    ReportefinancieroComponent,
   ],
   imports: [
     BrowserModule,
