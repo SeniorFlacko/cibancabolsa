@@ -2,10 +2,17 @@
 
 <div class="header_superior">
   <img  class="img_logo" src="/assets/img/logo.png" >
-  <span>
+  <span class="span_padre">
     <span>Contrato: <span>7533324</span></span>
-    <span>Contacto Asesor :</span>
-    <span class="logout" (click)="logout()">Cerrar Sesión</span>
+    <span>
+      <select>
+        <option value="0" selected>Contacto asesor</option>
+      </select>
+    </span>
+    <span>
+      <img class="icono_logout" src="/assets/img/icon_logout.png" >
+      <span class="logout" (click)="logout()">Cerrar Sesión</span>
+    </span>
   </span>
 </div>
 
@@ -16,9 +23,30 @@
   <a href="">Fondos de Inversión</a>
   <a href="">Órdenes</a>
   <a href="">Reporte de Análisis Financiero</a>
-  <a href=""><select>
-    <option value="0" selected>Mi Cuenta</option>
-  </select></a>
+
+  <a >
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle micuenta" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Mi Cuenta
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <button class="dropdown-item" type="button">Retiro</button>
+          <button class="dropdown-item" type="button">Estado de Cuenta</button>
+          <button class="dropdown-item" type="button">Historial de Movimientos</button>
+          <button class="dropdown-item" type="button">Configuración</button>
+        </div>
+    </div>
+  </a>
+
+  <!-- <a >
+    <select class="dropdown" >
+      <option value="0" selected></option>
+      <option value="1" ></option>
+      <option value="2" ></option>
+      <option value="3" ></option>
+      <option value="4" >Configuración</option>
+    </select>
+  </a> -->
   <a href="http://www.cibanco.com/es/cibanco/cicasa-de-bolsa" target="_blank">Sitio Web</a>
 </div>
 

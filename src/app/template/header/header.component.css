@@ -33,7 +33,6 @@ select{
     color: whitesmoke;
     padding: 0px 4px;
     outline: none;
-    
 }
 a{
     color:whitesmoke;
@@ -48,5 +47,25 @@ a:hover{
 }
 .logout{
     cursor: pointer;
+}
+.icono_logout{
+    width: 15px;
+}
+.span_padre span{
+    margin: 0 5px;
+}
+.micuenta,micuenta:hover,micuenta:focus,micuenta:active{
+    background-color: transparent;
+    border-color: transparent;
+    outline: none;
+}
 
+.dropdown.show .micuenta,.btn-secondary,.btn-secondary:hover,.show>.btn-secondary.dropdown-toggle,.btn-secondary:not(:disabled):not(.disabled):active{
+    background: transparent;
+    border: none;
+    outline: none;
+}
+.btn{
+    padding: 0px;
+    outline: none;
 }
