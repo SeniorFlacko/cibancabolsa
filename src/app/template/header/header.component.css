@@ -39,11 +39,10 @@ a{
     padding: 10px;
     padding-top: 2px;
 }
-a:hover{
+a:hover, .active{
     text-decoration: none;
     background-color:#00853e;
     border-radius: 5px 5px 0px 0px;
-
 }
 .logout{
     cursor: pointer;
