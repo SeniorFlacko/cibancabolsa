@@ -1,0 +1,19 @@
+#myChart{
+    width: 830px !important;
+    height: 350px !important;
+}
+
+.informacion{
+    display:flex; 
+    flex-flow:row wrap; 
+    justify-content:space-around;
+}
+
+.grafica{
+    width:830px;
+}
+
+.gran-total{
+    color: green;
+    font-size: 25px;
+}
