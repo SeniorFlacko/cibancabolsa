@@ -1,10 +1,9 @@
 import { Injectable } from '@angular/core';
-import { User } from '../models/user';
-import { Token } from '../models/token';
+import { User,Token } from '../../models/index.models';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import 'rxjs/add/operator/delay';
-import { SessionService } from './session.service';
+import { SessionService } from '../Session/session.service';
 import { Router } from '@angular/router';
 
 @Injectable()

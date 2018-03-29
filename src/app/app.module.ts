@@ -8,14 +8,13 @@ import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule } from '@angular/forms'; 
 import { HeaderComponent } from './template/header/header.component';
 import { TemplateComponent } from './template/template.component';
-import { AuthGuard } from './auth.guard';
-import { AuthService,SessionService, LoaderService } from './services/index.services';
 import { AlertComponent } from './helpers/alert/alert.component';
 import { PortafolioComponent, MercadocapitalesComponent } from './template/index.templatecmpts';
 import { MercadodineroComponent } from './template/mercadodinero/mercadodinero.component';
 import { FondoinversionComponent } from './template/fondoinversion/fondoinversion.component';
 import { OrdenesComponent } from './template/ordenes/ordenes.component';
 import { ReportefinancieroComponent } from './template/reportefinanciero/reportefinanciero.component';
+import { ServicesModule } from './services/services.module';
 
 
 @NgModule({
@@ -35,9 +34,10 @@ import { ReportefinancieroComponent } from './template/reportefinanciero/reporte
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ServicesModule
   ],
-  providers: [AuthService,SessionService,AuthGuard,LoaderService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
