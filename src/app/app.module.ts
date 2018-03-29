@@ -9,11 +9,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './template/header/header.component';
 import { TemplateComponent } from './template/template.component';
 import { AlertComponent } from './helpers/alert/alert.component';
-import { PortafolioComponent, MercadocapitalesComponent } from './template/index.templatecmpts';
-import { MercadodineroComponent } from './template/mercadodinero/mercadodinero.component';
-import { FondoinversionComponent } from './template/fondoinversion/fondoinversion.component';
-import { OrdenesComponent } from './template/ordenes/ordenes.component';
-import { ReportefinancieroComponent } from './template/reportefinanciero/reportefinanciero.component';
 import { ServicesModule } from './services/services.module';
 
 
@@ -24,12 +19,6 @@ import { ServicesModule } from './services/services.module';
     TemplateComponent,
     HeaderComponent,
     AlertComponent,
-    PortafolioComponent,
-    MercadocapitalesComponent,
-    MercadodineroComponent,
-    FondoinversionComponent,
-    OrdenesComponent,
-    ReportefinancieroComponent,
   ],
   imports: [
     BrowserModule,

@@ -11,15 +11,7 @@ const routes: Routes = [
     path:'', 
     component: TemplateComponent,
     canActivate: [AuthGuard],
-    children: [
-        { path: 'portafolio', component: PortafolioComponent }, 
-        { path: 'capitales', component: MercadocapitalesComponent }, 
-        { path: 'dinero', component: MercadodineroComponent }, 
-        { path: 'inversion', component: FondoinversionComponent }, 
-        { path: 'ordenes', component: OrdenesComponent }, 
-        { path: 'reportes', component: ReportefinancieroComponent }, 
-        { path: '', redirectTo: 'portafolio', pathMatch: 'full' }
-    ]
+    loadChildren: 'app/template/template.module#TemplateModule'
   },
   { path:'login', component: LoginComponent},
   { path: '**', component: LoginComponent }
