@@ -11,40 +11,4 @@
 <body>
   <app-root></app-root>
 </body>
-<script>
-  var ctx = document.getElementById("myChart");
-  var myChart = new Chart(ctx, {
-      type: 'line',
-      data: {
-          labels: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,1,61,7,18,19,20,21,22,23,2,4,25,26,27,28,29,30],
-          datasets: [{
-              label: 'Valor monetario',
-              data: [1200, 1900, 1000, 500, 200, 300,400,500,600,700,800,500,300,5600,900,7800,5800,300,500,400,700,800,900,500,300,200,700,500,400,800,900,3400],
-              backgroundColor: [
-                  'rgba(204, 230, 217, .8)'
-              ],
-              borderColor: [
-                  'rgba(206,229,217,1)'
-              ],
-              borderWidth: 1
-          }]
-      },
-      options: {
-          scales: {
-              yAxes: [{
-                  ticks: {
-                      beginAtZero:true
-                      
-                  }
-              }]
-          },
-          elements:{
-            line:{
-              tension:0
-            }
-          }
-
-      }
-  });
-  </script>
 </html>

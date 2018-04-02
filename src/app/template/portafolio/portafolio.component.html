@@ -1,55 +1,126 @@
-<div class="container">
-   
-    <div class="grafica" >
-        <h1>Portafolio</h1>
-        <canvas id="myChart"></canvas>
-        <p></p>
-        <div class="informacion">
-            
-            <div>
-                <p>
-                    Efectivo liquido
-                </p>
-                <b>
-                    $38,746.78
-                </b>
+<div class="box">
+    <div class="box-1">
+        <div class="titulo">
+            <img src="/assets/img/icon_portafolio.png">
+            <span>Portafolio</span>
+        </div>
+        <div class="graficas">
+            <div class="grafica">
+                <canvas id="myChart" width="" height="89">{{ chart }}</canvas>
             </div>
-            <div>
-                    <p>
-                            24 hr.
-                        </p>
-                        <b>
-                            $8,796.78
-                        </b>
-
-            </div>
-            <div>
-                    <p>
-                            48 hr.
-                        </p>
-                        <b>
-                            $18,746.78
-                        </b>
-
-            </div>
-            <div>
-                <p>
-                    Total Portafolio
-                </p>
-                <b>
-                    $188,245.98
-                </b>
-            </div>
-            <div>
-                <p>
-                Gran Total
-                </p>
-                <b class="gran-total">
-                    $888,982.90
-                </b>
-
+            <div class="checks">
+                <fieldset>
+                        <label>
+                            <input type="radio" checked="checked" name="color" value="azul"> 1 mes
+                        </label>
+                        <label>
+                            <input type="radio" name="color" value="negro"> 6 meses
+                        </label>
+                        <label>
+                            <input type="radio" name="color" value="amarillo"> 1 año
+                        </label>
+                </fieldset>
             </div>
         </div>
-    </div>
+        <div class="informacion">
+                <div class="marcador">
+                    <label>Efectivo Líquido</label>
+                    <span>$38,746.78</span>
+                </div>
+                <div class="marcador">
+                    <label>24 hr.</label>
+                    <span>$8,796.78</span>
+                </div>
+                <div class="marcador">
+                    <label> 48 hr.</label>
+                    <span>$18,746.78</span>
+                </div>
+                <div class="marcador">
+                    <label> Total Portafolio</label>
+                    <span> $188,245.98</span>
+                </div>
+                <div class="marcador">
+                    <label>Gran Total</label>
+                    <span class="gran-total">$888,982.90</span>
+                </div>
+        </div>
 
+        <hr>
+        <div class="ordenes_pendientes" (click)="toggleOrdenes()">
+            <div *ngIf="!ordenes">
+                <img src="/assets/img/icon_arrowDown_verde.png">
+            </div>
+            <div *ngIf="ordenes">
+                <img src="/assets/img/icon_arrowUp_verde.png">
+            </div>
+            Órdenes Pendientes
+        </div>
+        <div *ngIf="ordenes">
+            <table>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Emisora</th>
+                    <th>Sentido</th>
+                    <th>Tipo de orden</th>
+                    <th>Estatus</th>
+                    <th>Títulos</th>
+                    <th>Precio límite</th>
+                    <th>Precio promedio</th>
+                    <th>Total</th>
+                </tr>
+                <tr>
+                    <td>06/12</td>
+                    <td>SARE B</td>
+                    <td>Compra</td>
+                    <td>Limitada</td>
+                    <td>Vigente</td>
+                    <td>2500</td>
+                    <td>$40.90</td>
+                    <td>$40.81</td>
+                    <td>$40.81</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- <hr>
+        <div class="mercado_capitales" (click)="toggleCapitales()">
+            <div *ngIf="!capitales">
+                <img src="/assets/img/icon_arrowDown_verde.png">
+            </div>
+            <div *ngIf="capitales">
+                <img src="/assets/img/icon_arrowUp_verde.png">
+            </div>
+            Mercado de Capitales
+        </div>
+        <div *ngIf="capitales">
+            <table>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Emisora</th>
+                    <th>Sentido</th>
+                    <th>Tipo de orden</th>
+                    <th>Estatus</th>
+                    <th>Títulos</th>
+                    <th>Precio límite</th>
+                    <th>Precio promedio</th>
+                    <th>Total</th>
+                </tr>
+                <tr>
+                    <td>06/12</td>
+                    <td>SARE B</td>
+                    <td>Compra</td>
+                    <td>Limitada</td>
+                    <td>Vigente</td>
+                    <td>2500</td>
+                    <td>$40.90</td>
+                    <td>$40.81</td>
+                    <td>$40.81</td>
+                </tr>
+            </table>
+        </div> -->
+
+    </div>
+    <div class="box-2">
+        2
+    </div>
 </div>

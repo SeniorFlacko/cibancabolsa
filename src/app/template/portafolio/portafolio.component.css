@@ -1,19 +1,112 @@
-#myChart{
-    width: 830px !important;
-    height: 350px !important;
-}
-
 .informacion{
     display:flex; 
     flex-flow:row wrap; 
     justify-content:space-around;
 }
 
-.grafica{
-    width:830px;
+.gran-total{
+    color: #00853e;
+    font-size: 25px;
 }
 
-.gran-total{
-    color: green;
-    font-size: 25px;
+.box{
+    display:flex;
+    margin: 35px;
+}
+
+.box-1{
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgba(119, 134, 147, 0.16);
+    margin-right: 25px;
+    padding: 10px 5px;
+    flex: 2;
+}
+
+.box-2{
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgba(119, 134, 147, 0.16);
+    flex: 1;
+}
+
+.graficas{
+    display: flex;
+    justify-content: space-around;
+}
+
+.grafica{
+    width: 600px;
+}
+
+.checks{
+    align-self: center;
+}
+
+fieldset{
+    display: flex;
+}
+
+.informacion div{
+    font-family: Roboto-Regular;
+}
+
+.marcador{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.marcador span{
+    font-family: Roboto-Bold;
+}
+
+.titulo{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    font-family: OpenSans-Bold;
+    font-size: 30px;
+}
+
+.titulo img{
+    width: 0.7em;
+    margin: 5px;
+}
+
+.ordenes_pendientes{
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+    font-size: 20px;
+    padding: 0px 20px;
+    font-family: OpenSans-Bold;
+}
+
+.ordenes_pendientes img{
+    width: 1em;
+    margin: 10px;
+}
+
+table {
+    font-family: OpenSans-Regular;
+    font-size: 14px;
+    border-collapse: collapse;
+    width: 95%;
+    margin: 0px 20px;
+}
+
+td, th {
+    border: none;
+    text-align: left;
+    padding: 8px;
+    text-align: center;
+}
+
+th{ 
+    background-color: #f5f5f5;
+}
+
+tr:nth-child(odd) {
+    background-color: #f5f5f5;
 }
