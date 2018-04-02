@@ -1,55 +1,51 @@
-<div class="container">
-   
-    <div class="grafica" >
-        <h1>Portafolio</h1>
-        <canvas id="myChart"></canvas>
-        <p></p>
-        <div class="informacion">
-            
-            <div>
-                <p>
-                    Efectivo liquido
-                </p>
-                <b>
-                    $38,746.78
-                </b>
+<div class="box">
+    <div class="box-1">
+        <div class="titulo">
+            <img src="/assets/img/icon_portafolio.png">
+            <span>Portafolio</span>
+        </div>
+        <div class="graficas">
+            <div class="grafica">
+                <canvas id="myChart" width="" height="89">{{ chart }}</canvas>
             </div>
-            <div>
-                    <p>
-                            24 hr.
-                        </p>
-                        <b>
-                            $8,796.78
-                        </b>
-
-            </div>
-            <div>
-                    <p>
-                            48 hr.
-                        </p>
-                        <b>
-                            $18,746.78
-                        </b>
-
-            </div>
-            <div>
-                <p>
-                    Total Portafolio
-                </p>
-                <b>
-                    $188,245.98
-                </b>
-            </div>
-            <div>
-                <p>
-                Gran Total
-                </p>
-                <b class="gran-total">
-                    $888,982.90
-                </b>
-
+            <div class="checks">
+                <fieldset>
+                        <label>
+                            <input type="radio" checked="checked" name="color" value="azul"> 1 mes
+                        </label>
+                        <label>
+                            <input type="radio" name="color" value="negro"> 6 meses
+                        </label>
+                        <label>
+                            <input type="radio" name="color" value="amarillo"> 1 año
+                        </label>
+                </fieldset>
             </div>
         </div>
+        <div class="informacion">
+                <div class="marcador">
+                    <label>Efectivo Líquido</label>
+                    <span>$38,746.78</span>
+                </div>
+                <div class="marcador">
+                    <label>24 hr.</label>
+                    <span>$8,796.78</span>
+                </div>
+                <div class="marcador">
+                    <label> 48 hr.</label>
+                    <span>$18,746.78</span>
+                </div>
+                <div class="marcador">
+                    <label> Total Portafolio</label>
+                    <span> $188,245.98</span>
+                </div>
+                <div class="marcador">
+                    <label>Gran Total</label>
+                    <span class="gran-total">$888,982.90</span>
+                </div>
+            </div>
     </div>
-
+    <div class="box-2">
+        2
+    </div>
 </div>

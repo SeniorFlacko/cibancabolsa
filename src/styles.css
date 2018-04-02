@@ -60,3 +60,8 @@
     font-family: Roboto-Regular;
     src: url("assets/fonts/Roboto-Regular.ttf");
 }
+
+body{
+    background-color:#f9f9f9;
+    font-family: OpenSans-Regular;
+}
