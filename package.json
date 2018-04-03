@@ -23,10 +23,7 @@
     "@angular/router": "^5.2.0",
     "bootstrap": "^4.0.0",
     "chart.js": "^2.7.2",
-<<<<<<< HEAD
     "chartjs": "^0.3.24",
-=======
->>>>>>> 0459a535c264044d32881b9e034a2ae9d21ed3bc
     "core-js": "^2.4.1",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.1",
