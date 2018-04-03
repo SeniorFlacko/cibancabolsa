@@ -10,6 +10,8 @@ import { HeaderComponent } from './template/header/header.component';
 import { TemplateComponent } from './template/template.component';
 import { AlertComponent } from './helpers/alert/alert.component';
 import { ServicesModule } from './services/services.module';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MaterialModule } from './material.module';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { ServicesModule } from './services/services.module';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    ServicesModule
+    ServicesModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [
   ],
