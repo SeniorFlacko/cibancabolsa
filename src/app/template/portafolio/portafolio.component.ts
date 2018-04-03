@@ -8,6 +8,7 @@ import { Chart } from 'chart.js';
 })
 export class PortafolioComponent implements OnInit {
   chart = [];
+  ordenes: boolean = false;
   constructor() { }
 
   ngOnInit() {
@@ -49,6 +50,10 @@ export class PortafolioComponent implements OnInit {
 
       }
     });
+  }
+
+  toggleOrdenes(){
+      this.ordenes = !this.ordenes;
   }
 
 }

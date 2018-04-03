@@ -46,7 +46,82 @@
                     <label>Gran Total</label>
                     <span class="gran-total">$888,982.90</span>
                 </div>
+        </div>
+
+        <hr>
+        <div class="ordenes_pendientes" (click)="toggleOrdenes()">
+            <div *ngIf="!ordenes">
+                <img src="/assets/img/icon_arrowDown_verde.png">
             </div>
+            <div *ngIf="ordenes">
+                <img src="/assets/img/icon_arrowUp_verde.png">
+            </div>
+            Órdenes Pendientes
+        </div>
+        <div *ngIf="ordenes">
+            <table>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Emisora</th>
+                    <th>Sentido</th>
+                    <th>Tipo de orden</th>
+                    <th>Estatus</th>
+                    <th>Títulos</th>
+                    <th>Precio límite</th>
+                    <th>Precio promedio</th>
+                    <th>Total</th>
+                </tr>
+                <tr>
+                    <td>06/12</td>
+                    <td>SARE B</td>
+                    <td>Compra</td>
+                    <td>Limitada</td>
+                    <td>Vigente</td>
+                    <td>2500</td>
+                    <td>$40.90</td>
+                    <td>$40.81</td>
+                    <td>$40.81</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- <hr>
+        <div class="mercado_capitales" (click)="toggleCapitales()">
+            <div *ngIf="!capitales">
+                <img src="/assets/img/icon_arrowDown_verde.png">
+            </div>
+            <div *ngIf="capitales">
+                <img src="/assets/img/icon_arrowUp_verde.png">
+            </div>
+            Mercado de Capitales
+        </div>
+        <div *ngIf="capitales">
+            <table>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Emisora</th>
+                    <th>Sentido</th>
+                    <th>Tipo de orden</th>
+                    <th>Estatus</th>
+                    <th>Títulos</th>
+                    <th>Precio límite</th>
+                    <th>Precio promedio</th>
+                    <th>Total</th>
+                </tr>
+                <tr>
+                    <td>06/12</td>
+                    <td>SARE B</td>
+                    <td>Compra</td>
+                    <td>Limitada</td>
+                    <td>Vigente</td>
+                    <td>2500</td>
+                    <td>$40.90</td>
+                    <td>$40.81</td>
+                    <td>$40.81</td>
+                </tr>
+            </table>
+        </div> -->
+
     </div>
     <div class="box-2">
         2

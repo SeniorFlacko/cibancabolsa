@@ -68,3 +68,44 @@ a:hover, .active{
     padding: 0px;
     outline: none;
 }
+
+/* Tabla de valores globales */
+
+
+.tabla{
+  display: flex;
+  background: white;
+  margin-top: 40px;
+  margin-left: 40px;
+  border-radius: 5px;
+  box-shadow: 1px 2px 10px #aaaaaa;
+}
+
+.tablitas{
+  display: flex;
+  margin-bottom: -16px;
+}
+
+.tituloColumnas{
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 70px;
+  margin-bottom: -2PX;
+}
+
+.ipc{
+  margin-left: 30px;
+}
+
+.usd, .eur{
+  margin-right: 90px;
+}
+
+.inter{
+  margin-bottom: 0px;
+}
+
+.cantidades{
+  font-size: 12px;
+}
+/* Fin de tabla de valores globales */
