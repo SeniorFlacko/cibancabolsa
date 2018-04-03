@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AuthService,SessionService,LoaderService,AuthGuard } from './index.services';
-import { ValuesTableService } from './HeaderServices/valuesTable.service';
+import { AuthService,SessionService,LoaderService,AuthGuard,ValuesTableService,OrdenesPendientesService } from './index.services';
 
 @NgModule({
   imports: [
@@ -13,7 +12,8 @@ import { ValuesTableService } from './HeaderServices/valuesTable.service';
     SessionService,
     LoaderService,
     AuthGuard,
-    ValuesTableService
+    ValuesTableService,
+    OrdenesPendientesService,
   ]
 })
 export class ServicesModule { }

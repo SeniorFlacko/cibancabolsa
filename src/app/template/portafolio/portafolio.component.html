@@ -47,122 +47,55 @@
                     <span class="gran-total">$888,982.90</span>
                 </div>
         </div>
-
         <hr>
-        <div class="ordenes_pendientes" (click)="toggleOrdenes()">
-            <div *ngIf="!ordenes">
-                <img src="/assets/img/icon_arrowDown_verde.png">
-            </div>
-            <div *ngIf="ordenes">
-                <img src="/assets/img/icon_arrowUp_verde.png">
-            </div>
+        <div class="ordenes_pendientes" (click)="toggleOrdenes()" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            <img *ngIf="!ordenes" src="/assets/img/icon_arrowDown_verde.png" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            <img *ngIf="ordenes"src="/assets/img/icon_arrowUp_verde.png" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
             Órdenes Pendientes
         </div>
-        <div>
-            <!-- <table>
-                <tr>
-                    <th>Fecha</th>
-                    <th>Emisora</th>
-                    <th>Sentido</th>
-                    <th>Tipo de orden</th>
-                    <th>Estatus</th>
-                    <th>Títulos</th>
-                    <th>Precio límite</th>
-                    <th>Precio promedio</th>
-                    <th>Total</th>
-                </tr>
-                <tr>
-                    <td>06/12</td>
-                    <td>SARE B</td>
-                    <td>Compra</td>
-                    <td>Limitada</td>
-                    <td>Vigente</td>
-                    <td>2500</td>
-                    <td>$40.90</td>
-                    <td>$40.81</td>
-                    <td>$40.81</td>
-                </tr>
-            </table> -->
-            <div class="example-header">
-                    <mat-form-field>
-                      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
-                    </mat-form-field>
-                  </div>
-                  
-                  <div class="example-container mat-elevation-z8">
-                  
-                    <mat-table [dataSource]="dataSource" matSort>
-                  
-                      <!-- ID Column -->
-                      <ng-container matColumnDef="id">
-                        <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
-                        <mat-cell *matCellDef="let row"> {{row.id}} </mat-cell>
-                      </ng-container>
-                  
-                      <!-- Progress Column -->
-                      <ng-container matColumnDef="progress">
-                        <mat-header-cell *matHeaderCellDef mat-sort-header> Progress </mat-header-cell>
-                        <mat-cell *matCellDef="let row"> {{row.progress}}% </mat-cell>
-                      </ng-container>
-                  
-                      <!-- Name Column -->
-                      <ng-container matColumnDef="name">
-                        <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
-                        <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
-                      </ng-container>
-                  
-                      <!-- Color Column -->
-                      <ng-container matColumnDef="color">
-                        <mat-header-cell *matHeaderCellDef mat-sort-header> Color </mat-header-cell>
-                        <mat-cell *matCellDef="let row" [style.color]="row.color"> {{row.color}} </mat-cell>
-                      </ng-container>
-                  
-                      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-                      <mat-row *matRowDef="let row; columns: displayedColumns;">
-                      </mat-row>
-                    </mat-table>
-                  
-                    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
-                  </div>
-                  
+        <div class="collapse" id="collapseExample">            
+            <mat-table [dataSource]="dataOrdenes" matSort matSortActive="fecha" matSortDirection="asc" matSortDisableClear>
+                <ng-container matColumnDef="fecha">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header>Fecha</mat-header-cell>
+                    <mat-cell *matCellDef="let orden">{{ orden.fecha }}</mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="emisora">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header>Emisora</mat-header-cell>
+                    <mat-cell *matCellDef="let orden">{{ orden.emisora }}</mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="sentido">
+                    <mat-header-cell *matHeaderCellDef>Sentido</mat-header-cell>
+                    <mat-cell *matCellDef="let orden">{{ orden.sentido }}</mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="orden">
+                    <mat-header-cell *matHeaderCellDef>Tipo de Orden</mat-header-cell>
+                    <mat-cell *matCellDef="let orden">{{ orden.orden }}</mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="estatus">
+                    <mat-header-cell *matHeaderCellDef>Estatus</mat-header-cell>
+                    <mat-cell *matCellDef="let orden">{{ orden.estatus }}</mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="titulos">
+                    <mat-header-cell *matHeaderCellDef>Títulos</mat-header-cell>
+                    <mat-cell *matCellDef="let orden">{{ orden.titulos }}</mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="limite">
+                    <mat-header-cell *matHeaderCellDef>Precio límite</mat-header-cell>
+                    <mat-cell *matCellDef="let orden">{{ orden.precio_limite }}</mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="promedio">
+                    <mat-header-cell *matHeaderCellDef>Precio Promedio</mat-header-cell>
+                    <mat-cell *matCellDef="let orden">{{ orden.precio_promedio }}</mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="total">
+                    <mat-header-cell *matHeaderCellDef>Total</mat-header-cell>
+                    <mat-cell *matCellDef="let orden">{{ orden.total }}</mat-cell>
+                </ng-container>
+                
+                <mat-header-row *matHeaderRowDef="displayedOrdenColumns"></mat-header-row>
+                <mat-row *matRowDef="let row; columns: displayedOrdenColumns"></mat-row>
+            </mat-table>
         </div>
-
-        <!-- <hr>
-        <div class="mercado_capitales" (click)="toggleCapitales()">
-            <div *ngIf="!capitales">
-                <img src="/assets/img/icon_arrowDown_verde.png">
-            </div>
-            <div *ngIf="capitales">
-                <img src="/assets/img/icon_arrowUp_verde.png">
-            </div>
-            Mercado de Capitales
-        </div>
-        <div *ngIf="capitales">
-            <table>
-                <tr>
-                    <th>Fecha</th>
-                    <th>Emisora</th>
-                    <th>Sentido</th>
-                    <th>Tipo de orden</th>
-                    <th>Estatus</th>
-                    <th>Títulos</th>
-                    <th>Precio límite</th>
-                    <th>Precio promedio</th>
-                    <th>Total</th>
-                </tr>
-                <tr>
-                    <td>06/12</td>
-                    <td>SARE B</td>
-                    <td>Compra</td>
-                    <td>Limitada</td>
-                    <td>Vigente</td>
-                    <td>2500</td>
-                    <td>$40.90</td>
-                    <td>$40.81</td>
-                    <td>$40.81</td>
-                </tr>
-            </table>
-        </div> -->
 
     </div>
     <div class="box-2">
