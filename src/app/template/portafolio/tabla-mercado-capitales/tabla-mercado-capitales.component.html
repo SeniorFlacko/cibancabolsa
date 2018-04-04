@@ -1,0 +1,33 @@
+<mat-table [dataSource]="dataCapitales" matSort matSortActive="emisora" matSortDirection="asc" matSortDisableClear>
+  <ng-container matColumnDef="emisora">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Emisora</mat-header-cell>
+      <mat-cell *matCellDef="let capital">{{ capital.emisora }}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="titulos">
+      <mat-header-cell *matHeaderCellDef>Títulos</mat-header-cell>
+      <mat-cell *matCellDef="let capital">{{ capital.titulos }}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="promedio">
+      <mat-header-cell *matHeaderCellDef>Costo Promedio</mat-header-cell>
+      <mat-cell *matCellDef="let capital">{{ capital.costo_promedio }}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="total">
+      <mat-header-cell *matHeaderCellDef>Costo Total</mat-header-cell>
+      <mat-cell *matCellDef="let capital">{{ capital.costo_total }}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="variacion">
+      <mat-header-cell *matHeaderCellDef>% Variación intra día</mat-header-cell>
+      <mat-cell *matCellDef="let capital">{{ capital.variacion }}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="precio">
+      <mat-header-cell *matHeaderCellDef>Precio</mat-header-cell>
+      <mat-cell *matCellDef="let orden">{{ orden.precio }}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="valuacion">
+      <mat-header-cell *matHeaderCellDef>Valuación</mat-header-cell>
+      <mat-cell *matCellDef="let orden">{{ orden.valuacion }}</mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedCapitalesColumn"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedCapitalesColumn"></mat-row>
+</mat-table>

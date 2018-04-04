@@ -1,0 +1,33 @@
+<mat-table [dataSource]="dataDinero" matSort matSortActive="emisora" matSortDirection="asc" matSortDisableClear>
+  <ng-container matColumnDef="emisora">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Emisora</mat-header-cell>
+      <mat-cell *matCellDef="let dinero">{{ dinero.emisora }}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="plazo">
+      <mat-header-cell *matHeaderCellDef>Plazo</mat-header-cell>
+      <mat-cell *matCellDef="let dinero">{{ dinero.plazo }}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="monto">
+      <mat-header-cell *matHeaderCellDef>Monto</mat-header-cell>
+      <mat-cell *matCellDef="let dinero">{{ dinero.monto }}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="nominal">
+      <mat-header-cell *matHeaderCellDef>Valor Nominal</mat-header-cell>
+      <mat-cell *matCellDef="let dinero">{{ dinero.valor_nominal }}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="preciouno">
+      <mat-header-cell *matHeaderCellDef>1er Precio</mat-header-cell>
+      <mat-cell *matCellDef="let dinero">{{ dinero.precio_uno }}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="preciodos">
+      <mat-header-cell *matHeaderCellDef>2do Precio</mat-header-cell>
+      <mat-cell *matCellDef="let dinero">{{ dinero.precio_dos }}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="rendimiento">
+      <mat-header-cell *matHeaderCellDef>Rendimiento</mat-header-cell>
+      <mat-cell *matCellDef="let dinero">{{ dinero.rendimiento }}</mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedDinerosColumn"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedDinerosColumn"></mat-row>
+</mat-table>

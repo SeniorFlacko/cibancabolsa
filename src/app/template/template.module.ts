@@ -6,6 +6,8 @@ import { PortafolioComponent, MercadocapitalesComponent, MercadodineroComponent,
 import { MaterialModule } from '../material.module';
 import { OrdenesPendientesComponent } from './portafolio/ordenes-pendientes/ordenes-pendientes.component';
 import { TablaOrdenesPendientesComponent } from './portafolio/tabla-ordenes-pendientes/tabla-ordenes-pendientes.component';
+import { TablaMercadoCapitalesComponent } from './portafolio/tabla-mercado-capitales/tabla-mercado-capitales.component';
+import { TablaMercadoDineroComponent } from './portafolio/tabla-mercado-dinero/tabla-mercado-dinero.component';
 
 @NgModule({
   imports: [
@@ -22,6 +24,8 @@ import { TablaOrdenesPendientesComponent } from './portafolio/tabla-ordenes-pend
     ReportefinancieroComponent,
     OrdenesPendientesComponent,
     TablaOrdenesPendientesComponent,
+    TablaMercadoCapitalesComponent,
+    TablaMercadoDineroComponent,
 
   ]
 })

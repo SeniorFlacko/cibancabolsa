@@ -1,0 +1,20 @@
+mat-table{
+    width: 95%;
+    margin: 0 20px;
+}
+
+mat-header-row{
+    background-color: #f5f5f5;
+    border: none;
+}
+mat-header-cell{
+    font-family: OpenSans-Bold;
+    font-size: 14px;
+    color: black;
+}
+
+mat-cell{
+    font-family: OpenSans-Regular;
+    font-size: 14px;
+    color: black;
+}
