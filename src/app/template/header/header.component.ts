@@ -9,9 +9,22 @@ import { AuthService, ValuesTableService } from '../../services/index.services';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private auth: AuthService, private values:ValuesTableService) { }
+  dolarbuy: number;
+  dolarsell:number;
+
+  constructor(private auth: AuthService, private values:ValuesTableService) {
+
+    this.dolarbuy = values.dolarbuy;
+    this.dolarsell = values.dolarsell;
+
+    console.log(this.dolarbuy);
+    console.log(this.dolarsell);
+    
+
+   }
 
   ngOnInit() {
+
   }
 
   logout(){
