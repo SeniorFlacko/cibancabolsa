@@ -1,0 +1,41 @@
+<mat-table [dataSource]="dataOrdenes" matSort matSortActive="fecha" matSortDirection="asc" matSortDisableClear>
+    <ng-container matColumnDef="fecha">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Fecha</mat-header-cell>
+        <mat-cell *matCellDef="let orden">{{ orden.fecha }}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="emisora">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Emisora</mat-header-cell>
+        <mat-cell *matCellDef="let orden">{{ orden.emisora }}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="sentido">
+        <mat-header-cell *matHeaderCellDef>Sentido</mat-header-cell>
+        <mat-cell *matCellDef="let orden">{{ orden.sentido }}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="orden">
+        <mat-header-cell *matHeaderCellDef>Tipo de Orden</mat-header-cell>
+        <mat-cell *matCellDef="let orden">{{ orden.orden }}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="estatus">
+        <mat-header-cell *matHeaderCellDef>Estatus</mat-header-cell>
+        <mat-cell *matCellDef="let orden">{{ orden.estatus }}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="titulos">
+        <mat-header-cell *matHeaderCellDef>Títulos</mat-header-cell>
+        <mat-cell *matCellDef="let orden">{{ orden.titulos }}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="limite">
+        <mat-header-cell *matHeaderCellDef>Precio límite</mat-header-cell>
+        <mat-cell *matCellDef="let orden">{{ orden.precio_limite }}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="promedio">
+        <mat-header-cell *matHeaderCellDef>Precio Promedio</mat-header-cell>
+        <mat-cell *matCellDef="let orden">{{ orden.precio_promedio }}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="total">
+        <mat-header-cell *matHeaderCellDef>Total</mat-header-cell>
+        <mat-cell *matCellDef="let orden">{{ orden.total }}</mat-cell>
+    </ng-container>
+    
+    <mat-header-row *matHeaderRowDef="displayedOrdenColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedOrdenColumns"></mat-row>
+</mat-table>

@@ -1,0 +1,8 @@
+<div class="ordenes_pendientes" (click)="toggleOrdenes()" data-toggle="collapse" [attr.data-target]="hid" aria-expanded="false" >
+    <img *ngIf="!ordenes" src="/assets/img/icon_arrowDown_verde.png" data-toggle="collapse" [attr.data-target]="hid" aria-expanded="false" >
+    <img *ngIf="ordenes" src="/assets/img/icon_arrowUp_verde.png" data-toggle="collapse" [attr.data-target]="hid" aria-expanded="false" >
+    {{ title }}
+</div>
+<div class="collapse" [attr.id]="numero">            
+    <ng-content></ng-content>
+</div>

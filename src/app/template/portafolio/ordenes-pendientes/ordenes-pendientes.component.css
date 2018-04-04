@@ -1,0 +1,14 @@
+.ordenes_pendientes{
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+    font-size: 20px;
+    padding: 0px 20px;
+    font-family: OpenSans-Bold;
+}
+
+.ordenes_pendientes img{
+    width: 1em;
+    margin: 10px;
+}
