@@ -16,13 +16,14 @@
   </span>
 </div>
 
-<div class="menu">
+<div class="menu topnav" id="myTopnav">
   <a routerLink="/portafolio" routerLinkActive="active">Portafolio</a>
   <a routerLink="/capitales" routerLinkActive="active">Mercado de Capitales</a>
   <a routerLink="/dinero" routerLinkActive="active">Mercado de Dinero</a>
   <a routerLink="/inversion" routerLinkActive="active">Fondos de Inversión</a>
   <a routerLink="/ordenes" routerLinkActive="active">Órdenes</a>
   <a routerLink="/reportes" routerLinkActive="active">Reporte de Análisis Financiero</a>
+
 
   <a >
     <div class="dropdown">
@@ -48,6 +49,11 @@
     </select>
   </a> -->
   <a href="http://www.cibanco.com/es/cibanco/cicasa-de-bolsa" target="_blank">Sitio Web</a>
+  <span class="aref">
+      <img class="icono_logout" src="/assets/img/icon_logout.png" >
+      <span class="logout" (click)="logout()">Cerrar Sesión</span>
+    </span>
+  <a class="icon" (click)="myFunction()">&#9776;</a>
 </div>
 
 </header>

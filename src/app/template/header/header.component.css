@@ -4,6 +4,7 @@ header{
     background-size: cover;
     background-repeat: no-repeat;
     color: whitesmoke;
+    display: inline-block;
 }
 .header_superior{
     display: flex;
@@ -39,11 +40,18 @@ a{
     padding: 10px;
     padding-top: 2px;
 }
-a:hover, .active{
+a:hover, .active,.aref:hover{
     text-decoration: none;
     background-color:#00853e;
     border-radius: 5px 5px 0px 0px;
 }
+.aref{
+  color:whitesmoke;
+  padding: 10px;
+  padding-top: 2px;
+  display: none;
+}
+
 .logout{
     cursor: pointer;
 }
@@ -120,5 +128,47 @@ a:hover, .active{
     font-size: 12px;
     margin-right: 27px;
 }
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+  .topnav{
+    padding: 0px 10px;
+    display: block;
+    margin-top: -27px;
+  }
+  .icono_logout{
+    display: none;
+  }
+  .logout{
+    display: none;
+  }
+  .img_logo{
+    width: 80%;
+    height: 80%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 10px;
+    top: 0;
+  }
+}
+  .topnav.responsive a,.topnav.responsive span {
+    float: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
 
 /* Fin de tabla de valores globales */
