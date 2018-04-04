@@ -1,9 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Chart } from 'chart.js';
-import {ViewChild} from '@angular/core';
-import { AfterViewInit } from '@angular/core';
-import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
-import { OrdenesPendientesService } from '../../services/index.services';
 
 @Component({
   selector: 'app-portafolio',
@@ -11,18 +7,11 @@ import { OrdenesPendientesService } from '../../services/index.services';
   styleUrls: ['./portafolio.component.css']
 })
 export class PortafolioComponent implements OnInit,AfterViewInit {
-  dataOrdenes;
-  displayedOrdenColumns = ['fecha','emisora','sentido','orden','estatus','titulos','limite','promedio','total'];
-  chart = [];
-  ordenes: boolean = false;
-
-  @ViewChild(MatSort) sort: MatSort;
-  
-  constructor(private opendientesService: OrdenesPendientesService) {}
+  chart = [];  
+  constructor() {}
         
   ngOnInit() {
     this.renderGraphic();
-    this.getOrdenesPendientes();
   }
 
   ngAfterViewInit(){}
@@ -63,16 +52,4 @@ export class PortafolioComponent implements OnInit,AfterViewInit {
       }
     });
   }
-
-  toggleOrdenes(){
-      this.ordenes = !this.ordenes;
-  }
-
-  getOrdenesPendientes(){
-    this.opendientesService.getOrdenesPendientes().subscribe(response =>{
-      this.dataOrdenes = new MatTableDataSource(response)
-      this.dataOrdenes.sort = this.sort;
-    });
-  }
-
 }
