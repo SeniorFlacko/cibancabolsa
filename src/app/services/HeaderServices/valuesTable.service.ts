@@ -1,21 +1,17 @@
 import { Injectable } from '@angular/core';
+import { Http, Headers } from '@angular/http';
+import 'rxjs/Rx';
 
 @Injectable()
 export class ValuesTableService {
-
-  dolarbuy: number;
-  dolarsell:number;
-
-  constructor() {
-    this.dolarbuy = 18.00;
-    this.dolarsell = 20.00;
+  constructor(private http: Http) {
 
   }
 
-  URL= "https://cicasabolsa.firebaseio.com/valores";
-
-
-
-  
+  getValues(){
+    let URL= "https://cicasabolsa.firebaseio.com/valores.json";
+    let headers = new Headers({'Content-Type':'application/json'});
+    return this.http.get(URL).map(res=>{return res.json()});
+  }
 
 }

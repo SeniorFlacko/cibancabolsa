@@ -9,22 +9,35 @@ import { AuthService, ValuesTableService } from '../../services/index.services';
 })
 export class HeaderComponent implements OnInit {
 
-  dolarbuy: number;
-  dolarsell:number;
+  dolarbuy: any;
+  dolarsell: any;
+  ipc: any;
+  dowJones: any;
+  nasdaq: any;
+  eurcompra: any; 
+  eurventa: any; 
+  cadcompra:any;
+  cadventa:any;
 
-  constructor(private auth: AuthService, private values:ValuesTableService) {
-
-    this.dolarbuy = values.dolarbuy;
-    this.dolarsell = values.dolarsell;
-
-    console.log(this.dolarbuy);
-    console.log(this.dolarsell);
-    
-
+  constructor(private auth: AuthService, private values:ValuesTableService) {    
    }
 
   ngOnInit() {
 
+    this.values.getValues().subscribe(res=>{console.log(res)
+    
+      this.dolarbuy = res.usd.compra;
+      this.dolarsell = res.usd.venta;
+      this.ipc = res.ipc;
+      this.dowJones = res.dowjones;
+      this.nasdaq = res.nasdaq;
+      this.eurcompra = res.eur.compra;
+      this.eurventa = res.eur.venta;
+      this.cadcompra = res.cad.compra;
+      this.cadventa = res.cad.venta;
+
+
+    });
   }
 
    myFunction() {
