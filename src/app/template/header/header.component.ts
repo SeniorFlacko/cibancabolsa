@@ -10,36 +10,35 @@ import { Valores } from '../../models/index.models';
 })
 export class HeaderComponent implements OnInit {
 
-  modelo: Valores;
-  dolarbuy: any;
-  dolarsell: any;
-  ipc: any;
-  dowJones: any;
-  nasdaq: any;
-  eurcompra: any; 
-  eurventa: any; 
-  cadcompra:any;
-  cadventa:any;
+  modelo: Valores = {
+    "cadcompra": "",
+    "cadventa": "",
+    "dolarbuy": "",
+    "dolarsell": "",
+    "dowjones": "",
+    "eurcompra": "",
+    "eurventa": "",
+    "ipc": "",
+    "nasdaq": ""
+  };
 
   constructor(private auth: AuthService, private values:ValuesTableService) {    
    }
 
   ngOnInit() {
 
-    this.values.getValues().subscribe(res=>{console.log(res)
+    this.values.getValues().subscribe(res=>{
+      console.log(res);
+      
     
-      this.dolarbuy = res.usd.compra;
-      this.dolarsell = res.usd.venta;
-      this.ipc = res.ipc;
-      this.dowJones = res.dowjones;
-      this.nasdaq = res.nasdaq;
-      this.eurcompra = res.eur.compra;
-      this.eurventa = res.eur.venta;
-      this.cadcompra = res.cad.compra;
-      this.cadventa = res.cad.venta;
-
-
+      this.modelo = res;
+      console.log(this.modelo);
+      
+      // console.log(this.modelo);
+      
     });
+
+    // this.modelo = this.values.getValues();
   }
 
    myFunction() {

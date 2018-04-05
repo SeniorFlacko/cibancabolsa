@@ -2,7 +2,7 @@ export interface Valores{
     dolarbuy: any;
     dolarsell: any;
     ipc: any;
-    dowJones: any;
+    dowjones: any;
     nasdaq: any;
     eurcompra: any; 
     eurventa: any; 

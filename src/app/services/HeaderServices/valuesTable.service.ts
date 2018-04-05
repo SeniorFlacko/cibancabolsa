@@ -4,6 +4,7 @@ import 'rxjs/Rx';
 
 @Injectable()
 export class ValuesTableService {
+  
   constructor(private http: Http) {
 
   }
@@ -11,7 +12,9 @@ export class ValuesTableService {
   getValues(){
     let URL= "https://cicasabolsa.firebaseio.com/valores.json";
     let headers = new Headers({'Content-Type':'application/json'});
-    return this.http.get(URL).map(res=>{return res.json()});
+    return this.http.get(URL).map(res=>{
+      return res.json();
+    });
   }
 
 }
