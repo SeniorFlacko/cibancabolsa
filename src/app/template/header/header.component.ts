@@ -11,15 +11,15 @@ import { Valores } from '../../models/index.models';
 export class HeaderComponent implements OnInit {
 
   modelo: Valores = {
-    "cadcompra": "",
-    "cadventa": "",
-    "dolarbuy": "",
-    "dolarsell": "",
-    "dowjones": "",
-    "eurcompra": "",
-    "eurventa": "",
-    "ipc": "",
-    "nasdaq": ""
+    "cadcompra": 666666,
+    "cadventa": 777777,
+    "dolarbuy": 18,
+    "dolarsell": 20,
+    "dowjones": 22222,
+    "eurcompra": 444444,
+    "eurventa": 555555,
+    "ipc": 123456,
+    "nasdaq": 333333
   };
 
   constructor(private auth: AuthService, private values:ValuesTableService) {    
@@ -27,18 +27,11 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
 
-    this.values.getValues().subscribe(res=>{
-      console.log(res);
-      
+    this.values.getValues().subscribe(res=>{console.log(res)
     
       this.modelo = res;
       console.log(this.modelo);
-      
-      // console.log(this.modelo);
-      
     });
-
-    // this.modelo = this.values.getValues();
   }
 
    myFunction() {

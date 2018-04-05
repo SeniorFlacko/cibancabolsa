@@ -4,7 +4,6 @@ header{
     background-size: cover;
     background-repeat: no-repeat;
     color: whitesmoke;
-
 }
 .header_superior{
     display: flex;
@@ -146,13 +145,9 @@ a:hover, .active,.aref:hover{
 .topnav .icon {
   display: none;
 }
-
-@media screen and (min-width: 768px) {
-  .tablaFondo{
-    margin-left: 2.5%;
-  }
+.icon-left{
+  display: none;
 }
-
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
