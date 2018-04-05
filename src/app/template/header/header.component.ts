@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService, ValuesTableService } from '../../services/index.services';
+import { Valores } from '../../models/index.models';
 
 
 @Component({
@@ -9,6 +10,7 @@ import { AuthService, ValuesTableService } from '../../services/index.services';
 })
 export class HeaderComponent implements OnInit {
 
+  modelo: Valores;
   dolarbuy: any;
   dolarsell: any;
   ipc: any;

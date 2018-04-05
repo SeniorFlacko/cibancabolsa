@@ -77,16 +77,18 @@ a:hover, .active,.aref:hover{
 }
 
 /* Tabla de valores globales */
-
+.tablaFondo{
+  background: white;
+  border-radius: 5px;
+  box-shadow: 1px 2px 10px #aaaaaa;
+  /* margin-left: 5%; */
+}
 
 .tabla{
   display: flex;
-  background: white;
   margin-top: 40px;
-  margin-left: 40px;
-  border-radius: 5px;
-  box-shadow: 1px 2px 10px #aaaaaa;
-  height: 65px;
+  margin-left: 0px;
+  height: auto;
 }
 
 .tablitas{
@@ -97,12 +99,12 @@ a:hover, .active,.aref:hover{
 .tituloColumnas{
   font-size: 16px;
   font-weight: bolder;
-  margin-right: 70px;
+  margin-right: 54px;
   margin-bottom: -2PX;
 }
 
 .ipc{
-  margin-left: 30px;
+  margin-left: 0px;
 }
 
 .usd, .eur{
@@ -128,12 +130,34 @@ a:hover, .active,.aref:hover{
     margin-right: 27px;
 }
 
+.cancolor{
+  color: red;
+}
+
+.columipc{
+  margin-right: 25px;
+}
+
+.columdow{
+  margin-right: -30px;
+}
+
 .topnav .icon {
   display: none;
 }
+<<<<<<< HEAD
 .icon-left{
   display: none;
 }
+=======
+
+@media screen and (min-width: 768px) {
+  .tablaFondo{
+    margin-left: 5%;
+  }
+}
+
+>>>>>>> 9832c242997f3da24f0978c1b68312d369a77ba7
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
