@@ -4,7 +4,7 @@ header{
     background-size: cover;
     background-repeat: no-repeat;
     color: whitesmoke;
-    display: inline-block;
+
 }
 .header_superior{
     display: flex;
@@ -173,6 +173,9 @@ a:hover, .active,.aref:hover{
   .img_logo{
     width: 80%;
     height: 80%;
+  }
+  header{
+    display: inline-block;
   }
 }
 
