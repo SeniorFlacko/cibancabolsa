@@ -17,13 +17,12 @@
 </div>
 
 <div class="menu topnav" id="myTopnav">
-  <a class="icon-left"></a>
-  <a routerLink="/portafolio" routerLinkActive="active" (click)="myFunction2()">Portafolio</a>
-  <a routerLink="/capitales" routerLinkActive="active" (click)="myFunction2()">Mercado de Capitales</a>
-  <a routerLink="/dinero" routerLinkActive="active" (click)="myFunction2()">Mercado de Dinero</a>
-  <a routerLink="/inversion" routerLinkActive="active" (click)="myFunction2()">Fondos de Inversión</a>
-  <a routerLink="/ordenes" routerLinkActive="active" (click)="myFunction2()">Órdenes</a>
-  <a routerLink="/reportes" routerLinkActive="active" (click)="myFunction2()">Reporte de Análisis Financiero</a>
+  <a routerLink="/portafolio" routerLinkActive="active">Portafolio</a>
+  <a routerLink="/capitales" routerLinkActive="active">Mercado de Capitales</a>
+  <a routerLink="/dinero" routerLinkActive="active">Mercado de Dinero</a>
+  <a routerLink="/inversion" routerLinkActive="active">Fondos de Inversión</a>
+  <a routerLink="/ordenes" routerLinkActive="active">Órdenes</a>
+  <a routerLink="/reportes" routerLinkActive="active">Reporte de Análisis Financiero</a>
 
 
   <a >
@@ -32,10 +31,10 @@
             Mi Cuenta
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-          <button class="dropdown-item" type="button" (click)="myFunction2()">Retiro</button>
-          <button class="dropdown-item" type="button" (click)="myFunction2()">Estado de Cuenta</button>
-          <button class="dropdown-item" type="button" (click)="myFunction2()">Historial de Movimientos</button>
-          <button class="dropdown-item" type="button" (click)="myFunction2()">Configuración</button>
+          <button class="dropdown-item" type="button">Retiro</button>
+          <button class="dropdown-item" type="button">Estado de Cuenta</button>
+          <button class="dropdown-item" type="button">Historial de Movimientos</button>
+          <button class="dropdown-item" type="button">Configuración</button>
         </div>
     </div>
   </a>
@@ -53,7 +52,7 @@
   <span class="aref">
       <img class="icono_logout" src="/assets/img/icon_logout.png" >
       <span class="logout" (click)="logout()">Cerrar Sesión</span>
-  </span>
+    </span>
   <a class="icon" (click)="myFunction()">&#9776;</a>
 </div>
 
@@ -68,21 +67,10 @@
       </div>
       <div class="columnas columdow">
       <p class="tituloColumnas">Dow Jones</p>
-<<<<<<< HEAD
       <p class="inter cantidades">{{ modelo.dowjones }}</p>
       <p class="cantidades cancolor">-39.73(-0.16%)</p>
       </div>
       <div class="columnas">
-=======
-      <p class="inter cantidades">{{ dowJones }}</p>
-<<<<<<< HEAD
-          <p class="cantidades">-39.73(-0.16%)</p>
-=======
-      <p class="cantidades cancolor">-39.73(-0.16%)</p>
->>>>>>> 9832c242997f3da24f0978c1b68312d369a77ba7
-    </div>
-    <div class="columnas">
->>>>>>> c2f15381ebbce3769e79916924eb7e047728f2b2
       <p class="tituloColumnas">NASDAQ</p>
       <p class="inter cantidades">{{ modelo.nasdaq }}</p>
       <p class="cantidades cancolor">+14.16(+0.21%)</p>
