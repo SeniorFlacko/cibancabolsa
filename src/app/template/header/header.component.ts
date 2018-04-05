@@ -14,18 +14,18 @@ export class HeaderComponent implements OnInit {
   ipc: any;
   dowJones: any;
   nasdaq: any;
-  eurcompra: any; 
-  eurventa: any; 
+  eurcompra: any;
+  eurventa: any;
   cadcompra:any;
   cadventa:any;
 
-  constructor(private auth: AuthService, private values:ValuesTableService) {    
+  constructor(private auth: AuthService, private values:ValuesTableService) {
    }
 
   ngOnInit() {
 
     this.values.getValues().subscribe(res=>{console.log(res)
-    
+
       this.dolarbuy = res.usd.compra;
       this.dolarsell = res.usd.venta;
       this.ipc = res.ipc;
@@ -40,17 +40,24 @@ export class HeaderComponent implements OnInit {
     });
   }
 
-   myFunction() {
+   myFunction(){
     let x = document.getElementById('myTopnav');
-    if (x.className === 'topnav') {
+    if (x.className === 'topnav'){
       x.className += ' responsive';
     } else {
       x.className = 'topnav';
     }
   }
 
+  myFunction2(){
+    let x = document.getElementById('myTopnav');
+    if (x.className === 'topnav responsive'){
+      x.className += 'topnav';
+    }
+  }
+
+
   logout(){
     this.auth.logout();
   }
-
 }

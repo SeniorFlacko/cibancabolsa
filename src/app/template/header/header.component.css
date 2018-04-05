@@ -4,7 +4,6 @@ header{
     background-size: cover;
     background-repeat: no-repeat;
     color: whitesmoke;
-
 }
 .header_superior{
     display: flex;
@@ -132,7 +131,9 @@ a:hover, .active,.aref:hover{
 .topnav .icon {
   display: none;
 }
-
+.icon-left{
+  display: none;
+}
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
