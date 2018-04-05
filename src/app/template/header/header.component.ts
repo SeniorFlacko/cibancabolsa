@@ -22,16 +22,23 @@ export class HeaderComponent implements OnInit {
     "nasdaq": 333333
   };
 
-  constructor(private auth: AuthService, private values:ValuesTableService) {    
+  constructor(private auth: AuthService, private values:ValuesTableService) {
    }
 
   ngOnInit() {
 
     this.values.getValues().subscribe(res=>{console.log(res)
-    
+
       this.modelo = res;
       console.log(this.modelo);
     });
+  }
+
+  myFunction2() {
+    let x = document.getElementById('myTopnav');
+    if (x.className === 'topnav responsive') {
+      x.className= 'topnav';
+    }
   }
 
    myFunction() {

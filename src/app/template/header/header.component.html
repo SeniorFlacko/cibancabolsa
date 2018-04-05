@@ -17,12 +17,13 @@
 </div>
 
 <div class="menu topnav" id="myTopnav">
-  <a routerLink="/portafolio" routerLinkActive="active">Portafolio</a>
-  <a routerLink="/capitales" routerLinkActive="active">Mercado de Capitales</a>
-  <a routerLink="/dinero" routerLinkActive="active">Mercado de Dinero</a>
-  <a routerLink="/inversion" routerLinkActive="active">Fondos de Inversión</a>
-  <a routerLink="/ordenes" routerLinkActive="active">Órdenes</a>
-  <a routerLink="/reportes" routerLinkActive="active">Reporte de Análisis Financiero</a>
+  <a class="icon-left"></a>
+  <a routerLink="/portafolio" routerLinkActive="active" (click)="myFunction2()">Portafolio</a>
+  <a routerLink="/capitales" routerLinkActive="active" (click)="myFunction2()">Mercado de Capitales</a>
+  <a routerLink="/dinero" routerLinkActive="active" (click)="myFunction2()">Mercado de Dinero</a>
+  <a routerLink="/inversion" routerLinkActive="active" (click)="myFunction2()">Fondos de Inversión</a>
+  <a routerLink="/ordenes" routerLinkActive="active" (click)="myFunction2()">Órdenes</a>
+  <a routerLink="/reportes" routerLinkActive="active" (click)="myFunction2()">Reporte de Análisis Financiero</a>
 
 
   <a >
@@ -31,10 +32,10 @@
             Mi Cuenta
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-          <button class="dropdown-item" type="button">Retiro</button>
-          <button class="dropdown-item" type="button">Estado de Cuenta</button>
-          <button class="dropdown-item" type="button">Historial de Movimientos</button>
-          <button class="dropdown-item" type="button">Configuración</button>
+          <button class="dropdown-item" type="button" (click)="myFunction2()">Retiro</button>
+          <button class="dropdown-item" type="button" (click)="myFunction2()">Estado de Cuenta</button>
+          <button class="dropdown-item" type="button" (click)="myFunction2()">Historial de Movimientos</button>
+          <button class="dropdown-item" type="button" (click)="myFunction2()">Configuración</button>
         </div>
     </div>
   </a>
@@ -52,7 +53,7 @@
   <span class="aref">
       <img class="icono_logout" src="/assets/img/icon_logout.png" >
       <span class="logout" (click)="logout()">Cerrar Sesión</span>
-    </span>
+  </span>
   <a class="icon" (click)="myFunction()">&#9776;</a>
 </div>
 
