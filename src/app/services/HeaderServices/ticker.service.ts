@@ -1,20 +1,20 @@
 import { Injectable } from '@angular/core';
-import { Http, Headers } from '@angular/http';
-import 'rxjs/Rx';
-
+import { Http } from '@angular/http';
+import { Ticker } from '../../models/ticker';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/map'
 @Injectable()
-export class ValuesTableService {
-  
+export class TickerService {
+
   constructor(private http: Http) {
 
   }
 
-  getValues(){
+  getValues():Observable<Ticker>{
     let URL= "https://cicasabolsa.firebaseio.com/valores.json";
     let headers = new Headers({'Content-Type':'application/json'});
     return this.http.get(URL).map(res=>{
       return res.json();
     });
   }
-
 }

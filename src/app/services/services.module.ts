@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AuthService,SessionService,LoaderService,AuthGuard,ValuesTableService,
+import { AuthService,SessionService,LoaderService,AuthGuard,TickerService,
   OrdenesPendientesService, FondoInversionService, MercadoCapitalesService, 
   MercadoDineroService, PortafolioGraficaService } from './index.services';
 
@@ -14,7 +14,7 @@ import { AuthService,SessionService,LoaderService,AuthGuard,ValuesTableService,
     SessionService,
     LoaderService,
     AuthGuard,
-    ValuesTableService,
+    TickerService,
     OrdenesPendientesService,
     FondoInversionService,
     MercadoCapitalesService,

@@ -4,11 +4,13 @@ import { HeaderComponent } from './header/header.component';
 import { TickerComponent } from './header/ticker/ticker.component';
 import { RouterModule } from '@angular/router';
 import { AlertComponent } from './helpers/alert/alert.component';
+import { MaterialModule } from '../material.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    MaterialModule
   ],
   declarations: [
     HeaderComponent, 
@@ -17,6 +19,7 @@ import { AlertComponent } from './helpers/alert/alert.component';
   ],
   exports:[
     HeaderComponent,
-    AlertComponent]
+    AlertComponent
+  ]
 })
 export class SharedModule { }

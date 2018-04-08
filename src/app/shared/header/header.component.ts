@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService, ValuesTableService } from '../../services/index.services';
-import { Valores } from '../../models/index.models';
+import { AuthService } from '../../services/index.services';
 
 
 @Component({

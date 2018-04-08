@@ -1,4 +1,4 @@
-<div class="ticker">
+<div class="ticker" *ngIf="(modelo$ | async) as modelo; else loading">
     <div class="indicador">
         <span class="title-ticker">IPC</span>
         <span class="subtitle-ticker">{{ modelo.ipc }}</span>
@@ -58,3 +58,7 @@
     </div>
 
   </div>
+
+  <ng-template #loading>
+    <mat-spinner></mat-spinner>
+  </ng-template>
