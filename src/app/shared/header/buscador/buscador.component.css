@@ -1,0 +1,35 @@
+.bg_white{
+    background: white;
+    border-radius: 5px;
+    box-shadow: 1px 2px 10px #aaaaaa;
+}
+  
+input{
+    font-family: OpenSans-LightItalic;
+    font-size: 15px;
+    outline: none;
+    border: 1px solid #eaeaea;
+    border-radius: 30px;
+    padding: 10px 35px;
+}
+
+button{
+    font-family: OpenSans-Regular;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    color: #34794e;
+    background-color: white;
+    border: 1px solid #eaeaea;
+    border-radius: 0px 35px 35px 0px;
+}
+button:hover{
+    color: white;
+    background-color: #00853e;
+}
+i{
+    margin: 0px 5px;
+}
+.input-group{
+    width: 73%;
+}

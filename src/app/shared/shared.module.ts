@@ -5,6 +5,8 @@ import { TickerComponent } from './header/ticker/ticker.component';
 import { RouterModule } from '@angular/router';
 import { AlertComponent } from './helpers/alert/alert.component';
 import { MaterialModule } from '../material.module';
+import { BuscadorComponent } from './header/buscador/buscador.component';
+import { FechaComponent } from './header/fecha/fecha.component';
 
 @NgModule({
   imports: [
@@ -15,7 +17,9 @@ import { MaterialModule } from '../material.module';
   declarations: [
     HeaderComponent, 
     TickerComponent,
-    AlertComponent
+    AlertComponent,
+    BuscadorComponent,
+    FechaComponent
   ],
   exports:[
     HeaderComponent,

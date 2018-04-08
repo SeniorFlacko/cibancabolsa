@@ -209,6 +209,7 @@ a:hover, .active,.aref:hover{
 .contenedor{
   display: flex;
   margin: 35px 35px;
+  margin-top: 10px;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -218,10 +219,24 @@ a:hover, .active,.aref:hover{
 }
 
 app-ticker{
+  margin-right: 25px;
   flex: 2;
 }
 
-.azul{
-  background-color: transparent;
+app-buscador{
+  flex: 1;
+}
+
+
+.contenedor-fecha{
+  display: flex;
+  margin: 10px 35px;
+}
+.contenedor-fecha .fecha_sibling{
+  margin-right: 25px;
+  flex: 2;
+}
+
+app-fecha{
   flex: 1;
 }
