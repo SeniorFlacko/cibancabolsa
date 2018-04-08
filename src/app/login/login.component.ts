@@ -101,7 +101,7 @@ export class LoginComponent implements OnInit {
     const keysToAccept = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'Backspace', 'ArrowLeft', 'ArrowRight', 'Delete', 'Tab', 'Shift'];
     
     if(this.tokenForm.get('value').value.length>7){
-      const keysToDeleteAccept = ['Backspace', 'ArrowLeft', 'ArrowRight', 'Delete', 'Tab', 'Shift'];
+      const keysToDeleteAccept = ['Backspace', 'ArrowLeft', 'ArrowRight', 'Delete', 'Tab', 'Shift','Enter'];
       if(keysToDeleteAccept.indexOf($event.key) !== -1)
         return true;
       return false;

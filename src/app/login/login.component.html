@@ -2,39 +2,34 @@
   <div class="contenedor">
     <img class="logo" src="../../assets/img/logo.png">
     <h2>Ingresar</h2>
-  
-
-    <div *ngIf="loading">
-      Cargando...
-    </div>
     
-    <div *ngIf="!loading">
-      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-        <div class="group">
-          <input type="text" required  (keydown)="filterAlpha($event)" (paste)="pasteNumber($event)" formControlName="name">
-          <label >NOMBRE DE USUARIO</label>
-          <div *ngIf="name.invalid && (name.dirty || name.touched)">
-              <div *ngIf="name.errors.required" class="error">
-                El nombre es requerido.
-              </div>
-              <div *ngIf="name.errors.maxlength" class="error">
-                El nombre no puede tener mas de 20 caracteres.
-              </div>
-          </div>
+    
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="group">
+        <input type="text" required  (keydown)="filterAlpha($event)" (paste)="pasteNumber($event)" formControlName="name">
+        <label >NOMBRE DE USUARIO</label>
+        <div *ngIf="name.invalid && (name.dirty || name.touched)">
+            <div *ngIf="name.errors.required" class="error">
+              El nombre es requerido.
+            </div>
+            <div *ngIf="name.errors.maxlength" class="error">
+              El nombre no puede tener mas de 20 caracteres.
+            </div>
         </div>
-        <div class="group">
-          <input type="password"  required formControlName="password">
-          <label >CONTRASEÑA</label>
-          <div *ngIf="password.invalid && (password.dirty || password.touched)">
-              <div *ngIf="password.errors.required" class="error">
-                El password es requerido.
-              </div>
-          </div>
+      </div>
+      <div class="group">
+        <input type="password"  required formControlName="password">
+        <label >CONTRASEÑA</label>
+        <div *ngIf="password.invalid && (password.dirty || password.touched)">
+            <div *ngIf="password.errors.required" class="error">
+              El password es requerido.
+            </div>
         </div>
-        <button type="submit" [disabled]="!loginForm.valid">Continuar</button>
-      </form>
-      <!-- <button class="miboton">ok</button> -->
-    </div>    
+      </div>
+      <button type="submit" [disabled]="!loginForm.valid">Continuar</button>
+    </form>
+    <!-- <button class="miboton">ok</button> -->
+      
   
     <!-- <p>Form value: {{ loginForm.value | json }}</p>
     <p>Form status: {{ loginForm.status | json }}</p>

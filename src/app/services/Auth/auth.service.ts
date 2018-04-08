@@ -29,7 +29,7 @@ export class AuthService {
       this.user = user;
     }
 
-    return of(response).delay(1500);
+    return of(response);
   }
 
   aproveToken( token:Token ): Observable<boolean> {

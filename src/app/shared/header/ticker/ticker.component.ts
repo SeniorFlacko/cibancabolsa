@@ -22,7 +22,7 @@ export class TickerComponent implements OnInit {
   constructor(private values:ValuesTableService) { }
 
   ngOnInit() {
-    this.values.getValues().subscribe(res=>{console.log(res)
+    this.values.getValues().subscribe(res=>{
       this.modelo = res;
     });
   }

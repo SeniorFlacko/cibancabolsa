@@ -7,21 +7,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HeaderComponent } from './template/header/header.component';
-import { TemplateComponent } from './template/template.component';
 import { AlertComponent } from './helpers/alert/alert.component';
 import { ServicesModule } from './services/services.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
-import { TickerComponent } from './template/header/ticker/ticker.component';
+import { SharedModule } from './shared/shared.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    TemplateComponent,
-    HeaderComponent,
-    TickerComponent,
+    DashboardComponent,
     AlertComponent,
   ],
   imports: [
@@ -31,7 +28,8 @@ import { TickerComponent } from './template/header/ticker/ticker.component';
     ServicesModule,
     BrowserAnimationsModule,
     MaterialModule,
-    HttpModule
+    HttpModule,
+    SharedModule
   ],
   providers: [
   ],
