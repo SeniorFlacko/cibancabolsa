@@ -1,0 +1,60 @@
+<div class="ticker">
+    <div class="indicador">
+        <span class="title-ticker">IPC</span>
+        <span class="subtitle-ticker">{{ modelo.ipc }}</span>
+        <span class="indice cancolor">-39.73(-0.16%)</span>
+    </div>
+    <div class="indicador">
+        <span class="title-ticker">Dow Jones</span>
+        <span class="subtitle-ticker">{{ modelo.dowjones }}</span>
+        <span class="indice cancolor">-39.73(-0.16%)</span>
+    </div>
+    <div class="indicador">
+        <span class="title-ticker">NASDAQ</span>
+        <span class="subtitle-ticker">{{ modelo.nasdaq }}</span>
+        <span class="indice cancolor">+14.16(+0.21%)</span>
+    </div>
+    <div class="separador">
+      <div class="linea"></div>
+    </div>
+    <div class="indicador">
+        <span class="title-ticker">USD</span>
+        <div class="compra-venta">
+          <div class="compra">
+            <span class="cv-title">COMPRA</span>
+            <span class="indice">{{ modelo.dolarbuy }}</span>
+          </div>
+          <div class="venta">
+            <span class="cv-title">VENTA</span>
+            <span class="indice">{{ modelo.dolarsell }}</span>
+          </div>
+        </div>
+    </div>
+    <div class="indicador">
+        <span class="title-ticker">EUR</span>
+        <div class="compra-venta">
+          <div class="compra">
+            <span class="cv-title">COMPRA</span>
+            <span class="indice">{{ modelo.eurcompra }}</span>
+          </div>
+          <div class="venta">
+            <span class="cv-title">VENTA</span>
+            <span class="indice">{{ modelo.eurventa }}</span>
+          </div>
+        </div>
+    </div>
+    <div class="indicador">
+        <span class="title-ticker">CAD</span>
+        <div class="compra-venta">
+          <div class="compra">
+            <span class="cv-title">COMPRA</span>
+            <span class="indice">{{ modelo.cadcompra }}</span>
+          </div>
+          <div class="venta">
+            <span class="cv-title">VENTA</span>
+            <span class="indice">{{ modelo.cadventa }}</span>
+          </div>
+        </div>
+    </div>
+
+  </div>

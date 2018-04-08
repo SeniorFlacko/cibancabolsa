@@ -2,8 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { TemplateComponent } from './template/template.component';
-
-import { PortafolioComponent, MercadocapitalesComponent, MercadodineroComponent, FondoinversionComponent, OrdenesComponent, ReportefinancieroComponent } from './template/index.templatecmpts';
 import { AuthGuard } from './services/index.services';
 
 const routes: Routes = [

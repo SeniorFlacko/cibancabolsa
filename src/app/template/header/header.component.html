@@ -59,56 +59,9 @@
 
 </header>
 
-<div class="col-xs-11 col-sm-11 col-md-7  tablaFondo">
-  <div class="col-xs-11 col-sm-11 col-md-12 tabla table-responsive">
-      <div class="columnas columipc">
-      <p class="tituloColumnas ipc">IPC</p>
-      <p class="ipc inter cantidades">{{ modelo.ipc }}</p>
-      <p class="ipc cantidades cancolor">-39.73(-0.16%)</p>
-      </div>
-      <div class="columnas columdow">
-      <p class="tituloColumnas">Dow Jones</p>
-      <p class="inter cantidades">{{ modelo.dowjones }}</p>
-      <p class="cantidades cancolor">-39.73(-0.16%)</p>
-      </div>
-      <div class="columnas">
-      <p class="tituloColumnas" style="margin-right: -15px;">NASDAQ</p>
-      <p class="inter cantidades">{{ modelo.nasdaq }}</p>
-      <p class="cantidades cancolor">+14.16(+0.21%)</p>
-      </div>
-      <div class="line"></div>
-      <div class="columnas">
-      <p class="tituloColumnas usd">USD</p>
-      <div class="tablitas">
-        <p class="columcan">COMPRA</p>
-        <p class="columcan">VENTA</p>
-      </div>
-      <div class="tablitas">
-        <p class="cantidades can2">{{ modelo.dolarbuy }}</p>
-        <p class="cantidades can2">{{ modelo.dolarsell }}</p>
-      </div>
-      </div>
-      <div class="columnas">
-      <p class="tituloColumnas eur">EUR</p>
-      <div class="tablitas">
-        <p class="columcan">COMPRA</p>
-        <p class="columcan">VENTA</p>
-      </div>
-      <div class="tablitas">
-        <p class="cantidades can2">{{ modelo.eurcompra }}</p>
-        <p class="cantidades can2">{{ modelo.eurventa }}</p>
-      </div>
-      </div>
-      <div class="columnas">
-      <p class="tituloColumnas">CAD</p>
-      <div class="tablitas">
-        <p class="columcan">COMPRA</p>
-        <p class="columcan">VENTA</p>
-      </div>
-      <div class="tablitas">
-        <p class="cantidades can2">{{ modelo.cadcompra }}</p>
-        <p class="cantidades can2">{{ modelo.cadventa }}</p>
-      </div>
-      </div>
-  </div>
+<div class="contenedor">
+  
+  <app-ticker></app-ticker>
+
+  <div class="azul">2</div>
 </div>

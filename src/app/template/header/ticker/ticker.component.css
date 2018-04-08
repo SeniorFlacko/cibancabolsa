@@ -1,0 +1,67 @@
+.ticker{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    background-color: green;
+    margin-right: 20px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 1px 2px 10px #aaaaaa;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    .ticker{
+      margin: 0px;
+      flex: 1;
+    }
+  }
+  
+  .title-ticker{
+    font-family: OpenSans-SemiBold;
+    font-size: 16px;
+    font-weight: bolder;
+  }
+  .subtitle-ticker{
+    font-size: 12px;
+  }
+  .indice{
+    font-size: 12px;
+  }
+  
+  .indicador{
+    display: flex;
+    flex-flow: column;
+    margin: 10px;
+    flex:1;
+  }
+  
+  .separador{
+    display: flex;
+    align-items: center;
+  }
+  .linea{
+    border: 1px solid #eeeeee;
+    height: 80%;
+  }
+  
+  .compra-venta{
+    display: flex;
+  }
+  
+  .compra{
+    display: flex;
+    flex-flow: column;
+    margin-right: 10px;
+  }
+  
+  .cv-title{
+    font-size: 12px;
+    font-family: OpenSans-Semibold;
+  } 
+  
+  .venta{
+    display: flex;
+    flex-flow: column;
+  }
+  
+  

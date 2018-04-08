@@ -13,6 +13,7 @@ import { AlertComponent } from './helpers/alert/alert.component';
 import { ServicesModule } from './services/services.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
+import { TickerComponent } from './template/header/ticker/ticker.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { MaterialModule } from './material.module';
     LoginComponent,
     TemplateComponent,
     HeaderComponent,
+    TickerComponent,
     AlertComponent,
   ],
   imports: [

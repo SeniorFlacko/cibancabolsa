@@ -205,3 +205,23 @@ a:hover, .active,.aref:hover{
   }
 
 /* Fin de tabla de valores globales */
+
+.contenedor{
+  display: flex;
+  margin: 35px 35px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .contenedor{
+    flex-flow: column;
+  }
+}
+
+app-ticker{
+  flex: 2;
+}
+
+.azul{
+  background-color: transparent;
+  flex: 1;
+}
