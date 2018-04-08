@@ -7,7 +7,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { AlertComponent } from './helpers/alert/alert.component';
 import { ServicesModule } from './services/services.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
@@ -19,7 +18,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     AppComponent,
     LoginComponent,
     DashboardComponent,
-    AlertComponent,
   ],
   imports: [
     BrowserModule,

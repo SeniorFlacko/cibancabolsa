@@ -3,8 +3,8 @@ import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms'
 import { User, Token } from '../models/index.models';
 import { Router } from '@angular/router';
 import { AuthService, LoaderService } from '../services/index.services';
-import { AlertComponent } from '../helpers/alert/alert.component';
 import * as $ from 'jquery';
+import { AlertComponent } from '../shared/helpers/alert/alert.component';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',

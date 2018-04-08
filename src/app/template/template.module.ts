@@ -8,12 +8,14 @@ import { TablaOrdenesPendientesComponent } from './portafolio/tabla-ordenes-pend
 import { TablaMercadoCapitalesComponent } from './portafolio/tabla-mercado-capitales/tabla-mercado-capitales.component';
 import { TablaMercadoDineroComponent } from './portafolio/tabla-mercado-dinero/tabla-mercado-dinero.component';
 import { SlideToogleComponent } from './portafolio/slide-toogle/slide-toogle.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
     TemplateRoutingModule,
-    MaterialModule
+    MaterialModule,
+    SharedModule
   ],
   declarations: [
     PortafolioComponent,
