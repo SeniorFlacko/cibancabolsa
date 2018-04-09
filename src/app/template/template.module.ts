@@ -9,6 +9,7 @@ import { TablaMercadoCapitalesComponent } from './portafolio/tabla-mercado-capit
 import { TablaMercadoDineroComponent } from './portafolio/tabla-mercado-dinero/tabla-mercado-dinero.component';
 import { SlideToogleComponent } from './portafolio/slide-toogle/slide-toogle.component';
 import { SharedModule } from '../shared/shared.module';
+import { AvisoComponent } from './portafolio/aviso/aviso.component';
 
 @NgModule({
   imports: [
@@ -28,6 +29,7 @@ import { SharedModule } from '../shared/shared.module';
     TablaMercadoCapitalesComponent,
     TablaMercadoDineroComponent,
     SlideToogleComponent,
+    AvisoComponent,
 
   ]
 })
