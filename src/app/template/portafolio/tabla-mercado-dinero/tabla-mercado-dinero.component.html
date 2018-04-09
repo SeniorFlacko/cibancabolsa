@@ -1,3 +1,6 @@
+<div class="table-responsive">
+        <div class="table">
+
 <mat-table [dataSource]="dataDinero" matSort matSortActive="emisora" matSortDirection="asc" matSortDisableClear>
   <ng-container matColumnDef="emisora">
       <mat-header-cell *matHeaderCellDef mat-sort-header>Emisora</mat-header-cell>
@@ -31,3 +34,7 @@
   <mat-header-row *matHeaderRowDef="displayedDinerosColumn"></mat-header-row>
   <mat-row *matRowDef="let row; columns: displayedDinerosColumn"></mat-row>
 </mat-table>
+
+
+</div>
+</div>

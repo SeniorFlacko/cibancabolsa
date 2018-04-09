@@ -11,30 +11,32 @@
 
 .box{
     display:flex;
+    flex-flow: row wrap;
     margin: 35px;
 }
 
 .box-1{
     background-color: white;
-    box-shadow: 0 2px 4px 0 rgba(119, 134, 147, 0.16);
+    box-shadow: 1px 2px 10px #aaaaaa;
     margin-right: 25px;
     padding: 10px 5px;
     flex: 2;
 }
 
 .box-2{
-    background-color: white;
-    box-shadow: 0 2px 4px 0 rgba(119, 134, 147, 0.16);
     flex: 1;
 }
 
+
 .graficas{
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-around;
 }
 
 .grafica{
-    width: 600px;
+    /* width: 600px; */
+    width: 80%;
 }
 
 .checks{
@@ -122,4 +124,84 @@ fieldset{
   height: 12px;
   border-radius: 80%;
   background: #008541;
+}
+
+@media only screen and (max-width: 1024px) {
+    .box{
+        flex-flow: column wrap;
+    }
+    .box-1{
+
+    }
+    
+    .box-2{
+        margin: 35px 0;
+    }
+
+    .graficas{
+        flex-flow: column wrap;
+    }
+
+    fieldset{
+        display: inline;
+    }
+
+}
+
+
+
+@media only screen and (max-width: 1024px) {
+    .grafica{
+        width: 95%;
+    }
+}
+
+
+.titulo .material-icons{
+    color: #949494;
+}
+
+
+.cartera-informacion{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.cartera-informacion_titulo{
+    font-family: OpenSans-Light;
+    font-size: 18px;
+    margin: 0 3px;
+}
+
+.cartera-informacion_cantidad{
+    font-family: OpenSans-Bold;
+}
+
+.cartera-informacion_indice{
+    display: flex;
+    flex-flow: row wrap;
+}
+.cartera-informacion_icono{
+    border-radius: 50%;
+    padding: 0.5em;
+    width: 1px;
+    height: 1px;
+    align-self: flex-start;
+    margin: 0.3em 0;
+}
+
+.color-capitales{
+    background-color: rgb(52, 92, 4);
+}
+.color-reportes{
+    background-color: rgb(116, 190, 8);
+}
+.color-fondos{
+    background-color: rgb(185, 233, 134);
+}
+
+.box-shadow{
+    background-color: white;
+    box-shadow: 1px 2px 10px #aaaaaa;
 }

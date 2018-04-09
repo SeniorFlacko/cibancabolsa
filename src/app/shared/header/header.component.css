@@ -212,11 +212,6 @@ a:hover, .active,.aref:hover{
   margin-top: 10px;
 }
 
-@media only screen and (max-width: 1024px) {
-  .contenedor{
-    flex-flow: column;
-  }
-}
 
 app-ticker{
   margin-right: 25px;
@@ -239,4 +234,18 @@ app-buscador{
 
 app-fecha{
   flex: 1;
+}
+
+@media only screen and (max-width: 1024px) {
+  .contenedor{
+    flex-flow: column;
+  }
+
+  app-buscador{
+    margin-top: 35px;
+  }
+
+  app-fecha{
+    flex: 1 1 100%;
+  }
 }

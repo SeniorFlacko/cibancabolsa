@@ -8,6 +8,7 @@ import { Chart } from 'chart.js';
 })
 export class PortafolioComponent implements OnInit,AfterViewInit {
   chart = [];  
+  do_chart = [];
   constructor() {}
         
   ngOnInit() {
@@ -50,6 +51,28 @@ export class PortafolioComponent implements OnInit,AfterViewInit {
           }
 
       }
+    });
+
+
+    this.do_chart = new Chart('my-dochart', {
+        type: 'doughnut',
+        data: {
+            datasets: [{
+                data: [75, 20, 5],
+                backgroundColor:[
+                    "rgb(52, 92, 4)",
+                    "rgb(116, 190, 8)",
+                    "rgb(185, 233, 134)"
+                ]
+            }],
+
+            // These labels appear in the legend and in the tooltips when hovering different arcs
+            // labels: [
+            //     'Capitales',
+            //     'Reportes',
+            //     'Fondos'
+            // ]
+        }    
     });
   }
 }
