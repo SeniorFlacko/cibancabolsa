@@ -4,13 +4,16 @@ import { CommonModule } from '@angular/common';
 import { TemplateRoutingModule } from './template-routing.module';
 import { PortafolioComponent, MercadocapitalesComponent, MercadodineroComponent, FondoinversionComponent, OrdenesComponent, ReportefinancieroComponent } from './index.templatecmpts';
 import { MaterialModule } from '../material.module';
-import { TablaOrdenesPendientesComponent } from './portafolio/tabla-ordenes-pendientes/tabla-ordenes-pendientes.component';
 import { TablaMercadoCapitalesComponent } from './portafolio/tabla-mercado-capitales/tabla-mercado-capitales.component';
 import { TablaMercadoDineroComponent } from './portafolio/tabla-mercado-dinero/tabla-mercado-dinero.component';
 import { SlideToogleComponent } from './portafolio/slide-toogle/slide-toogle.component';
 import { SharedModule } from '../shared/shared.module';
 import { AvisoComponent } from './portafolio/aviso/aviso.component';
 import { FavoritasComponent } from './portafolio/favoritas/favoritas.component';
+import { OrdenesPendientesTabsComponent } from './portafolio/ordenes-pendientes-tabs/ordenes-pendientes-tabs.component';
+import { TablaMercadoCapitalesPendientesComponent } from './portafolio/ordenes-pendientes-tabs/tabla-mercado-capitales-pendientes/tabla-mercado-capitales-pendientes.component';
+import { TablaMercadoDineroPendientesComponent } from './portafolio/ordenes-pendientes-tabs/tabla-mercado-dinero-pendientes/tabla-mercado-dinero-pendientes.component';
+import { TablaFondosInversionPendientesComponent } from './portafolio/ordenes-pendientes-tabs/tabla-fondos-inversion-pendientes/tabla-fondos-inversion-pendientes.component';
 
 @NgModule({
   imports: [
@@ -26,12 +29,15 @@ import { FavoritasComponent } from './portafolio/favoritas/favoritas.component';
     FondoinversionComponent,
     OrdenesComponent,
     ReportefinancieroComponent,
-    TablaOrdenesPendientesComponent,
     TablaMercadoCapitalesComponent,
     TablaMercadoDineroComponent,
     SlideToogleComponent,
     AvisoComponent,
     FavoritasComponent,
+    OrdenesPendientesTabsComponent,
+    TablaMercadoCapitalesPendientesComponent,
+    TablaMercadoDineroPendientesComponent,
+    TablaFondosInversionPendientesComponent,
 
   ]
 })
