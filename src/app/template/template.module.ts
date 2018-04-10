@@ -10,6 +10,7 @@ import { TablaMercadoDineroComponent } from './portafolio/tabla-mercado-dinero/t
 import { SlideToogleComponent } from './portafolio/slide-toogle/slide-toogle.component';
 import { SharedModule } from '../shared/shared.module';
 import { AvisoComponent } from './portafolio/aviso/aviso.component';
+import { FavoritasComponent } from './portafolio/favoritas/favoritas.component';
 
 @NgModule({
   imports: [
@@ -30,6 +31,7 @@ import { AvisoComponent } from './portafolio/aviso/aviso.component';
     TablaMercadoDineroComponent,
     SlideToogleComponent,
     AvisoComponent,
+    FavoritasComponent,
 
   ]
 })

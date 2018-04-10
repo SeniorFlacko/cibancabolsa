@@ -18,3 +18,14 @@ mat-cell{
     font-size: 14px;
     color: black;
 }
+.positivo{
+    color:#00863b;
+    display: flex;
+    align-items: center;
+}
+
+.negativo{
+    color:#e5212f;
+    display: flex;
+    align-items: center;
+}

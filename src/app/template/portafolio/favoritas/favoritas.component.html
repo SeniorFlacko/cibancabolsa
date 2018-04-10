@@ -1,0 +1,33 @@
+
+<div class="table-responsive">
+    <div class="titulo">
+        <img src="/assets/img/icon_portafolio.png">
+        <span>Favoritas</span>
+    </div>
+    <div class="table">
+<mat-table [dataSource]="dataFavoritas" matSort matSortActive="emisora" matSortDirection="asc" matSortDisableClear>
+<ng-container matColumnDef="emisora">
+  <mat-header-cell *matHeaderCellDef mat-sort-header>Emisora</mat-header-cell>
+  <mat-cell *matCellDef="let favorita">{{ favorita.emisora }}</mat-cell>
+</ng-container>
+<ng-container matColumnDef="ultimo_precio">
+  <mat-header-cell *matHeaderCellDef>Último precio</mat-header-cell>
+  <mat-cell *matCellDef="let favorita">{{ favorita.ultimo_precio }}</mat-cell>
+</ng-container>
+<ng-container matColumnDef="cambio">
+  <mat-header-cell *matHeaderCellDef>Cambio</mat-header-cell>
+  <mat-cell class="positivo" *matCellDef="let favorita"><i class="material-icons">arrow_drop_up</i>{{ favorita.cambio }}</mat-cell>
+</ng-container>
+<ng-container matColumnDef="cambio_en_porcentaje">
+  <mat-header-cell *matHeaderCellDef>Cambio en %</mat-header-cell>
+  <mat-cell class="negativo" *matCellDef="let favorita"><i class="material-icons">arrow_drop_down</i>{{ favorita.cambio_porcentaje }}</mat-cell>
+</ng-container>
+
+
+<mat-header-row *matHeaderRowDef="displayedFavoritasColumn"></mat-header-row>
+<mat-row *matRowDef="let row; columns: displayedFavoritasColumn"></mat-row>
+</mat-table>
+
+
+</div>
+</div>

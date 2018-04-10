@@ -20,7 +20,7 @@
   </ng-container>
   <ng-container matColumnDef="variacion">
       <mat-header-cell *matHeaderCellDef>% Variación intra día</mat-header-cell>
-      <mat-cell *matCellDef="let capital">{{ capital.variacion }}</mat-cell>
+      <mat-cell class="positivo" *matCellDef="let capital"><i class="material-icons">arrow_drop_up</i>{{ capital.variacion }}</mat-cell>
   </ng-container>
   <ng-container matColumnDef="precio">
       <mat-header-cell *matHeaderCellDef>Precio</mat-header-cell>
