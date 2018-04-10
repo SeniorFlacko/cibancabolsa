@@ -1,11 +1,12 @@
 export interface OrdenPendiente {
-    fecha: string,
-    emisora: string,
-    sentido: string,
-    orden: string,
-    estatus: string,
-    titulos: string,
-    precio_limite: string,
-    precio_promedio: string,
-    total: string
+    clave_pizarra:string,
+    folio_orden:string,
+    sentido:string,
+    fecha:string,
+    titulos:string,
+    estatus:string,
+    orden:string,
+    precio_promedio:string,
+    precio_limite:string,
+    importe: string,
 }

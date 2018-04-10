@@ -16,7 +16,7 @@ import { fromEvent } from 'rxjs/observable/fromEvent';
 export class TablaOrdenesPendientesComponent implements OnInit, AfterViewInit {
 
   dataSource: OrdenesDataSource;
-  displayedOrdenColumns = ['fecha','emisora','sentido','orden','estatus','titulos','limite','promedio','total'];
+  displayedOrdenColumns = ['clave','folio','sentido','fecha','titulos','estatus','orden','promedio','limite','importe'];
 
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;

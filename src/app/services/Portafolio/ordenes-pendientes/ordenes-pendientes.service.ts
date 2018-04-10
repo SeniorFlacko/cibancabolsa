@@ -7,82 +7,173 @@ import { OrdenPendiente } from '../../../models/index.models';
 export class OrdenesPendientesService {
   ordenes_pendientes: OrdenPendiente[] = [
     {
-      "fecha": "01/12",
-      "emisora": "ABC",
-      "sentido": "Compra",
-      "orden": "Limitada",
-      "estatus": "Vigente",
-      "titulos": "2500",
-      "precio_limite": "$40.90",
-      "precio_promedio": "$40.81",
-      "total": "$40.81"
+      clave_pizarra:"SARE B",
+      folio_orden:"0001",
+      sentido:"Compra",
+      fecha:"06/12",
+      titulos:"2500",
+      estatus:"Vigente",
+      orden:"Limitada",
+      precio_promedio:"$40.90",
+      precio_limite:"$40.81",
+      importe: "$40.81"
     },
     {
-      "fecha": "02/12",
-      "emisora": "ABC",
-      "sentido": "Compra",
-      "orden": "Limitada",
-      "estatus": "Vigente",
-      "titulos": "2500",
-      "precio_limite": "$40.90",
-      "precio_promedio": "$40.81",
-      "total": "$40.81"
+      clave_pizarra:"CEMEX",
+      folio_orden:"0001",
+      sentido:"Compra",
+      fecha:"06/12",
+      titulos:"2500",
+      estatus:"Vigente",
+      orden:"Limitada",
+      precio_promedio:"$40.90",
+      precio_limite:"$40.81",
+      importe: "$40.81"
     },
     {
-      "fecha": "03/12",
-      "emisora": "ABC",
-      "sentido": "Compra",
-      "orden": "Limitada",
-      "estatus": "Vigente",
-      "titulos": "2500",
-      "precio_limite": "$40.90",
-      "precio_promedio": "$40.81",
-      "total": "$40.81"
+      clave_pizarra:"SARE B",
+      folio_orden:"0001",
+      sentido:"Compra",
+      fecha:"06/12",
+      titulos:"2500",
+      estatus:"Vigente",
+      orden:"Limitada",
+      precio_promedio:"$40.90",
+      precio_limite:"$40.81",
+      importe: "$40.81"
     },
     {
-      "fecha": "04/12",
-      "emisora": "ABC",
-      "sentido": "Compra",
-      "orden": "Limitada",
-      "estatus": "Vigente",
-      "titulos": "2500",
-      "precio_limite": "$40.90",
-      "precio_promedio": "$40.81",
-      "total": "$40.81"
+      clave_pizarra:"CEMEX",
+      folio_orden:"0001",
+      sentido:"Compra",
+      fecha:"06/12",
+      titulos:"2500",
+      estatus:"Vigente",
+      orden:"Limitada",
+      precio_promedio:"$40.90",
+      precio_limite:"$40.81",
+      importe: "$40.81"
     },
     {
-      "fecha": "05/12",
-      "emisora": "ABC",
-      "sentido": "Compra",
-      "orden": "Limitada",
-      "estatus": "Vigente",
-      "titulos": "2500",
-      "precio_limite": "$40.90",
-      "precio_promedio": "$40.81",
-      "total": "$40.81"
+      clave_pizarra:"SARE B",
+      folio_orden:"0001",
+      sentido:"Compra",
+      fecha:"06/12",
+      titulos:"2500",
+      estatus:"Vigente",
+      orden:"Limitada",
+      precio_promedio:"$40.90",
+      precio_limite:"$40.81",
+      importe: "$40.81"
     },
     {
-      "fecha": "06/12",
-      "emisora": "SARE B",
-      "sentido": "Compra",
-      "orden": "Limitada",
-      "estatus": "Vigente",
-      "titulos": "2500",
-      "precio_limite": "$40.90",
-      "precio_promedio": "$40.81",
-      "total": "$40.81"
+      clave_pizarra:"CEMEX",
+      folio_orden:"0001",
+      sentido:"Compra",
+      fecha:"06/12",
+      titulos:"2500",
+      estatus:"Vigente",
+      orden:"Limitada",
+      precio_promedio:"$40.90",
+      precio_limite:"$40.81",
+      importe: "$40.81"
     },
     {
-      "fecha": "07/12",
-      "emisora": "ABC",
-      "sentido": "Compra",
-      "orden": "Limitada",
-      "estatus": "Vigente",
-      "titulos": "2500",
-      "precio_limite": "$40.90",
-      "precio_promedio": "$40.81",
-      "total": "$40.81"
-    }
+      clave_pizarra:"SARE B",
+      folio_orden:"0001",
+      sentido:"Compra",
+      fecha:"06/12",
+      titulos:"2500",
+      estatus:"Vigente",
+      orden:"Limitada",
+      precio_promedio:"$40.90",
+      precio_limite:"$40.81",
+      importe: "$40.81"
+    },
+    {
+      clave_pizarra:"CEMEX",
+      folio_orden:"0001",
+      sentido:"Compra",
+      fecha:"06/12",
+      titulos:"2500",
+      estatus:"Vigente",
+      orden:"Limitada",
+      precio_promedio:"$40.90",
+      precio_limite:"$40.81",
+      importe: "$40.81"
+    },
+    {
+      clave_pizarra:"SARE B",
+      folio_orden:"0001",
+      sentido:"Compra",
+      fecha:"06/12",
+      titulos:"2500",
+      estatus:"Vigente",
+      orden:"Limitada",
+      precio_promedio:"$40.90",
+      precio_limite:"$40.81",
+      importe: "$40.81"
+    },
+    {
+      clave_pizarra:"CEMEX",
+      folio_orden:"0001",
+      sentido:"Compra",
+      fecha:"06/12",
+      titulos:"2500",
+      estatus:"Vigente",
+      orden:"Limitada",
+      precio_promedio:"$40.90",
+      precio_limite:"$40.81",
+      importe: "$40.81"
+    },
+    {
+      clave_pizarra:"SARE B",
+      folio_orden:"0001",
+      sentido:"Compra",
+      fecha:"06/12",
+      titulos:"2500",
+      estatus:"Vigente",
+      orden:"Limitada",
+      precio_promedio:"$40.90",
+      precio_limite:"$40.81",
+      importe: "$40.81"
+    },
+    {
+      clave_pizarra:"CEMEX",
+      folio_orden:"0001",
+      sentido:"Compra",
+      fecha:"06/12",
+      titulos:"2500",
+      estatus:"Vigente",
+      orden:"Limitada",
+      precio_promedio:"$40.90",
+      precio_limite:"$40.81",
+      importe: "$40.81"
+    },
+    {
+      clave_pizarra:"SARE B",
+      folio_orden:"0001",
+      sentido:"Compra",
+      fecha:"06/12",
+      titulos:"2500",
+      estatus:"Vigente",
+      orden:"Limitada",
+      precio_promedio:"$40.90",
+      precio_limite:"$40.81",
+      importe: "$40.81"
+    },
+    {
+      clave_pizarra:"CEMEX",
+      folio_orden:"0001",
+      sentido:"Compra",
+      fecha:"06/12",
+      titulos:"2500",
+      estatus:"Vigente",
+      orden:"Limitada",
+      precio_promedio:"$40.90",
+      precio_limite:"$40.81",
+      importe: "$40.81"
+    },
   ];
   constructor() { }
   
@@ -121,7 +212,7 @@ export class OrdenesPendientesService {
     ordenes = this.ordenes_pendientes;
 
     if (filter) {
-       ordenes = ordenes.filter(orden => orden.emisora.trim().toLowerCase().search(filter.toLowerCase()) >= 0);
+       ordenes = ordenes.filter(orden => orden.estatus.trim().toLowerCase().search(filter.toLowerCase()) >= 0);
     }
 
     if (sortOrder == "desc") {
