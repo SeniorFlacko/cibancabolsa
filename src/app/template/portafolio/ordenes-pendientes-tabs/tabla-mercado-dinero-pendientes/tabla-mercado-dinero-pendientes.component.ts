@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MercadoDineroPendieteService } from '../../../../services/index.services';
+import { Observable } from 'rxjs/Observable';
+import { MercadoDineroPendiente } from '../../../../models/index.models';
 
 @Component({
   selector: 'tabla-mercado-dinero-pendientes',
@@ -7,27 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TablaMercadoDineroPendientesComponent implements OnInit {
   
-  dataDineroPendiente = [
-    {
-      "fecha": "string",
-      "clave_pizarra": "string",
-      "folio_operacion": "string",
-      "sentido": "string",
-      "tasa":"string",
-      "iva":"string",
-      "importe":"string",
-      "estatus":"string",
-      "plazo":"string",
-    }
-  ];
-  displayedDinerosColumn=['fecha','clave_pizarra',
+  dataDineroPendiente: Observable<MercadoDineroPendiente[]>;
+  displayedDinerosColumn = ['fecha','clave_pizarra',
   'monto','nominal','tasa',
   'iva','importe','estatus','plazo'];
 
-  constructor() { }
+  constructor(private mercadoDin:MercadoDineroPendieteService) { }
 
   ngOnInit() {
     this.getOrdenesPendientes();
+    this.dataDineroPendiente = this.mercadoDin.getDineroPendiente();
   }
 
   getOrdenesPendientes(){
