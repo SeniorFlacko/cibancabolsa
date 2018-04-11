@@ -74,3 +74,21 @@ select{
 .monto{
     margin-left: 45px;
 }
+
+.botonenviar{
+    justify-content: center;
+}
+
+.enviar{
+    border-radius: 20px;
+    width: 40%;
+}
+
+.tituloModal{
+    font-size: 34px;
+    font-weight: bold;
+}
+
+.bold{
+    font-weight: bold;
+}
