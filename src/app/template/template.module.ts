@@ -10,6 +10,8 @@ import { SlideToogleComponent } from './portafolio/slide-toogle/slide-toogle.com
 import { SharedModule } from '../shared/shared.module';
 import { AvisoComponent } from './portafolio/aviso/aviso.component';
 import { FavoritasComponent } from './portafolio/favoritas/favoritas.component';
+import { TablaFondosInversionComponent } from './portafolio/tabla-fondos-inversion/tabla-fondos-inversion.component';
+import { PortafolioUsdComponent } from './portafolio/portafolio-usd/portafolio-usd.component';
 import { OrdenesPendientesTabsComponent } from './portafolio/ordenes-pendientes-tabs/ordenes-pendientes-tabs.component';
 import { TablaMercadoCapitalesPendientesComponent } from './portafolio/ordenes-pendientes-tabs/tabla-mercado-capitales-pendientes/tabla-mercado-capitales-pendientes.component';
 import { TablaMercadoDineroPendientesComponent } from './portafolio/ordenes-pendientes-tabs/tabla-mercado-dinero-pendientes/tabla-mercado-dinero-pendientes.component';
@@ -34,6 +36,8 @@ import { TablaFondosInversionPendientesComponent } from './portafolio/ordenes-pe
     SlideToogleComponent,
     AvisoComponent,
     FavoritasComponent,
+    TablaFondosInversionComponent,
+    PortafolioUsdComponent,
     OrdenesPendientesTabsComponent,
     TablaMercadoCapitalesPendientesComponent,
     TablaMercadoDineroPendientesComponent,
