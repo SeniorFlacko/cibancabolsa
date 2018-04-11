@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import {MatButtonModule, MatCheckboxModule, MatInputModule, MatSortModule, MatProgressSpinnerModule} from '@angular/material';
+import {MatButtonModule, MatCheckboxModule, MatInputModule, MatSortModule, MatProgressSpinnerModule, MatTabsModule} from '@angular/material';
 import {MatTableModule} from '@angular/material/table';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatPaginatorModule} from '@angular/material/paginator'; 
@@ -11,8 +11,9 @@ import {MatSelectModule} from '@angular/material/select';
     MatButtonModule, 
     MatCheckboxModule,
     MatTableModule,
-    MatSelectModule
+    MatSelectModule,
 
+    MatTabsModule
   ],
   exports:[
     MatButtonModule, 
@@ -23,7 +24,8 @@ import {MatSelectModule} from '@angular/material/select';
     MatInputModule,
     MatSortModule,
     MatProgressSpinnerModule,
-    MatSelectModule
+    MatSelectModule,
+    MatTabsModule
   ],
   declarations: []
 })

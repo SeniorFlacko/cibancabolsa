@@ -25,7 +25,7 @@ export class OrdenesDataSource implements DataSource<OrdenPendiente> {
         this.loadingSubject.complete();
     }
 
-    loadOrdenes(filter = '',sortDirection = 'asc', pageIndex = 0, pageSize = 3) {
+    loadOrdenes(filter = '',sortDirection = 'asc', pageIndex = 0, pageSize = 10) {
         
         this.loadingSubject.next(true);
 

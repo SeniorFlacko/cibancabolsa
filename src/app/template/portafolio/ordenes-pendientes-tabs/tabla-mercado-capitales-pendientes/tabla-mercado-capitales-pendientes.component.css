@@ -22,3 +22,16 @@ mat-cell{
 .buscador{
     margin: 0px 25px;
 }
+
+
+.paginador{
+    font-family: OpenSans-Regular;
+    font-size: 14px;
+    margin: 0 35px;
+}
+.pageSize{
+    background-color: #f5f5f7;
+    padding: 3px;
+    cursor: pointer;
+    color: #068140;
+}

@@ -1,0 +1,45 @@
+<div class="table-responsive">
+    <div class="table">
+<mat-table [dataSource]="dataDineroPendiente" matSort matSortActive="emisora" matSortDirection="asc" matSortDisableClear>
+<ng-container matColumnDef="fecha">
+  <mat-header-cell *matHeaderCellDef mat-sort-header>Fecha</mat-header-cell>
+  <mat-cell *matCellDef="let dinero">{{ dinero.fecha }}</mat-cell>
+</ng-container>
+<ng-container matColumnDef="clave_pizarra">
+  <mat-header-cell *matHeaderCellDef>Clave Pizarra</mat-header-cell>
+  <mat-cell *matCellDef="let dinero">{{ dinero.clave_pizarra }}</mat-cell>
+</ng-container>
+<ng-container matColumnDef="monto">
+  <mat-header-cell *matHeaderCellDef>Folio Operación</mat-header-cell>
+  <mat-cell *matCellDef="let dinero">{{ dinero.folio_operacion }}</mat-cell>
+</ng-container>
+<ng-container matColumnDef="nominal">
+  <mat-header-cell *matHeaderCellDef>Sentido</mat-header-cell>
+  <mat-cell *matCellDef="let dinero">{{ dinero.sentido }}</mat-cell>
+</ng-container>
+<ng-container matColumnDef="tasa">
+  <mat-header-cell *matHeaderCellDef>Tasa</mat-header-cell>
+  <mat-cell *matCellDef="let dinero">{{ dinero.tasa }}</mat-cell>
+</ng-container>
+<ng-container matColumnDef="iva">
+  <mat-header-cell *matHeaderCellDef>IVA</mat-header-cell>
+  <mat-cell *matCellDef="let dinero">{{ dinero.iva }}</mat-cell>
+</ng-container>
+<ng-container matColumnDef="importe">
+  <mat-header-cell *matHeaderCellDef>Importe</mat-header-cell>
+  <mat-cell *matCellDef="let dinero">{{ dinero.importe }}</mat-cell>
+</ng-container>
+<ng-container matColumnDef="estatus">
+  <mat-header-cell *matHeaderCellDef>Estatus</mat-header-cell>
+  <mat-cell *matCellDef="let dinero">{{ dinero.estatus }}</mat-cell>
+</ng-container>
+<ng-container matColumnDef="plazo">
+  <mat-header-cell *matHeaderCellDef>Plazo</mat-header-cell>
+  <mat-cell *matCellDef="let dinero">{{ dinero.plazo }}</mat-cell>
+</ng-container>
+
+<mat-header-row *matHeaderRowDef="displayedDinerosColumn"></mat-header-row>
+<mat-row *matRowDef="let row; columns: displayedDinerosColumn"></mat-row>
+</mat-table>
+</div>
+</div>
