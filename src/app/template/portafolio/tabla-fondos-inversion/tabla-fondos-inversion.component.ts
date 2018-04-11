@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Fondos } from '../../../models/fondos';
+import { FondoInversionService } from '../../../services/index.services';
 
 @Component({
   selector: 'app-tabla-fondos-inversion',
@@ -8,26 +9,11 @@ import { Fondos } from '../../../models/fondos';
 })
 export class TablaFondosInversionComponent implements OnInit {
   displayedFondosColumn=['fondo','serie','titulos','precio_actual','valuacion']
-  dataFondos:Fondos[] =[
-  {
-  fondo:"CIGUB",
-  serie:"1234",
-  titulos:"500",
-  precio_actual:"$2.38",
-  valuacion:"$342.564"
-  },
-  {
-    fondo:"CIBOLSA",
-    serie:"5678",
-    titulos:"100",
-    precio_actual:"$12.38",
-    valuacion:"$1342.564"
-    }
-]
-  constructor() { }
-
+  dataFondos:Fondos[];
+  constructor(private fondos_service:FondoInversionService ) { }
+  
   ngOnInit() {
-   
+    this.dataFondos=this.fondos_service.getDataFondos();
   }
 
 }

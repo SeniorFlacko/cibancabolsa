@@ -1,3 +1,4 @@
+export { MarcadorServicioService } from './Portafolio/marcador/marcador-servicio.service';
 export { MercadoCapitalesDolaresService } from './Portafolio/mercado-capitales-usd/mercado-capitales-dolares.service';
 export { OrdenesPendientesService } from './ordenes-pendientes/ordenes-pendientes.service';
 export { MercadoDineroPendieteService } from './Portafolio/OrdenesPendientes/mercado-dinero-pendiete.service';
@@ -10,3 +11,4 @@ export { AuthService } from './Auth/auth.service';
 export { SessionService } from './Session/session.service';
 export { LoaderService } from './Loader/loader.service';
 export { AuthGuard } from './Guards/auth.guard';
+

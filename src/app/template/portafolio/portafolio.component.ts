@@ -1,5 +1,8 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Chart } from 'chart.js';
+import { Marcador } from '../../models/index.models';
+import { MarcadorServicioService } from '../../services/index.services';
+
 
 @Component({
   selector: 'app-portafolio',
@@ -9,11 +12,15 @@ import { Chart } from 'chart.js';
 export class PortafolioComponent implements OnInit,AfterViewInit {
   chart = [];  
   do_chart = [];
-  constructor() {}
+  marcador:Marcador;
+  constructor(private marcador_service:MarcadorServicioService) {
+      
+  }
         
   ngOnInit() {
+    this.marcador=this.marcador_service.getMarcador();
     this.renderGraphic();
-  }
+}
 
   ngAfterViewInit(){}
 
