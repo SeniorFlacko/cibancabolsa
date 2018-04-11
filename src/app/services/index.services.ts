@@ -1,3 +1,4 @@
+export { MercadoCapitalesDolaresService } from './Portafolio/mercado-capitales-usd/mercado-capitales-dolares.service';
 export { OrdenesPendientesService } from './ordenes-pendientes/ordenes-pendientes.service';
 export { MercadoDineroPendieteService } from './Portafolio/OrdenesPendientes/mercado-dinero-pendiete.service';
 export { TickerService } from './HeaderServices/ticker.service';

@@ -1,11 +1,7 @@
 .titulo{
-    padding-left: 10px;
     font-family: OpenSans-Bold;
     font-size: 30px;
-}
-.titulo img{
-    width: 0.7em;
-    margin: 5px;
+    margin-left: 35px;
 }
 
 .subtitulo{
@@ -15,16 +11,19 @@
     font-size: 14px;
 }
 
+hr{
+    margin: 1rem 35px;
+}
+
 .renglon-informacion{
     display:flex;
     flex-flow:row wrap; 
     justify-content:space-between;
-    padding-left: 10px;
-    padding-right: 10px;
 }
+
 .mercado{
     font-family: OpenSans-Bold;
-    font-size: 24px;
+    font-size: 20px;
 }
 .equivalente{
     font-family: OpenSans-SemiBold;
@@ -37,9 +36,18 @@
 }
 
 .footer{
-    padding-left: 10px;
-    display: block;
-    align-items: center;
     font-family: OpenSans-SemiBold;
     font-size: 14px;
+}
+
+.informacion{
+    margin: 10px 35px;
+}
+
+.tabla-usd{
+    margin: 10px 35px;
+}
+
+.footer{
+    margin: 20px 35px;
 }

@@ -16,6 +16,7 @@ import { OrdenesPendientesTabsComponent } from './portafolio/ordenes-pendientes-
 import { TablaMercadoCapitalesPendientesComponent } from './portafolio/ordenes-pendientes-tabs/tabla-mercado-capitales-pendientes/tabla-mercado-capitales-pendientes.component';
 import { TablaMercadoDineroPendientesComponent } from './portafolio/ordenes-pendientes-tabs/tabla-mercado-dinero-pendientes/tabla-mercado-dinero-pendientes.component';
 import { TablaFondosInversionPendientesComponent } from './portafolio/ordenes-pendientes-tabs/tabla-fondos-inversion-pendientes/tabla-fondos-inversion-pendientes.component';
+import { TablaMercadoCapitalesUsdComponent } from './portafolio/portafolio-usd/tabla-mercado-capitales-usd/tabla-mercado-capitales-usd.component';
 
 @NgModule({
   imports: [
@@ -42,6 +43,7 @@ import { TablaFondosInversionPendientesComponent } from './portafolio/ordenes-pe
     TablaMercadoCapitalesPendientesComponent,
     TablaMercadoDineroPendientesComponent,
     TablaFondosInversionPendientesComponent,
+    TablaMercadoCapitalesUsdComponent,
 
   ]
 })
