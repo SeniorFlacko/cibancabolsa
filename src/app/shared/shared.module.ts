@@ -7,6 +7,7 @@ import { AlertComponent } from './helpers/alert/alert.component';
 import { MaterialModule } from '../material.module';
 import { BuscadorComponent } from './header/buscador/buscador.component';
 import { FechaComponent } from './header/fecha/fecha.component';
+import { ComprarvenderComponent } from './header/comprarvender/comprarvender.component';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import { FechaComponent } from './header/fecha/fecha.component';
     TickerComponent,
     AlertComponent,
     BuscadorComponent,
-    FechaComponent
+    FechaComponent,
+    ComprarvenderComponent
   ],
   exports:[
     HeaderComponent,

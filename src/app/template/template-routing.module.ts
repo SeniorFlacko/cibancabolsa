@@ -8,7 +8,8 @@ const routes: Routes = [
   { path: 'dinero', component: MercadodineroComponent }, 
   { path: 'inversion', component: FondoinversionComponent }, 
   { path: 'ordenes', component: OrdenesComponent }, 
-  { path: 'reportes', component: ReportefinancieroComponent }, 
+  { path: 'reportes', component: ReportefinancieroComponent },
+  { path: 'reportes', component: ReportefinancieroComponent },
   { path: '', redirectTo: 'portafolio', pathMatch: 'full' }
 ];
 

@@ -1,0 +1,116 @@
+<div id="ComprarVender" data-toggle="modal" data-target="#exampleModal">
+  <i class="material-icons moneyfixed">monetization_on</i>
+  <p class="textoCV">Compra Venta</p>
+  <i class="material-icons arrows">first_page</i>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Comprar o Vender</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- Contenido Modal -->
+        <div class="container-fluid">
+          <p>Selecciona</p>
+          <div class="row centrarBotones">   
+              <button (click)="seleccionBotones('capitales')" type="button" class="btn btn-outline-success botonesModal3">Mercado <br>de Capitales</button>
+              <button (click)="seleccionBotones('dinero')" type="button" class="btn btn-outline-success botonesModal3">Mercado <br>de Dinero</button>
+              <button (click)="seleccionBotones('inversion')" type="button" class="btn btn-outline-success botonesModal3">Fondos <br>de Inversión</button>
+          </div>
+          <div class="row centrarBotones botones2">
+              <button type="button" class="btn btn-warning botonesModal2">COMPRA</button>
+              <button type="button" class="btn btn-outline-warning botonesModal2">VENTA</button>
+          </div>
+          <!-- FORMULARIO 1 -->
+          <div class="formulario1" *ngIf="capitales==true">
+          <div class="row">
+              <select class="seleccion inputsSeleccion" id="inputGroupSelect01">
+                  <option selected>Emisora</option>
+                  <option *ngFor="let food of foods" [value]="food.value">
+                    {{ food.viewValue }}
+                  </option>
+                </select>
+          </div>
+          <div class="row">
+              <select class="seleccion inputsSeleccion" id="inputGroupSelect01">
+                  <option class="label" selected>Emisora</option>
+                  <option *ngFor="let food of foods" [value]="food.value">
+                    {{ food.viewValue }}
+                  </option>
+                </select>
+          </div>
+          <div class="row">
+              <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Títulos" >
+                </mat-form-field>
+              <p class="monto">Monto:</p>
+          </div>
+          <div class="row">
+              <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Precio Compra" >
+                </mat-form-field>
+          </div>
+          </div>
+
+          <!-- FORMULARIO 2 -->
+
+        <div class="formulario2" *ngIf="dinero==true">
+            <div class="row">
+                <select class="seleccion inputsSeleccion" id="inputGroupSelect01">
+                    <option selected>REPORTOS</option>
+                    <option *ngFor="let food of foods" [value]="food.value">
+                      {{ food.viewValue }}
+                    </option>
+                  </select>
+            </div>
+            <div class="row">
+              <p>TASA: 3.30%</p>
+            </div>
+            <div class="row">
+                <select class="mitad" id="inputGroupSelect01">
+                    <option selected>PLAZO</option>
+                    <option *ngFor="let food of foods" [value]="food.value">
+                      {{ food.viewValue }}
+                    </option>
+                  </select>
+                  <p>MONTO: $10,000.00</p>
+            </div>
+        </div>
+
+        <!-- FORMULARIO 3 -->
+
+        <div class="formulario3" *ngIf="inversion==true">
+            <div class="row">
+                <select class="seleccion inputsSeleccion" id="inputGroupSelect01">
+                    <option selected>FONDO</option>
+                    <option *ngFor="let food of foods" [value]="food.value">
+                      {{ food.viewValue }}
+                    </option>
+                  </select>
+            </div>
+            <div class="row">
+                <p>PRECIO: 3.30097687</p>
+            </div>
+            <div class="row">
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="CANTIDAD A CONVERTIR" >
+                  </mat-form-field>
+            </div>
+        </div>
+
+
+        </div>
+        <!-- Fin Contenido Modal -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Enviar</button>
+      </div>
+    </div>
+  </div>
+</div>
