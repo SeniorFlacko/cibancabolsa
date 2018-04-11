@@ -1,3 +1,4 @@
+export { OrdenesPendientesService } from './ordenes-pendientes/ordenes-pendientes.service';
 export { MercadoDineroPendieteService } from './Portafolio/OrdenesPendientes/mercado-dinero-pendiete.service';
 export { TickerService } from './HeaderServices/ticker.service';
 export { FondoInversionService } from './Portafolio/fondo-inversion/fondo-inversion.service';
