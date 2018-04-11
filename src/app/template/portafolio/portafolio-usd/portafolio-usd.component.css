@@ -1,0 +1,45 @@
+.titulo{
+    padding-left: 10px;
+    font-family: OpenSans-Bold;
+    font-size: 30px;
+}
+.titulo img{
+    width: 0.7em;
+    margin: 5px;
+}
+
+.subtitulo{
+    display: block;
+    align-items: center;
+    font-family: OpenSans-SemiBold;
+    font-size: 14px;
+}
+
+.renglon-informacion{
+    display:flex;
+    flex-flow:row wrap; 
+    justify-content:space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.mercado{
+    font-family: OpenSans-Bold;
+    font-size: 24px;
+}
+.equivalente{
+    font-family: OpenSans-SemiBold;
+    font-size: 14px;
+}
+
+.numero{
+    font-family: OpenSans-Bold;
+    font-size: 18px;
+}
+
+.footer{
+    padding-left: 10px;
+    display: block;
+    align-items: center;
+    font-family: OpenSans-SemiBold;
+    font-size: 14px;
+}

@@ -1,0 +1,32 @@
+
+<div class="table-responsive">
+<div class="table">
+<mat-table [dataSource]="dataFondos" matSort matSortActive="fondo" matSortDirection="asc" matSortDisableClear>
+<ng-container matColumnDef="fondo">
+  <mat-header-cell *matHeaderCellDef mat-sort-header>Fondo</mat-header-cell>
+  <mat-cell *matCellDef="let fondos">{{ fondos.fondo }}</mat-cell>
+</ng-container>
+<ng-container matColumnDef="serie">
+  <mat-header-cell *matHeaderCellDef>Serie</mat-header-cell>
+  <mat-cell *matCellDef="let fondos">{{ fondos.serie }}</mat-cell>
+</ng-container>
+<ng-container matColumnDef="titulos">
+  <mat-header-cell *matHeaderCellDef>Títulos</mat-header-cell>
+  <mat-cell *matCellDef="let fondos">{{ fondos.titulos }}</mat-cell>
+</ng-container>
+<ng-container matColumnDef="precio_actual">
+  <mat-header-cell *matHeaderCellDef>Precio actual </mat-header-cell>
+  <mat-cell *matCellDef="let fondos">{{ fondos.precio_actual }}</mat-cell>
+</ng-container>
+<ng-container matColumnDef="valuacion">
+  <mat-header-cell *matHeaderCellDef>Valuación</mat-header-cell>
+<mat-cell  *matCellDef="let fondos">{{ fondos.valuacion }}</mat-cell>
+</ng-container>
+
+<mat-header-row *matHeaderRowDef="displayedFondosColumn"></mat-header-row>
+<mat-row *matRowDef="let row; columns: displayedFondosColumn"></mat-row>
+</mat-table>
+
+
+</div>
+</div>

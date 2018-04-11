@@ -11,6 +11,8 @@ import { SlideToogleComponent } from './portafolio/slide-toogle/slide-toogle.com
 import { SharedModule } from '../shared/shared.module';
 import { AvisoComponent } from './portafolio/aviso/aviso.component';
 import { FavoritasComponent } from './portafolio/favoritas/favoritas.component';
+import { TablaFondosInversionComponent } from './portafolio/tabla-fondos-inversion/tabla-fondos-inversion.component';
+import { PortafolioUsdComponent } from './portafolio/portafolio-usd/portafolio-usd.component';
 
 @NgModule({
   imports: [
@@ -32,6 +34,8 @@ import { FavoritasComponent } from './portafolio/favoritas/favoritas.component';
     SlideToogleComponent,
     AvisoComponent,
     FavoritasComponent,
+    TablaFondosInversionComponent,
+    PortafolioUsdComponent,
 
   ]
 })
