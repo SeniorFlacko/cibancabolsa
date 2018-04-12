@@ -67,3 +67,7 @@ body{
     background-color:#f9f9f9;
     font-family: OpenSans-Regular;
 }
+
+.mat-paginator-container{
+    /* display: none !important; */
+}

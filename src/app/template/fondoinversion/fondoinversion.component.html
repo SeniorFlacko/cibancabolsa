@@ -1,3 +1,46 @@
-<div class="container">
-    <h3>Aqui va el fondo de inversión...</h3>
-</div>
+<div class="table-responsive">
+        <div class="table">
+        <mat-table [dataSource]="dataInversion" matSort matSortActive="fondo" matSortDirection="asc" matSortDisableClear>
+        <ng-container matColumnDef="fondo">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Fondo</mat-header-cell>
+                <mat-cell *matCellDef="let fondos">{{ fondos.fondo }}</mat-cell>
+              </ng-container>
+              <ng-container matColumnDef="serie">
+                <mat-header-cell *matHeaderCellDef>Serie</mat-header-cell>
+                <mat-cell *matCellDef="let fondos">{{ fondos.serie }}</mat-cell>
+              </ng-container>
+              <ng-container matColumnDef="operar">
+                <mat-header-cell *matHeaderCellDef>Operar</mat-header-cell>
+                <mat-cell *matCellDef="let fondos">{{ fondos.operar }}</mat-cell>
+              </ng-container>
+              <ng-container matColumnDef="clasificacion">
+                <mat-header-cell *matHeaderCellDef>Clasificación</mat-header-cell>
+                <mat-cell *matCellDef="let fondos">{{ fondos.clasificacion }}</mat-cell>
+              </ng-container>
+              <ng-container matColumnDef="liquidacion">
+                <mat-header-cell *matHeaderCellDef>Liquidación</mat-header-cell>
+              <mat-cell  *matCellDef="let fondos">{{ fondos.liquidacion }}</mat-cell>
+              </ng-container>
+              <ng-container matColumnDef="horizonte">
+                <mat-header-cell *matHeaderCellDef>Horizonte</mat-header-cell>
+                <mat-cell  *matCellDef="let fondos">{{ fondos.horizonte }}</mat-cell>
+              </ng-container>
+              <ng-container matColumnDef="maxima">
+                <mat-header-cell *matHeaderCellDef>Var. Máxima</mat-header-cell>
+                <mat-cell  *matCellDef="let fondos">{{ fondos.maxima }}</mat-cell>
+              </ng-container>
+              <ng-container matColumnDef="calificacion">
+                <mat-header-cell *matHeaderCellDef>Calificación</mat-header-cell>
+                <mat-cell  *matCellDef="let fondos">{{ fondos.calificacion }}</mat-cell>
+              </ng-container>
+              <ng-container matColumnDef="horario">
+                <mat-header-cell *matHeaderCellDef>Horario de Operación</mat-header-cell>
+                <mat-cell  *matCellDef="let fondos">{{ fondos.horario }}</mat-cell>
+              </ng-container>
+        <mat-header-row *matHeaderRowDef="displayedFondosColumn"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedFondosColumn"></mat-row>
+        </mat-table>
+        
+        
+        </div>
+        </div>

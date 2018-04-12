@@ -18,13 +18,13 @@ export class TickerService {
     let headers = new Headers({'Content-Type':'application/json'});
 
     // Obtener respuesta cada segundo
-    // return Observable.timer(0, 1000)
-    //   .flatMapTo(this.http.get(URL))
-    //   .map(res => res.json());
+    return Observable.timer(0, 1000)
+      .flatMapTo(this.http.get(URL))
+      .map(res => res.json());
     
-    return this.http.get(URL).map(res=>{
-      console.log(res.json());
-      return res.json();
-    });
+    // return this.http.get(URL).map(res=>{
+    //   console.log(res.json());
+    //   return res.json();
+    // });
   }
 }
