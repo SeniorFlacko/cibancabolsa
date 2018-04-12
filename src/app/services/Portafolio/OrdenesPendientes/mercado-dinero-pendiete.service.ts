@@ -7,16 +7,27 @@ import { of } from 'rxjs/observable/of';
 export class MercadoDineroPendieteService {
   private dataDineroPendiente = [
     {
-      "fecha": "string",
-      "clave_pizarra": "string",
-      "folio_operacion": "string",
-      "sentido": "string",
-      "tasa":"string",
-      "iva":"string",
-      "importe":"string",
-      "estatus":"string",
-      "plazo":"string",
-    }
+      fecha: "01/18",
+      clave_pizarra: "Privado",
+      folio_operacion: "00013",
+      sentido: "venta",
+      tasa:"15%",
+      iva:"$1995.34",
+      importe:"$11,23.23",
+      estatus:"vigente",
+      plazo:"20 días",
+    },
+    {
+      fecha: "02/18",
+      clave_pizarra: "Gubernamental",
+      folio_operacion: "00018",
+      sentido: "compra",
+      tasa:"190%",
+      iva:"$19,959.34",
+      importe:"$115,23.23",
+      estatus:"vigente",
+      plazo:"320 días",
+    },
   ];
   constructor() { }
 
