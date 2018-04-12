@@ -17,6 +17,10 @@ export class TablaMercadoCapitalesPendientesComponent implements OnInit {
   dataSource: OrdenesDataSource;
   displayedOrdenColumns = ['clave','folio','sentido','fecha','titulos','estatus','orden','promedio','limite','importe'];
 
+  pageSizeOptions = [3, 5, 10];
+  pageSize = 10;
+  length = 100;
+
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
   // @ViewChild('input') input: ElementRef;

@@ -35,3 +35,30 @@ mat-cell{
     cursor: pointer;
     color: #068140;
 }
+
+.my_paginator{
+    display: flex;
+}
+
+.circulo_verde{
+    background-color: #028340;
+    color: white;
+    margin: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.siguiente{
+    align-self: center;
+    color: #028340;
+    cursor: pointer;
+}
+
+.puntos{
+    align-self: flex-end;
+}
