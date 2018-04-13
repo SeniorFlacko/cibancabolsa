@@ -1,3 +1,5 @@
+export { MercadocapitalesservicioService } from './mercadocapitalesservicio.service';
+
 export { MarcadorServicioService } from './marcador-servicio.service';
 export { MercadoCapitalesDolaresService } from './mercado-capitales-dolares.service';
 export { OrdenesPendientesService } from './ordenes-pendientes.service';

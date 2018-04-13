@@ -1,7 +1,7 @@
 import { Component, OnInit,ViewChild } from '@angular/core';
 import { DataSource } from '@angular/cdk/table';
 import { MatSort, MatTableDataSource, MatPaginator } from '@angular/material';
-import {MercadocapitalesservicioService} from '../../services/mercado-capitales/mercadocapitalesservicio.service';
+import { MercadocapitalesservicioService } from '../../services/index.services';
 
 @Component({
   selector: 'app-mercadocapitales',
