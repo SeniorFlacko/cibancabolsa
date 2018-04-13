@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
-import { Capital } from '../../../models/capital';
-import { of } from 'rxjs/observable/of';
+import { CapitalDolar } from '../models/index.models';
 import { Observable } from 'rxjs/Observable';
+import { of } from 'rxjs/observable/of';
 
 @Injectable()
-export class MercadoCapitalesService {
-  capitales: Capital[] = [
+export class MercadoCapitalesDolaresService {
+
+  capitales_dolares: CapitalDolar[] = [
     {
       "emisora": "CEMEX",
       "titulos": "1000",
@@ -16,10 +17,10 @@ export class MercadoCapitalesService {
       "valuacion": "$116,000.00",
     },
   ];
+
   constructor() { }
-
-  getCapitales(): Observable<Capital[]> {
-    return of(this.capitales);
+  
+  getCapitalesUSD(): Observable<CapitalDolar[]> {
+    return of(this.capitales_dolares);
   }
-
 }

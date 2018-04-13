@@ -1,33 +1,42 @@
 <div id="ComprarVender" data-toggle="modal" data-target="#exampleModal">
   <i class="material-icons moneyfixed">monetization_on</i>
-  <p class="textoCV">Compra Venta</p>
+  <p class="textoCV">Comprar Vender</p>
   <i class="material-icons arrows">first_page</i>
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal modal-compra-venta modal-hover fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    
+    <div class="modal-body">
+        
   <div class="modal-dialog" role="document">
+      
     <div class="modal-content">
+        <div id="ComprarVenderModal" data-toggle="modal" data-target="#exampleModal">
+            <i class="material-icons moneyfixed">monetization_on</i>
+            <p class="textoCV">Comprar Vender</p>
+            <i class="material-icons arrows">first_page</i>
+        </div>
       <!-- <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Comprar o Vender</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div> -->
-      <div class="modal-body">
+      
         <!-- Contenido Modal -->
         <h5 class="tituloModal">Comprar o Vender</h5>
         <div><p class="saldoletra">SALDO DISPONIBLE:      <span class="bold">   $12,000,000.00</span></p></div>
         <div class="container-fluid">
-          <p class="bold">Selecciona</p>
+          <p class="bold selecciona">Selecciona</p>
           <div class="row centrarBotones">   
-              <button (click)="seleccionBotones('capitales')" type="button" class="btn btn-outline-success botonesModal3">Mercado <br>de Capitales</button>
-              <button (click)="seleccionBotones('dinero')" type="button" class="btn btn-outline-success botonesModal3">Mercado <br>de Dinero</button>
-              <button (click)="seleccionBotones('inversion')" type="button" class="btn btn-outline-success botonesModal3">Fondos <br>de Inversión</button>
+              <button (click)="seleccionBotones('capitales')" type="button" class="btn btn-outline-success botonesModal3 botonesModal31">Mercado <br>de Capitales</button>
+              <button (click)="seleccionBotones('dinero')" type="button" class="btn btn-outline-success botonesModal3 botonesModal32">Mercado <br>de Dinero</button>
+              <button (click)="seleccionBotones('inversion')" type="button" class="btn btn-outline-success botonesModal3 botonesModal33">Fondos <br>de Inversión</button>
           </div>
           <div class="row centrarBotones botones2">
-              <button type="button" class="btn btn-warning botonesModal2">COMPRA</button>
-              <button type="button" class="btn btn-outline-warning botonesModal2">VENTA</button>
+              <button type="button" class="btn btn-warning botonesModal2 botonesModal21 ">COMPRA</button>
+              <button type="button" class="btn btn-outline-warning botonesModal2 botonesModal22">VENTA</button>
           </div>
           <!-- FORMULARIO 1 -->
           <div class="formulario1" *ngIf="capitales==true">
@@ -117,4 +126,4 @@
         
     </div>
   </div>
-</div>
+</div> 
