@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Mercadodinero } from '../../../models/mercadodinero';
+import { Mercadodinero } from '../models/mercadodinero';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 @Injectable()

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Marcador } from '../../../models/index.models';
+import { Marcador } from '../models/index.models';
+
 
 
 @Injectable()
