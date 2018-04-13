@@ -1,3 +1,130 @@
-<div class="container">
-    <h3>Aqui va el Mercado de Dinero...</h3>
+<div class="contenedor">
+    <div class="box">
+        <div class="titulo">
+            <img src="/assets/img/icon_portafolio.png">
+            <span>Mercado de Dinero</span>
+        </div>
+        <div class="contenedor-content">
+            <div class="saldo-disponible">
+                SALDO DISPONIBLE
+                <div class="saldo-disponible-cantidad">
+                    $1,846,746.29
+                </div>
+            </div>
+            <form [formGroup]="mercadoDineroForm" (ngSubmit)="onSubmit()">
+                <div class="campos-set">
+
+                    <select class="sreportes" formControlName="reportes">
+                        <option class="placeholder" value="" disabled selected hidden>REPORTES...</option>
+                        <option value="1" selected>INDIFERENTE</option>
+                        <option value="2">GUBERNAMENTAL</option>
+                        <option value="3">BANCARIO</option>
+                        <option value="4">PRIVADO</option>
+                    </select>
+
+                    <input class="input-monto" type="text" placeholder="MONTO" formControlName="monto">
+
+                    <select class="splazo" formControlName="plazo">
+                        <option class="placeholder" value="" disabled selected hidden>PLAZO...</option>
+                        <option value="1" selected>30 DÍAS</option>
+                        <option value="2">60 DÍAS</option>
+                        <option value="3">90 DÍAS</option>
+                        <option value="4">100 DÍAS</option>
+                    </select>
+    
+                    <span class="tasa">TASA: 3.30%</span>
+                    
+                </div>
+                <div class="boton_enviar">
+                    <button class="boton-enviar" type="submit" [disabled]="!mercadoDineroForm.valid">INVERTIR</button>
+                </div>
+            </form>
+        </div> 
+        <br>
+    </div>
+</div>
+      
+<!-- Modal -->
+<!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button> -->
+<div class="modal fade" id="miModal" tabindex="-1" role="dialog" aria-labelledby="miModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="titulo-modal">
+                    <img src="/assets/img/icon_portafolio.png">
+                    <span>Confirmación</span>
+                </div>
+
+                <div class="caja_reportes">
+                    <div class="reportes-heading">
+                        <span class="reportes">REPORTES</span>
+                        <span class="privado">Privado</span>
+                    </div>
+                    <div class="reportes-content">
+                        <div class="monto">
+                            <span>MONTO</span>
+                            <span class="cantidad">$10,000.00</span>
+                        </div>
+                        <div class="tasa-interes">
+                            <span>TASA</span>
+                            <span class="cantidad">3.30%</span>
+                        </div>
+                    </div>
+                    <div class="reportes-total">
+                        <span>TOTAL: $10,000.00</span>
+                    </div>
+                </div>
+                <div class="reportes-footer">
+                    <button class="cancelar" data-dismiss="modal">Cancelar</button>
+                    <button class="confirmar" (click)="showDynamicModal()">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="contrasenia-dinamica" tabindex="-1" role="dialog" aria-labelledby="miModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="titulo-modal">
+                    <span>Contraseña Dinámica</span>
+                </div>
+
+                <div class="contenido">
+                    <span class="mensaje"> 
+                        Desde tu dispositivo móvil genera una clave dinámica e ingrésala a continuación.
+                    </span>
+                    <input class="input-token" type="text">
+                </div>
+                
+                <div class="reportes-footer">
+                    <button class="cancelar" data-dismiss="modal">Cancelar</button>
+                    <button class="confirmar" (click)="showSuccessModal()">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="envio-exitoso" tabindex="-1" role="dialog" aria-labelledby="miModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="titulo-modal">
+                    <span>Envío exitoso</span>
+                </div>
+
+                <div class="contenido">
+                    <p>Operación registrada con éxito</p>
+                    <p>Folio: 87652</p>
+                </div>
+                
+                <div class="reportes-footer">
+                    <button class="cancelar" data-dismiss="modal">Cancelar</button>
+                    <button class="confirmar" data-dismiss="modal">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

@@ -17,13 +17,15 @@ import { TablaMercadoCapitalesPendientesComponent } from './portafolio/ordenes-p
 import { TablaMercadoDineroPendientesComponent } from './portafolio/ordenes-pendientes-tabs/tabla-mercado-dinero-pendientes/tabla-mercado-dinero-pendientes.component';
 import { TablaFondosInversionPendientesComponent } from './portafolio/ordenes-pendientes-tabs/tabla-fondos-inversion-pendientes/tabla-fondos-inversion-pendientes.component';
 import { TablaMercadoCapitalesUsdComponent } from './portafolio/portafolio-usd/tabla-mercado-capitales-usd/tabla-mercado-capitales-usd.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     TemplateRoutingModule,
     MaterialModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule
   ],
   declarations: [
     PortafolioComponent,
