@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Fondos } from '../../../models/index.models';
+import { Fondos } from '../models/index.models';
+
 
 
 @Injectable()

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { FondoInversion } from '../../models/index.models';
+import { FondoInversion } from '../models/index.models';
 
 
 @Injectable()

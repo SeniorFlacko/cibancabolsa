@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { MercadoDineroPendiente } from '../../../models/index.models';
+import { MercadoDineroPendiente } from '../models/index.models';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 
