@@ -1,3 +1,4 @@
+export { MercadoCapitales } from './mercado-capitales';
 export { Token } from './token';
 export { User } from './User';
 export { OrdenPendiente } from './orden-pendiente';

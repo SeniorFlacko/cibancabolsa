@@ -1,41 +1,76 @@
-<div class="example-header">
-    <mat-form-field>
-      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
-    </mat-form-field>
-</div>
-  
-  <div class="example-container mat-elevation-z8">
-  
-    <mat-table [dataSource]="dataSource" matSort>
-  
-      <!-- ID Column -->
-      <ng-container matColumnDef="id">
-        <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
-        <mat-cell *matCellDef="let row"> {{row.id}} </mat-cell>
-      </ng-container>
-  
-      <!-- Progress Column -->
-      <ng-container matColumnDef="progress">
-        <mat-header-cell *matHeaderCellDef mat-sort-header> Progress </mat-header-cell>
-        <mat-cell *matCellDef="let row"> {{row.progress}}% </mat-cell>
-      </ng-container>
-  
-      <!-- Name Column -->
-      <ng-container matColumnDef="name">
-        <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
-        <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
-      </ng-container>
-  
-      <!-- Color Column -->
-      <ng-container matColumnDef="color">
-        <mat-header-cell *matHeaderCellDef mat-sort-header> Color </mat-header-cell>
-        <mat-cell *matCellDef="let row" [style.color]="row.color"> {{row.color}} </mat-cell>
-      </ng-container>
-  
-      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-      <mat-row *matRowDef="let row; columns: displayedColumns;">
-      </mat-row>
-    </mat-table>
-  
-    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+<div class="box">
+  <div class="box-1">
+    <div class="titulo">
+      <img src="/assets/img/icon_portafolio.png">
+      <span>Mercado de Capitales</span>
+    </div>
+    <div class="horario">
+      <span class="horario">Mercados cerrarán en  1 hr 54 min</span>
+    </div>
   </div>
+  <div class="box-1">
+    <div>
+      <span class="saldo">SALDO DISPONIBLE:</span>
+      <span class="saldo-dinero"> $1,846,746.29</span>
+    </div>
+    <div class="horario">
+      <span>Todas</span>
+      <span class="favoritas">| <i class="material-icons">star_border</i> Emisoras favoritas</span>
+    </div>
+  </div>
+
+  <div class="table-responsive">
+    <div class="table">
+      <mat-table [dataSource]="dataCapitales" matSort matSortActive="emisora" matSortDirection="asc"
+                 matSortDisableClear>
+        <ng-container matColumnDef="emisora">
+          <mat-header-cell *matHeaderCellDef mat-sort-header>Emisora</mat-header-cell>
+          <mat-cell *matCellDef="let capital">{{ capital.emisora }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="precio_cierre">
+          <mat-header-cell *matHeaderCellDef>Precio Cierre</mat-header-cell>
+          <mat-cell *matCellDef="let capital">{{ capital.precio_cierre }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="precio_ultimo">
+          <mat-header-cell *matHeaderCellDef>Costo Promedio</mat-header-cell>
+          <mat-cell *matCellDef="let capital">{{ capital.precio_ultimo }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="precio_variacion">
+          <mat-header-cell *matHeaderCellDef>Precio Variacion</mat-header-cell>
+          <mat-cell *matCellDef="let capital">{{ capital.precio_variacion }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="precio_compra">
+          <mat-header-cell *matHeaderCellDef>Precio Compra</mat-header-cell>
+          <mat-cell *matCellDef="let capital">{{ capital.precio_compra }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="precio_venta">
+          <mat-header-cell *matHeaderCellDef>Precio Venta</mat-header-cell>
+          <mat-cell class="positivo" *matCellDef="let capital"><i class="material-icons">arrow_drop_up</i>{{
+            capital.precio_venta }}
+          </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="volumen">
+          <mat-header-cell *matHeaderCellDef>Volumen</mat-header-cell>
+          <mat-cell *matCellDef="let orden">{{ orden.volumen }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="maximo">
+          <mat-header-cell *matHeaderCellDef>Máximo</mat-header-cell>
+          <mat-cell *matCellDef="let orden">{{ orden.maximo }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="minimo">
+        <mat-header-cell *matHeaderCellDef>Mínimo</mat-header-cell>
+        <mat-cell *matCellDef="let orden">{{ orden.minimo }}</mat-cell>
+      </ng-container>
+        <ng-container matColumnDef="favorita">
+          <mat-header-cell *matHeaderCellDef>Favorita</mat-header-cell>
+          <mat-cell *matCellDef="let orden">{{ orden.favorita }}</mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+      </mat-table>
+
+
+    </div>
+  </div>
+</div>
