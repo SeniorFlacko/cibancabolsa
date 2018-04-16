@@ -1,0 +1,172 @@
+.box{
+  background-color: white;
+  box-shadow: 1px 2px 10px #aaaaaa;
+  margin-right: 60px;
+  margin-left: 60px;
+  padding: 5px 5px;
+  flex: 2;
+}
+.box-1{
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-flow: row wrap;
+}
+.titulo{
+  font-family: OpenSans-Bold;
+  font-size: 30px;
+  text-align: left;
+  margin-left: 1%;
+}
+
+.saldofi{
+  margin-left: 4%;
+}
+
+.horario{
+  font-family: OpenSans-SemiBold;
+  font-size: 16px;
+}
+.favoritas{
+  color: #5f995a;
+  font-size: 16px;
+}
+.saldo{
+  font-size: 16px;
+  font-family: OpenSans-Regular;
+}
+.saldo-dinero{
+  font-family: OpenSans-SemiBold;
+
+}
+
+mat-table{
+  
+  margin: 0 20px;
+}
+
+mat-header-row{
+  background-color: #f5f5f5;
+  border: none;
+}
+mat-header-cell{
+  font-family: OpenSans-Bold;
+  font-size: 14px;
+  color: black;
+}
+
+mat-cell{
+  font-family: OpenSans-Regular;
+  font-size: 14px;
+  color: black;
+}
+.positivo{
+  color:#00863b;
+  display: flex;
+  align-items: center;
+}
+
+.negativo{
+  color:#e5212f;
+  display: flex;
+  align-items: center;
+}
+
+.rowMonetizacion{
+  cursor: pointer;
+}
+
+.btn-row{
+  border-radius: 20px 20px 20px 20px !important;
+}
+
+.modal-content{
+  background: #ffffff;
+  height: auto;
+  padding: 25px;
+  border-left: 10px solid #fbd437;
+}
+
+.generalmodalfi{
+  display: flex;
+}
+
+.divonemodalfi{
+  width: 40%;
+}
+
+.divtwomodalfi{
+  width: 40%;
+}
+
+.divthreemodalfi{
+  width: 20%;
+}
+
+.texto1modal{
+  font-weight: 900;
+  font-size: 25px;
+  margin-bottom: -5px;
+}
+
+.texto2modal{
+  font-weight: bolder;
+  font-size: 13px;
+}
+
+.texto3modal{
+  font-size: 12px;
+  color: #aaaaaa;
+}
+
+.linkmodal{
+  color: #00863b;
+}
+
+.btn-comprar-modal{
+  border-radius: 20px;
+}
+
+.centrado{
+  text-align: center;
+}
+
+.justifyContent{
+  justify-content: center;
+}
+
+.flex{
+  display: flex;
+  
+}
+
+.modal-lg{
+  max-width: 600px !important; 
+}
+
+.detalleConfirmacion{
+  border: 2px solid #efefef;
+  border-radius: 5px 5px 0px 0px;
+  padding: 10px;
+}
+
+.totalconfirmacion{
+  background: #efefef;
+  color: #49aa43;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.tituloconfirmacion{
+  font-weight: bold;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.textolateralconfirmacion{
+  position: absolute;
+  left: -32px;
+  background: #fbd437;
+  border-radius: 0px 20px 20px 0px;
+  padding: 1px 10px;
+}

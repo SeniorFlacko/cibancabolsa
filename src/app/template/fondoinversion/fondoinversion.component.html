@@ -1,8 +1,17 @@
+<div class="box">
+    <div class="titulo">
+      <i class="material-icons">equalizer</i>
+      <span>Fondos de Inversión</span>
+    </div>
+    <div class="saldofi">
+      <span class="saldo">SALDO DISPONIBLE:</span>
+      <span class="saldo-dinero"> $1,846,746.29</span>
+    </div>
 <div class="table-responsive">
         <div class="table">
         <mat-table [dataSource]="dataInversion" matSort matSortActive="fondo" matSortDirection="asc" matSortDisableClear>
         <ng-container matColumnDef="fondo">
-                <mat-header-cell *matHeaderCellDef mat-sort-header>Fondo</mat-header-cell>
+                <mat-header-cell *matHeaderCellDef>Fondo</mat-header-cell>
                 <mat-cell *matCellDef="let fondos">{{ fondos.fondo }}</mat-cell>
               </ng-container>
               <ng-container matColumnDef="serie">
@@ -11,7 +20,7 @@
               </ng-container>
               <ng-container matColumnDef="operar">
                 <mat-header-cell *matHeaderCellDef>Operar</mat-header-cell>
-                <mat-cell *matCellDef="let fondos">{{ fondos.operar }}</mat-cell>
+                <mat-cell *matCellDef="let fondos"><button type="button" class="btn btn-primary btn-row" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="material-icons">monetization_on</i></button></mat-cell>
                 <button mat-button>Click me!</button>
               </ng-container>
               <ng-container matColumnDef="clasificacion">
@@ -45,3 +54,70 @@
         
         </div>
         </div>
+</div>
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="generalmodalfi">
+            <div class="divonemodalfi">
+              <p class="texto1modal">+CIGUB</p>
+              <p class="texto2modal">+CIGUB CIGUBERNAMENTAL, S.A. DE C.V, F.I.I.D</p>
+              <p class="texto3modal">Serie: C-4</p>
+              <p class="texto3modal">Clasificación: Gubernamental</p>
+              <a class="linkmodal" href="#">Mas información del Fondo </a>
+            </div>
+            <div class="divtwomodalfi">
+              <div>
+                <button class="btn btn-warning">COMPRA</button>
+                <button class="btn btn-outline-secondary">VENTA</button>
+              </div>
+              <p>Precio: $3.654009</p>
+                <mat-form-field class="example-full-width">
+                <input matInput placeholder="Cantidad a Invertir" >
+                </mat-form-field>
+                <p>Mínimo: $10,000.00</p>
+                <div>
+                    <button class="btn btn-outline-success btn-comprar-modal" data-toggle="modal" data-target="#exampleModalCenter" data-dismiss="modal">Comprar</button>
+                </div>
+            </div>
+            <div class="divthreemodalfi">
+              <p>Saldo disponible</p>
+              <p>$1,846,746.29</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade " id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-lg modalconfirmacion" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="centrado tituloconfirmacion"><p class="textolateralconfirmacion">Compra</p><i class="material-icons">assignment</i><span>Confirmación</span></div>
+            <div class="detalleConfirmacion">
+                <div class="flex"><p>+CIGUB.</p><p>+CIGUB CIGUBERNAMENTAL, S.A. DE C.V, F.I.I.D</p></div>
+                <div class="flex"><p>Precio</p><p>$3.654009</p></div>
+                
+              </div>
+              <div class="centrado totalconfirmacion"><p>Total: $25,000.00</p></div>
+              <p><i class="material-icons">alarm</i>La vigencia de tu operación es de hoy 12/12/17 al cierre del mercado</p>
+          </div>
+          <div class="modal-footer justifyContent">
+            <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-success" data-dismiss="modal" data-toggle="modal" data-target=".bd-example-modal-sm">Confirmar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            ...
+          </div>
+        </div>
+      </div>
