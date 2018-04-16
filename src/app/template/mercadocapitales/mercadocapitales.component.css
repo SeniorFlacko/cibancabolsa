@@ -82,3 +82,7 @@ mat-cell{
   display: flex;
   justify-content: center;
 }
+
+.verde{
+  color: #49aa43;
+}
