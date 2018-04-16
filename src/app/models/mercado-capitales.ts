@@ -1,4 +1,5 @@
 export interface MercadoCapitales {
+  id: number;
   emisora:string;
   precio_cierre:string;
   precio_ultimo:string;
@@ -8,5 +9,5 @@ export interface MercadoCapitales {
   volumen:string;
   maximo:string;
   minimo:string;
-  favorita:string;
+  favorita:boolean;
 }

@@ -1,0 +1,89 @@
+.contenedor{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.box{
+    width: 1040px;
+    height: calc(100% - 350px);
+    background-color: white;
+    box-shadow: 1px 2px 10px #aaaaaa;
+    margin: 10px 5px;
+}
+
+.titulo{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    font-family: OpenSans-Bold;
+    font-size: 30px;
+    margin: 10px 20px;
+}
+
+.titulo img{
+    width: 0.7em;
+    margin: 5px;
+}
+
+
+.contenedor-content{
+    margin: 10px 30px;
+}
+
+.reporte{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    margin: 0 45px;
+}
+
+.icono{
+    width: 1em;
+    margin: 10px;
+}
+
+.slides{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.slide-child{
+    flex: 1 1 40%;
+    margin: 3%;
+}
+
+.reporte-texto{
+    font-size: 14px;
+}
+
+.titulo-divisas{
+    padding: 5px 0;
+    border-bottom: 1px solid #d8d8d8;
+    width: 40%;
+    font-family: OpenSans-Bold;
+    margin: 45px 30px;
+}
+
+
+.tabla-tasas{
+    display: flex;
+    flex-flow: row wrap;
+    margin: 35px 15px;
+}
+
+
+.tasas-informacion{
+    display: flex;
+    flex-flow: column wrap;
+    margin: 0 35px;
+}
+
+.separador{
+    height: auto;
+    border: 1px solid #d8d8d8;
+}
+
+.info{
+    margin: 15px 5px; 
+}
