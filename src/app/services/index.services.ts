@@ -1,3 +1,5 @@
+export { OrdenesService } from './ordenes.service';
+
 export { MercadocapitalesservicioService } from './mercadocapitalesservicio.service';
 
 export { MarcadorServicioService } from './marcador-servicio.service';
