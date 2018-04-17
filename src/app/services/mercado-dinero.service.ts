@@ -6,6 +6,7 @@ import { of } from 'rxjs/observable/of';
 export class MercadoDineroService {
   array: Mercadodinero[] = [
     {
+      "id": "1",
       "emisora": "Reporto",
       "plazo": "1 día",
       "monto": "$55,003.88",

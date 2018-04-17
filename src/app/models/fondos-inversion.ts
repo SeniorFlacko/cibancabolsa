@@ -1,4 +1,5 @@
 export interface FondoInversion {
+    id:string;
     fondo:string;
     serie:string;
     operar:string;

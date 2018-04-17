@@ -1,4 +1,5 @@
 export interface CapitalDolar {
+    id:string,
     emisora:string,
     titulos:string
     costo_promedio:string,

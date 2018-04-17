@@ -1,4 +1,5 @@
 export interface OrdenPendiente {
+    id:string;
     clave_pizarra:string,
     folio_orden:string,
     sentido:string,

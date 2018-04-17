@@ -1,4 +1,5 @@
 export interface Marcador {
+    id:string;
     liquido:string;
     undia:string;
     dosdias:string;

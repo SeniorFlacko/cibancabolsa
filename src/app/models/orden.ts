@@ -1,5 +1,5 @@
 export interface Orden {
-  
+    id:string;
     fecha: string;
     emisora: string;
     folio: string;

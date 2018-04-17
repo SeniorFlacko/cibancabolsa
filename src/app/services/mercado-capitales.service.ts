@@ -7,6 +7,7 @@ import { Observable } from 'rxjs/Observable';
 export class MercadoCapitalesService {
   capitales: Capital[] = [
     {
+      "id":"1",
       "emisora": "CEMEX",
       "titulos": "1000",
       "costo_promedio": "$120.00",

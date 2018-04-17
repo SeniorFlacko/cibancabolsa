@@ -1,4 +1,5 @@
 export interface Capital {
+    id:string,
     emisora:string,
     titulos:string
     costo_promedio:string,

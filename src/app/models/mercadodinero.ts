@@ -1,4 +1,5 @@
 export interface Mercadodinero {
+    id:string;
     emisora:string,
     plazo: string,
     monto: string,

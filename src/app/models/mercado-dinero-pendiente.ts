@@ -1,4 +1,5 @@
 export interface MercadoDineroPendiente {
+    id:string;
     fecha: string;
     clave_pizarra: string;
     folio_operacion: string;

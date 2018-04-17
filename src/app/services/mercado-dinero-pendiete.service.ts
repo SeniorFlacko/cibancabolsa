@@ -5,8 +5,9 @@ import { of } from 'rxjs/observable/of';
 
 @Injectable()
 export class MercadoDineroPendieteService {
-  private dataDineroPendiente = [
+  private dataDineroPendiente:MercadoDineroPendiente[] = [
     {
+      id: "1",
       fecha: "01/18",
       clave_pizarra: "Privado",
       folio_operacion: "00013",
@@ -18,6 +19,7 @@ export class MercadoDineroPendieteService {
       plazo:"20 días",
     },
     {
+      id: "2",
       fecha: "02/18",
       clave_pizarra: "Gubernamental",
       folio_operacion: "00018",

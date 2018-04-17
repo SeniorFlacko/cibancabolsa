@@ -7,13 +7,15 @@ import { Fondos } from '../models/index.models';
 export class FondoInversionService {
   dataFondos:Fondos[] =[
     {
-    fondo:"CIGUB",
-    serie:"1234",
-    titulos:"500",
-    precio_actual:"$2.38",
-    valuacion:"$342.564"
+      id:"1",
+      fondo:"CIGUB",
+      serie:"1234",
+      titulos:"500",
+      precio_actual:"$2.38",
+      valuacion:"$342.564"
     },
     {
+      id:"2",
       fondo:"CIBOLSA",
       serie:"5678",
       titulos:"100",

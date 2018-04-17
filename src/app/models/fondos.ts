@@ -1,4 +1,5 @@
 export interface Fondos {
+    id:string;
     fondo:string;
     serie:string;
     titulos:string;

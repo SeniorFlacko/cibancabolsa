@@ -5,6 +5,7 @@ import { Orden } from '../models/index.models';
 export class OrdenesService {
   private dataOrdenes: Orden[] = [
     {
+      "id": "1",
       fecha: "06/12",
       emisora: "SARE B",
       folio: "2334",
@@ -21,6 +22,7 @@ export class OrdenesService {
       estatus: "asignado",
     },
     {
+      "id": "2",
       fecha: "06/12",
       emisora: "SARE B",
       folio: "2334",
@@ -37,6 +39,7 @@ export class OrdenesService {
       estatus: "cancelado",
     },
     {
+      "id": "3",
       fecha: "06/12",
       emisora: "SARE B",
       folio: "2334",

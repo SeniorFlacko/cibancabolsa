@@ -10,18 +10,21 @@ export class FavoritasComponent implements OnInit {
   displayedFavoritasColumn=['emisora','ultimo_precio','cambio','cambio_en_porcentaje']
   dataFavoritas:Emisora[]=[
     {
+      id: "1",
       emisora:'CEMEX',
       ultimo_precio:'$234.67',
       cambio:'+1.01',
       cambio_porcentaje:'0.012%'
     },
     {
+      id: "2",
       emisora:'CIMEX',
       ultimo_precio:'$134.67',
       cambio:'-1.01',
       cambio_porcentaje:'0.112%'
     },
     {
+      id: "3",
       emisora:'TELMEX',
       ultimo_precio:'$934.67',
       cambio:'+6.01',

@@ -8,6 +8,7 @@ export class MercadoCapitalesDolaresService {
 
   capitales_dolares: CapitalDolar[] = [
     {
+      "id": "1",
       "emisora": "CEMEX",
       "titulos": "1000",
       "costo_promedio": "$120.00",
