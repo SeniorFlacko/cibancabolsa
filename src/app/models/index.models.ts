@@ -9,3 +9,4 @@ export { CapitalDolar } from './capital-dolar';
 export { Marcador  } from './marcador';
 export { Fondos  } from './fondos';
 export { FondoInversion } from './fondos-inversion';
+export { Orden } from './orden';

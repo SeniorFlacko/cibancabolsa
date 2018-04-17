@@ -1,3 +1,117 @@
-<div class="container">
-    <h3>Aqui van las Órdenes...</h3>
+<div class="contenedor">
+    <div class="box">
+        <div class="titulo">
+            <img src="/assets/img/icon_portafolio.png">
+            <span>Órdenes</span>
+        </div>
+        <div class="contenedor-content">
+            <div class="table-responsive">
+                <div class="table">
+            
+                    <mat-table [dataSource]="dataOrdenes" matSort matSortActive="fecha" matSortDirection="asc" matSortDisableClear>
+                        
+                        <ng-container matColumnDef="fecha">
+                            <mat-header-cell *matHeaderCellDef mat-sort-header>Fecha</mat-header-cell>
+                            <mat-cell *matCellDef="let orden">{{ orden.fecha }}</mat-cell>
+                        </ng-container>
+            
+                        <ng-container matColumnDef="emisora">
+                            <mat-header-cell *matHeaderCellDef >Emisora</mat-header-cell>
+                            <mat-cell *matCellDef="let orden">{{ orden.emisora }}</mat-cell>
+                        </ng-container>
+            
+                        <ng-container matColumnDef="folio">
+                            <mat-header-cell *matHeaderCellDef >Folio</mat-header-cell>
+                            <mat-cell *matCellDef="let orden">{{ orden.folio }}</mat-cell>
+                        </ng-container>
+            
+                        <ng-container matColumnDef="sentido">
+                            <mat-header-cell *matHeaderCellDef >Sentido</mat-header-cell>
+                            <mat-cell *matCellDef="let orden">{{ orden.sentido }}</mat-cell>
+                        </ng-container>
+            
+                        <ng-container matColumnDef="tipo_orden">
+                            <mat-header-cell *matHeaderCellDef >Tipo de orden</mat-header-cell>
+                            <mat-cell *matCellDef="let orden">{{ orden.tipo_orden }}</mat-cell>
+                        </ng-container>
+                        
+                        <ng-container matColumnDef="titulos">
+                            <mat-header-cell *matHeaderCellDef >Títulos</mat-header-cell>
+                            <mat-cell *matCellDef="let orden">{{ orden.titulos }}</mat-cell>
+                        </ng-container>
+            
+                        <ng-container matColumnDef="precio">
+                            <mat-header-cell *matHeaderCellDef >Precio</mat-header-cell>
+                            <mat-cell *matCellDef="let orden">{{ orden.precio }}</mat-cell>
+                        </ng-container>
+                                            
+                        <ng-container matColumnDef="precio_mercado">
+                            <mat-header-cell *matHeaderCellDef >Precio Mercado</mat-header-cell>
+                            <mat-cell *matCellDef="let orden">{{ orden.precio_mercado }}</mat-cell>
+                        </ng-container>
+            
+                        <ng-container matColumnDef="precio_bruto">
+                            <mat-header-cell *matHeaderCellDef >Precio Bruto</mat-header-cell>
+                            <mat-cell *matCellDef="let orden">{{ orden.precio_bruto }}</mat-cell>
+                        </ng-container>
+            
+                        <ng-container matColumnDef="precio_neto">
+                            <mat-header-cell *matHeaderCellDef >Precio Neto</mat-header-cell>
+                            <mat-cell *matCellDef="let orden">{{ orden.precio_neto }}</mat-cell>
+                        </ng-container>
+            
+                        <ng-container matColumnDef="comision">
+                            <mat-header-cell *matHeaderCellDef >Comisión</mat-header-cell>
+                            <mat-cell *matCellDef="let orden">{{ orden.comision }}</mat-cell>
+                        </ng-container>
+            
+                        <ng-container matColumnDef="iva">
+                            <mat-header-cell *matHeaderCellDef >IVA</mat-header-cell>
+                            <mat-cell *matCellDef="let orden">{{ orden.iva }}</mat-cell>
+                        </ng-container>
+            
+                        <ng-container matColumnDef="total">
+                            <mat-header-cell *matHeaderCellDef >Total</mat-header-cell>
+                            <mat-cell *matCellDef="let orden">{{ orden.total }}</mat-cell>
+                        </ng-container>
+            
+                        <ng-container matColumnDef="estatus">
+                            <mat-header-cell *matHeaderCellDef >Estatus</mat-header-cell>
+                            <mat-cell *matCellDef="let orden">
+                                <div [ngSwitch]="orden.estatus">
+
+                                    <div *ngSwitchCase="'cancelado'">
+                                        <div data-toggle="popover" title="Motivo de cancelación" data-content="And here's some amazing content. It's very engaging. Right?">
+                                            <span class="estatus">
+                                                {{ orden.estatus }}
+                                            </span>
+                                            <i class="material-icons info">info_outline</i>
+                                        </div>
+                                    </div>
+                                    <div *ngSwitchCase="'pendiente'">
+                                        <span class="estatus">
+                                            {{ orden.estatus }}
+                                        </span>
+                                        <img class="flecha_abajo" src="/assets/img/icon_arrowDown_verde.png">
+                                    </div>
+
+                                    <div *ngSwitchDefault>
+                                        <span class="estatus">
+                                            {{ orden.estatus }}
+                                        </span>
+                                    </div>
+                                
+                                </div>
+                            </mat-cell>
+                        </ng-container>
+            
+                        <mat-header-row *matHeaderRowDef="displayedOrdenesColumn"></mat-header-row>
+                        <mat-row *matRowDef="let row; columns: displayedOrdenesColumn"></mat-row>
+            
+                    </mat-table>
+                </div>
+            </div>
+        </div> 
+        <br>
+    </div>
 </div>
