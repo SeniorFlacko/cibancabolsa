@@ -2,39 +2,24 @@ import { Injectable } from '@angular/core';
 import { MercadoDineroPendiente } from '../models/index.models';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
+import { Http } from '@angular/http';
 
 @Injectable()
 export class MercadoDineroPendieteService {
-  private dataDineroPendiente:MercadoDineroPendiente[] = [
-    {
-      id: "1",
-      fecha: "01/18",
-      clave_pizarra: "Privado",
-      folio_operacion: "00013",
-      sentido: "venta",
-      tasa:"15%",
-      iva:"$1995.34",
-      importe:"$11,23.23",
-      estatus:"vigente",
-      plazo:"20 días",
-    },
-    {
-      id: "2",
-      fecha: "02/18",
-      clave_pizarra: "Gubernamental",
-      folio_operacion: "00018",
-      sentido: "compra",
-      tasa:"190%",
-      iva:"$19,959.34",
-      importe:"$115,23.23",
-      estatus:"vigente",
-      plazo:"320 días",
-    },
-  ];
-  constructor() { }
 
-  getDineroPendiente(): Observable<MercadoDineroPendiente[]> {
-    return of(this.dataDineroPendiente);
+  constructor(private http: Http) { }
+
+  // getDineroPendiente(): Observable<MercadoDineroPendiente[]> {
+  //   return of(this.dataDineroPendiente);
+  // }
+
+  getDineroPendiente():Observable<MercadoDineroPendiente[]>{
+    let URL= "https://cicasabolsa.firebaseio.com/mercadodineropendientes.json";
+
+    // Obtener respuesta cada segundo
+    return Observable.timer(0, 10000)
+      .flatMapTo(this.http.get(URL))
+      .map(res => res.json());
   }
 
 }
