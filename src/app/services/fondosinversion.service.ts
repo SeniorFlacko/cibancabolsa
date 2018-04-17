@@ -7,48 +7,7 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class FondosinversionService {
 
-<<<<<<< HEAD
-  dataInversion:FondoInversion[] = [
-    {
-      id: "1",
-      fondo: '123',
-      serie: '345',
-      operar: '456',
-      clasificacion: '345',
-      liquidacion: '3456',
-      horizonte: '3456',
-      maxima: '3456',
-      calificacion: '3456',
-      horario: '345'
-    },
-    {
-      id: "2",
-      fondo: '123',
-      serie: '345',
-      operar: '456',
-      clasificacion: '345',
-      liquidacion: '3456',
-      horizonte: '3456',
-      maxima: '3456',
-      calificacion: '3456',
-      horario: '345'
-    },
-    {
-      id: "3",
-      fondo: '123',
-      serie: '345',
-      operar: '456',
-      clasificacion: '345',
-      liquidacion: '3456',
-      horizonte: '3456',
-      maxima: '3456',
-      calificacion: '3456',
-      horario: '345'
-    },
-  ];
-=======
   dataInversion:FondoInversion[];
->>>>>>> 90a17544b7d2499833804f2372d03d5709ac3555
 
 
   constructor(private http: Http) { }
