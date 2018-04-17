@@ -32,12 +32,12 @@
           <mat-cell *matCellDef="let capital">{{ capital.precio_cierre }}</mat-cell>
         </ng-container>
         <ng-container matColumnDef="precio_ultimo">
-          <mat-header-cell *matHeaderCellDef>Costo Promedio</mat-header-cell>
+          <mat-header-cell *matHeaderCellDef>Precio Último</mat-header-cell>
           <mat-cell *matCellDef="let capital">{{ capital.precio_ultimo }}</mat-cell>
         </ng-container>
         <ng-container matColumnDef="precio_variacion">
-          <mat-header-cell *matHeaderCellDef>Precio Variacion</mat-header-cell>
-          <mat-cell *matCellDef="let capital">{{ capital.precio_variacion }}</mat-cell>
+          <mat-header-cell *matHeaderCellDef>% Var</mat-header-cell>
+          <mat-cell class="positivo" *matCellDef="let capital">{{ capital.precio_variacion }} <i class="material-icons">arrow_drop_up</i> </mat-cell>
         </ng-container>
         <ng-container matColumnDef="precio_compra">
           <mat-header-cell *matHeaderCellDef>Precio Compra</mat-header-cell>
@@ -45,7 +45,7 @@
         </ng-container>
         <ng-container matColumnDef="precio_venta">
           <mat-header-cell *matHeaderCellDef>Precio Venta</mat-header-cell>
-          <mat-cell class="positivo" *matCellDef="let capital"><i class="material-icons">arrow_drop_up</i>{{
+          <mat-cell *matCellDef="let capital">{{
             capital.precio_venta }}
           </mat-cell>
         </ng-container>
@@ -64,7 +64,7 @@
         <ng-container matColumnDef="favorita">
           <mat-header-cell *matHeaderCellDef>Favorita</mat-header-cell>
           <mat-cell *matCellDef="let orden;">
-            <i class="material-icons pointer centrado" (click)="toggle(orden)">{{ star_icon(orden.favorita) }}</i>
+            <i class="material-icons pointer centrado fav_icon" (click)="toggle(orden)">{{ star_icon(orden.favorita) }}</i>
           </mat-cell>
         </ng-container>
 
