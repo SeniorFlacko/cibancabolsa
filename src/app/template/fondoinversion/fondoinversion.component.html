@@ -56,9 +56,9 @@
         </div>
 </div>
 
-<div class="modal fade bd-example-modal-lg fademio" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
-      <div class="modal-content">
+      <div class="modal-content modalbordeizquierda">
         <div class="generalmodalfi">
             <div class="divonemodalfi">
               <p class="texto1modal">+CIGUB</p>
@@ -68,18 +68,20 @@
               <a class="linkmodal" href="#">Mas información del Fondo </a>
             </div>
             <div class="divtwomodalfi">
+              <form [formGroup]="fondoinversion1Form" (ngSubmit)="onSubmit()">
               <div>
                 <button class="btn btn-warning">COMPRA</button>
                 <button class="btn btn-outline-secondary">VENTA</button>
               </div>
               <p>Precio: $3.654009</p>
                 <mat-form-field class="example-full-width">
-                <input matInput placeholder="Cantidad a Invertir" >
+                <input matInput placeholder="Cantidad a Invertir" type="number" class="inputsverde" formControlName="montoInvertir">
                 </mat-form-field>
                 <p>Mínimo: $10,000.00</p>
                 <div>
-                    <button class="btn btn-outline-success btn-comprar-modal" data-toggle="modal" data-target="#exampleModalCenter" data-dismiss="modal">Comprar</button>
+                    <button class="btn btn-success btn-comprar-modal" data-toggle="modal" data-target="#exampleModalCenter" data-dismiss="modal" [disabled]="!fondoinversion1Form.valid">Comprar</button>
                 </div>
+              </form>
             </div>
             <div class="divthreemodalfi">
               <p>Saldo disponible</p>
@@ -89,7 +91,6 @@
       </div>
     </div>
   </div>
-
 
   <div class="modal fade " id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
       <div class="modal-dialog modal-lg modalconfirmacion" role="document">
@@ -105,8 +106,8 @@
               <p><i class="material-icons">alarm</i>La vigencia de tu operación es de hoy 12/12/17 al cierre del mercado</p>
           </div>
           <div class="modal-footer justifyContent">
-            <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cancelar</button>
-            <button type="button" class="btn btn-success" data-dismiss="modal" data-toggle="modal" data-target=".bd-example-modal-sm">Confirmar</button>
+            <button type="button" class="btn btn-outline-danger sinborde btn-radius" data-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-success btn-radius" data-dismiss="modal" data-toggle="modal" data-target=".bd-example-modal-sm">Confirmar</button>
           </div>
         </div>
       </div>
@@ -117,16 +118,38 @@
     <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
-            <h5 class="titulocontrasena">Contraseña dinámica</h5>
-            <div>
-              <p>Desde su dispositivo móvil genera una clave dinamica e ingrésala a continuación</p>
-              <div class="inputcontrasena"><input type="text"></div>
+            <h5 class="titulo-modal">Contraseña dinámica</h5>
+            <div class="contenido">
+              <p class="mensaje">Desde su dispositivo móvil genera una clave dinamica e ingrésala a continuación</p>
+              <input class="input-token" type="text">
             </div>
             <div class="modal-footer justifyContent">
-                <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-success" data-dismiss="modal" data-toggle="modal" data-target=".bd-example-modal-sm">Confirmar</button>
+                <button type="button" class="btn btn-outline-danger sinborde btn-radius" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success btn-radius" data-dismiss="modal" data-toggle="modal" data-target="#enviosuccess">Confirmar</button>
               </div>
           </div>
 
         </div>
+      </div>
+
+      <div class="modal fade" id="enviosuccess" tabindex="-1" role="dialog" aria-labelledby="miModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-body">
+                      <div class="titulo-modal">
+                          <span>Envío exitoso</span>
+                      </div>
+      
+                      <div class="contenido">
+                          <p>Operación registrada con éxito</p>
+                          <p>Folio: 87652</p>
+                      </div>
+                      
+                      <div class="reportes-footer">
+                          <button class="btn btn-outline-danger  sinborde btn-radius" data-dismiss="modal">Cancelar</button>
+                          <button class="btn btn-success btn-radius" data-dismiss="modal">Confirmar</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
       </div>

@@ -2,7 +2,7 @@ export interface FondoInversion {
     id:string;
     fondo:string;
     serie:string;
-    operar:string;
+    // operar:string;
     clasificacion:string;
     liquidacion:string;
     horizonte:string;
