@@ -42,7 +42,7 @@
           <div class="formulario1" *ngIf="capitales==true">
           <div class="row">
               <select class="seleccion inputsSeleccion" id="inputGroupSelect01">
-                  <option selected>Emisora</option>
+                  <option class="placeholder" value="" disabled selected hidden>EMISORA</option>
                   <option *ngFor="let food of foods" [value]="food.value">
                     {{ food.viewValue }}
                   </option>
@@ -50,7 +50,7 @@
           </div>
           <div class="row">
               <select class="seleccion inputsSeleccion" id="inputGroupSelect01">
-                  <option class="label" selected>Emisora</option>
+                  <option class="placeholder" value="" disabled selected hidden>EMISORA</option>
                   <option *ngFor="let food of foods" [value]="food.value">
                     {{ food.viewValue }}
                   </option>

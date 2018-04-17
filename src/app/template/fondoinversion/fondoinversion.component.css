@@ -84,6 +84,10 @@ mat-cell{
   background: #ffffff;
   height: auto;
   padding: 25px;
+  
+}
+
+.modalbordeizquierda{
   border-left: 10px solid #fbd437;
 }
 
@@ -127,6 +131,10 @@ mat-cell{
   border-radius: 20px;
 }
 
+.btn-radius{
+  border-radius: 20px;
+}
+
 .centrado{
   text-align: center;
 }
@@ -165,7 +173,7 @@ mat-cell{
 
 .textolateralconfirmacion{
   position: absolute;
-  left: -32px;
+  left: -26px;
   background: #fbd437;
   border-radius: 0px 20px 20px 0px;
   padding: 1px 10px;
@@ -179,4 +187,46 @@ mat-cell{
 .modal-backdrop.show{
   opacity: 1 !important;
   -webkit-filter: blur(5px) !important;
+}
+
+.inputsverde{
+  color: #49aa43;
+}
+
+.contenido p{
+  text-align: center;
+}
+
+.reportes-footer{
+  text-align: center;
+  margin: 30px;
+}
+
+.titulo-modal{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  font-family: OpenSans-Bold;
+  font-size: 30px;
+  justify-content: center;
+  margin-bottom: 25px;    
+}
+
+.mensaje{
+  font-family: OpenSans-Light;
+  font-size: 14px;
+}
+
+.input-token{
+  height: 40px;
+  background-color: transparent;
+  border: 1px solid #147942;
+  display: block;
+  margin: 0 auto;
+  border-radius: 0.3em;
+  text-align: center;
+}
+
+.sinborde{
+  border: 0px;
 }

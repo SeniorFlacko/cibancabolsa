@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FondoInversion } from '../../models/index.models';
 import { FondosinversionService } from '../../services/index.services';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Observable } from 'rxjs/Observable';
+
 
 
 @Component({
@@ -11,15 +14,26 @@ import { FondosinversionService } from '../../services/index.services';
 export class FondoinversionComponent implements OnInit {
 
   displayedFondosColumn = ['fondo', 'serie', 'operar', 'clasificacion','liquidacion','horizonte','maxima','calificacion','horario'];
-  dataInversion:FondoInversion[];
+  dataInversion: Observable<FondoInversion[]>;
 
+  private fondoinversion1Form: FormGroup;
 
   constructor(
-    private fondo_inversion_service:FondosinversionService
+    private fondo_inversion_service:FondosinversionService,
+    private fb: FormBuilder
   ) { }
 
+
   ngOnInit() {
-    this.dataInversion =  this.fondo_inversion_service.getDataFondoInversion();
+    this.validarForm1();
+    this.dataInversion =  this.fondo_inversion_service.getValues();
+
+  }
+
+  validarForm1() {
+    this.fondoinversion1Form = this.fb.group({
+      montoInvertir: ['', [Validators.required] ]
+    });
   }
 
 }

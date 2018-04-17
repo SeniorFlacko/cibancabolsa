@@ -18,7 +18,7 @@
     width: 82px;
     height: 112px;
     top: 0px !important;
-    position: absolute;
+    position: fixed;
     left: -82px;
     text-align: center;
     font-size: 13px;
@@ -29,9 +29,9 @@
 }
 
 .modal-hover{
-    top: 100px !important;
+    
     right: -1000px !important;
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: auto;
     
 }
@@ -144,7 +144,7 @@ select{
 }
 
 .tituloModal{
-    font-size: 34px;
+    font-size: 28px;
     font-weight: bold;
 }
 
@@ -152,3 +152,17 @@ select{
     font-weight: bold;
 }
 
+select{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    font-family: OpenSans-Regular;
+    font-size: 18px;
+    color: #267349;
+    padding: 0px 4px; 
+    outline: none;
+    background: transparent url(/assets/img/icon_arrowDown_verde.png) right center / 1.4em no-repeat;
+    border: none;
+    border-bottom: 1px solid #7a7a7a;
+    margin-right: 10px;
+    
+}
