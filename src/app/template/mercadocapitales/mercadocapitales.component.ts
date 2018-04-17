@@ -23,7 +23,9 @@ export class MercadocapitalesComponent implements OnInit {
   }
 
   getDataCapitales(){
-    this.dataCapitales=this.dataCapService.getMercadoCapitalesData();
+    this.dataCapService.getMercadoCapitalesData().subscribe(response=>{
+      this.dataCapitales=response;
+    });
   }
 
   toggle(orden:MercadoCapitales){
