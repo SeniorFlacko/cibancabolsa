@@ -1,0 +1,71 @@
+mat-table{
+    margin: 0 20px;
+}
+
+mat-header-row{
+    background-color: #f5f5f5;
+    border: none;
+}
+mat-header-cell{
+    font-family: OpenSans-Bold;
+    font-size: 14px;
+    color: black;
+    text-align: center;
+}
+
+mat-cell{
+    font-family: OpenSans-Regular;
+    font-size: 13px;
+    color: black;
+    text-align: center;
+}
+
+.contenedor{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.box{
+    width: calc(100% - 75px);
+    height: calc(100% - 350px);
+    background-color: white;
+    box-shadow: 1px 2px 10px #aaaaaa;
+    margin: 10px 5px;
+}
+
+.titulo{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    font-family: OpenSans-Bold;
+    font-size: 30px;
+    margin: 10px 20px;
+}
+
+.titulo img{
+    width: 0.7em;
+    margin: 5px;
+}
+
+
+.contenedor-content{
+    margin: 10px 30px;
+}
+
+
+.estatus{
+    font-family: OpenSans-BoldItalic;    
+}
+
+.info{
+    color: #589559;
+    cursor: pointer;
+}
+
+
+.flecha_abajo{
+    width: 1em;
+    height: 0.9em;
+    cursor: pointer;
+}

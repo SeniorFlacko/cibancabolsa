@@ -9,8 +9,11 @@
 .box-1{
   display:flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-flow: row wrap;
+  margin-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 20px;
 }
 .titulo{
   font-family: OpenSans-Bold;
@@ -19,22 +22,27 @@
 .horario{
   font-family: OpenSans-SemiBold;
   font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-flow: row;
 }
 .favoritas{
+  display: flex;
+  align-content: center;
   color: #5f995a;
   font-size: 16px;
 }
 .saldo{
   font-size: 16px;
   font-family: OpenSans-Regular;
+  padding-left: 50px;
 }
 .saldo-dinero{
   font-family: OpenSans-SemiBold;
-
 }
 
 mat-table{
-  
   margin: 0 20px;
 }
 
@@ -45,6 +53,10 @@ mat-header-row{
 
 mat-row:nth-child(odd){
   background-color: #f5f5f5;
+}
+
+.fav_icon{
+  color: #49aa43;
 }
 
 
@@ -60,17 +72,21 @@ mat-cell{
   font-size: 14px;
   color: black;
   text-align: center;
+  justify-content: center;
 }
 .positivo{
   color:#00863b;
   display: flex;
   align-items: center;
+  text-align: center;
+  justify-content: center;
 }
 
 .negativo{
   color:#e5212f;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 
@@ -81,4 +97,8 @@ mat-cell{
 .centrado{
   display: flex;
   justify-content: center;
+}
+
+.verde{
+  color: #49aa43;
 }

@@ -5,7 +5,7 @@
 }
 
 .box{
-    width: 1040px;
+    width: 90%;
     height: calc(100% - 350px);
     background-color: white;
     box-shadow: 1px 2px 10px #aaaaaa;
@@ -17,7 +17,7 @@
     flex-flow: row wrap;
     align-items: center;
     font-family: OpenSans-Bold;
-    font-size: 30px;
+    font-size: 28px;
     margin: 10px 20px;
 }
 
@@ -41,20 +41,22 @@
 .icono{
     width: 1em;
     margin: 10px;
+    color: #83ab80;
 }
 
 .slides{
     display: flex;
     flex-flow: row wrap;
+
 }
 
 .slide-child{
-    flex: 1 1 40%;
-    margin: 3%;
+    flex: 1 1 43%;
+    margin: 2%;
 }
 
 .reporte-texto{
-    font-size: 14px;
+    font-size: 11px;
 }
 
 .titulo-divisas{
@@ -85,5 +87,9 @@
 }
 
 .info{
-    margin: 15px 5px; 
+    margin: 15px 5px;
+}
+
+.grafica{
+  max-width: 80%;
 }
