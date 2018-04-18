@@ -32,6 +32,7 @@ export class MercadocapitalesComponent implements OnInit {
     this.dataCapitales.forEach( capital => {
       capital.id === orden.id ? capital.favorita = !capital.favorita : null;
     });
+    this.dataCapService.updateRegistro(orden).subscribe();
   }
 
   star_icon(star:boolean): string{

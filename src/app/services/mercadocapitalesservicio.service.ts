@@ -18,4 +18,16 @@ export class MercadocapitalesservicioService {
       .flatMapTo(this.http.get(URL))
       .map(res => res.json());
   }
+
+  updateRegistro( mercado_capitales:MercadoCapitales){
+   
+    let baseUrl = "https://cicasabolsa.firebaseio.com/mercadocapitales";
+
+    let url = `${ baseUrl }/${ mercado_capitales.id }.json`;
+    
+    let body = JSON.stringify( mercado_capitales );
+    
+    return this.http.put( url, body);
+  }
+
 }
