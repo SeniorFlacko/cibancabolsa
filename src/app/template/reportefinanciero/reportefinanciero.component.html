@@ -138,7 +138,7 @@
             <div class="separador"></div>
 
             <div class="tasas-informacion">
-                <span class="info">Tasa Actual</span>
+                <span class="info bold">Tasa Actual</span>
                 <span class="info">7.66500</span>
                 <span class="info">5.974179</span>
             </div>
@@ -146,15 +146,15 @@
             <div class="separador"></div>
 
             <div class="tasas-informacion">
-                <span class="info">Tasa Actual</span>
-                <span class="info">7.66500</span>
-                <span class="info">5.974179</span>
+                <span class="info bold">Tasa Anterior</span>
+                <span class="info"></span>
+                <span class="info"></span>
             </div>
 
             <div class="separador"></div>
 
             <div class="tasas-informacion">
-                <span class="info">Variación (%)</span>
+                <span class="info bold">Variación (%)</span>
                 <span class="info">0.009133</span>
                 <span class="info">0.0014866</span>
             </div>
@@ -166,11 +166,34 @@
             MERCADO BURSÁTIL
         </p>
         <div>
-          <span>Última Actualización</span>|  15:16:01 | 02-02-2018
+          <span class="ult_actualizacion">Última Actualización</span>|  <span class="inf_actualizacion">15:16:01</span> | <span class="inf_actualizacion">02-02-2018</span>
         </div>
         <p class="titulo-divisas">BOLSAS</p>
-        <div class="grafica">
-          <canvas id="myChart" width="" height="89">{{ chart }}</canvas>
+        <div >
+          <div class="grap_superior margin_bottom">
+            <div>IPC</div>
+            <div>DOLSPOT</div>
+            <div>DJIA</div>
+            <div>S&P500(EU)</div>
+          </div>
+          <div class="grap_superior">
+            <canvas class="grafica" id="myChart" width="" height="89">{{ chart }}</canvas>
+            <div class="grap_derecha">
+              <span class="grap_sub_title">ÍNDICE/PRECIO($)</span>
+              <span class="grap_sub_title_data">50280</span>
+              <span class="grap_sub_title">VARIACIÓN(%) DIARIA</span>
+              <span class="grap_sub_title_data">0.41</span>
+              <span class="grap_sub_title"> VARIACIÓN(%) MES</span>
+              <span class="grap_sub_title_data">0.33</span>
+              <span class="grap_sub_title">VARIACIÓN(%) EN EL AÑO</span>
+              <span class="grap_sub_title_data">1500</span>
+            </div>
+          </div>
+          <div>
+            <span class="grap_footer">
+              *Información con 20 minutos de retraso
+            </span>
+          </div>
         </div>
 
       </div>

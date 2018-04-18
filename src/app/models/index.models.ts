@@ -1,3 +1,4 @@
+export {FondosInversionPendientes} from './fondos-inversion-pendientes';
 export { MercadoCapitales } from './mercado-capitales';
 export { Token } from './token';
 export { User } from './User';

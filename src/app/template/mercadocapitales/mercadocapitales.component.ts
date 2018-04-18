@@ -23,13 +23,16 @@ export class MercadocapitalesComponent implements OnInit {
   }
 
   getDataCapitales(){
-    this.dataCapitales=this.dataCapService.getMercadoCapitalesData();
+    this.dataCapService.getMercadoCapitalesData().subscribe(response=>{
+      this.dataCapitales=response;
+    });
   }
 
   toggle(orden:MercadoCapitales){
     this.dataCapitales.forEach( capital => {
       capital.id === orden.id ? capital.favorita = !capital.favorita : null;
     });
+    this.dataCapService.updateRegistro(orden).subscribe();
   }
 
   star_icon(star:boolean): string{

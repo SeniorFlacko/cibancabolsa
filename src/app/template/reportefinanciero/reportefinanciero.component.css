@@ -88,8 +88,61 @@
 
 .info{
     margin: 15px 5px;
+    font-size: 14px;
+}
+
+.bold{
+  font-family: OpenSans-Bold;
 }
 
 .grafica{
-  max-width: 80%;
+  max-width: 70%;
+  max-height: 100%;
+}
+
+.ult_actualizacion{
+  padding-left: 30px;
+}
+
+.inf_actualizacion{
+  font-family: OpenSans-Bold;
+}
+
+.grap_superior{
+  color: #a9afbe;
+  font-family: OpenSans-Bold;
+  font-size: 12px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.margin_bottom{
+  margin-bottom: 30px;
+}
+
+.grap_derecha{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+}
+
+.grap_sub_title{
+  color: #598b5f;
+  font-family: Roboto-Bold;
+  font-size: 12px;
+}
+
+.grap_sub_title_data{
+  color: #5c5c5f ;
+  font-family: OpenSans-Bold;
+  font-size: 16px;
+  margin-top: -35px;
+}
+
+.grap_footer{
+  color: #bd261f;
+  font-size: 12px;
+  font-family: OpenSans-Bold;
+  margin-left: 75px;
 }

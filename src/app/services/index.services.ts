@@ -1,3 +1,5 @@
+export {FondosinversionpendientesService} from './fondosinversionpendientes.service';
+
 export { OrdenesService } from './ordenes.service';
 
 export { MercadocapitalesservicioService } from './mercadocapitalesservicio.service';
@@ -16,3 +18,5 @@ export { SessionService } from './session.service';
 export { LoaderService } from './loader.service';
 export { AuthGuard } from './auth.guard';
 export { FondosinversionService } from './fondosinversion.service';
+
+
