@@ -230,3 +230,16 @@ mat-cell{
 .sinborde{
   border: 0px;
 }
+
+.vigencia, .vigencia i{
+  font-size: 11px;
+  text-align: center;
+}
+
+.modal1{
+  max-width: 800px !important;
+}
+
+.modalconfirmacion{
+  max-width: 530px !important;
+}
