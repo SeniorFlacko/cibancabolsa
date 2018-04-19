@@ -1,3 +1,4 @@
+export { RetiroComponent } from './retiro/retiro.component';
 export { ReportefinancieroComponent } from './reportefinanciero/reportefinanciero.component';
 export { OrdenesComponent } from './ordenes/ordenes.component';
 export { PortafolioComponent } from './portafolio/portafolio.component';

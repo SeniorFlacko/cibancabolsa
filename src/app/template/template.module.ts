@@ -18,6 +18,7 @@ import { TablaMercadoDineroPendientesComponent } from './portafolio/ordenes-pend
 import { TablaFondosInversionPendientesComponent } from './portafolio/ordenes-pendientes-tabs/tabla-fondos-inversion-pendientes/tabla-fondos-inversion-pendientes.component';
 import { TablaMercadoCapitalesUsdComponent } from './portafolio/portafolio-usd/tabla-mercado-capitales-usd/tabla-mercado-capitales-usd.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RetiroComponent } from './retiro/retiro.component';
 
 @NgModule({
   imports: [
@@ -46,6 +47,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     TablaMercadoDineroPendientesComponent,
     TablaFondosInversionPendientesComponent,
     TablaMercadoCapitalesUsdComponent,
+    RetiroComponent,
 
   ]
 })
