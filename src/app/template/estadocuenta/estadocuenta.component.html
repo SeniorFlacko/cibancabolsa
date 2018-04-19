@@ -1,0 +1,67 @@
+<div class="container">
+  <div class="col-lg-8 offset-lg-2 box">
+    <div class="titulo">
+      <span><i class="material-icons">crop_portrait</i>Estado de Cuenta</span>
+    </div>
+    <div class="row centrado marginTop">
+      <form [formGroup]="formEstadoCuenta">
+        <select class="" formControlName="buscarEstadoCuenta">
+          <option class="placeholder" value="" disabled selected hidden>BUSCAR POR PERIODO</option>
+          <option value="1" selected>ENERO</option>
+          <option value="2" >FEBRERO</option>
+          <option value="3" >MARZO</option>
+          <option value="4" >ABRIL</option>
+          <option value="5" >MAYO</option>
+          <option value="6" >JUNIO</option>
+          <option value="7" >JULIO</option>
+          <option value="8" >AGOSTO</option>
+          <option value="9" >SEPTIEMBRE</option>
+          <option value="10" >OCTUBRE</option>
+          <option value="11" >NOVIEMBRE</option>
+          <option value="12" >DICIEMBRE</option>
+        </select>
+        <!-- <mat-form-field>
+          <input matInput [matDatepicker]="picker" placeholder="FECHA DE INICIO" formControlName="buscarFechaInicioEstadoCuenta">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput [matDatepicker]="picker1" placeholder="FECHA DE INICIO" formControlName="buscarFechaFinEstadoCuenta">
+            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+          </mat-form-field> -->
+        <button class="btn btn-success" [disabled]="!formEstadoCuenta.valid">Buscar</button>
+      </form>
+
+    </div>
+    <div class="container col-lg-6">
+      <table class="table table-striped">
+        <thead class="">
+          <tr>
+            <th scope="col">Periodo</th>
+            <th scope="col">Año</th>
+            <th scope="col">Descargar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Enero</td>
+            <td>2018</td>
+            <td>PDF</td>
+          </tr>
+          <tr>
+            <td>Diciembre</td>
+            <td>2017</td>
+            <td>PDF</td>
+          </tr>
+          <tr class="centrado">
+            <td>Noviembre</td>
+            <td>2017</td>
+            <td>PDF</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br>
+  </div>
+</div>

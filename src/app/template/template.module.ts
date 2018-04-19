@@ -19,6 +19,7 @@ import { TablaFondosInversionPendientesComponent } from './portafolio/ordenes-pe
 import { TablaMercadoCapitalesUsdComponent } from './portafolio/portafolio-usd/tabla-mercado-capitales-usd/tabla-mercado-capitales-usd.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { RetiroComponent } from './retiro/retiro.component';
+import { EstadocuentaComponent } from './estadocuenta/estadocuenta.component';
 
 @NgModule({
   imports: [
@@ -49,6 +50,7 @@ import { RetiroComponent } from './retiro/retiro.component';
     TablaFondosInversionPendientesComponent,
     TablaMercadoCapitalesUsdComponent,
     RetiroComponent,
+    EstadocuentaComponent,
 
   ]
 })
