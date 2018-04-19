@@ -17,6 +17,7 @@ export class FondoinversionComponent implements OnInit {
   dataInversion: Observable<FondoInversion[]>;
 
   private fondoinversion1Form: FormGroup;
+  private contradinamicafondoinversion: FormGroup;
 
   constructor(
     private fondo_inversion_service:FondosinversionService,
@@ -26,6 +27,7 @@ export class FondoinversionComponent implements OnInit {
 
   ngOnInit() {
     this.validarForm1();
+    this.contraDinamicaDondoInversion();
     this.dataInversion =  this.fondo_inversion_service.getValues();
 
   }
@@ -33,6 +35,13 @@ export class FondoinversionComponent implements OnInit {
   validarForm1() {
     this.fondoinversion1Form = this.fb.group({
       montoInvertir: ['', [Validators.required] ]
+    });
+  }
+
+  contraDinamicaDondoInversion()
+  {
+    this.contradinamicafondoinversion = this.fb.group({
+      token: ['', [Validators.required] ]
     });
   }
 

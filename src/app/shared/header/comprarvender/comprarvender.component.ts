@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators  } from '@angular/forms';
 import * as $ from 'jquery';
 
 @Component({
@@ -18,20 +19,58 @@ export class ComprarvenderComponent implements OnInit {
   dinero :boolean = false;
   inversion:boolean = false;
 
-  constructor() { 
 
-    
+  private formularioUno: FormGroup; 
+  private formularioDos: FormGroup;
+  private formularioTres: FormGroup;
+
+  constructor(
+    private fb: FormBuilder
+
+  ) { 
+
+   
 
   }
 
   ngOnInit() {
-//  setTimeout(() => {
+    
+    //  setTimeout(() => {
 //   $(document).ready(function(){
     
 //     $('#exampleModal').modal('show');
 
 //   });
 //  }, 5000);
+this.validarFormularioUno();
+this.validarFormularioDos();
+this.validarFormularioTres();
+  }
+
+  validarFormularioUno() {
+    this.formularioUno = this.fb.group({
+      emisoraUno: ['', [Validators.required] ],
+      tipoOrdenUno: ['', [Validators.required] ],
+      titulosUno: ['', [Validators.required] ],
+      precioCompraUno: ['', [Validators.required] ]
+
+    });
+  }
+
+  validarFormularioDos() {
+    this.formularioDos = this.fb.group({
+      reportesDos: ['', [Validators.required] ],
+      plazoDos: ['', [Validators.required] ]
+
+    });
+  }
+
+  validarFormularioTres() {
+    this.formularioTres = this.fb.group({
+      fondoTres: ['', [Validators.required] ],
+      catidadinvertirTres: ['', [Validators.required] ]
+
+    });
   }
 
   seleccionBotones(id:string){
@@ -52,5 +91,7 @@ export class ComprarvenderComponent implements OnInit {
       this.inversion = true;
     }
   }
+
+ 
 
 }

@@ -58,7 +58,7 @@
 
 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal1">
-      <div class="modal-content modalbordeizquierda">
+      <div class="modal-content modalbordeizquierda ">
         <div class="generalmodalfi">
             <div class="divonemodalfi">
               <p class="texto1modal">+CIGUB</p>
@@ -84,8 +84,8 @@
               </form>
             </div>
             <div class="divthreemodalfi">
-              <p>Saldo disponible</p>
-              <p>$1,846,746.29</p>
+              <p class="saldomodal1">Saldo disponible</p>
+              <p class="catidadsaldomodal1">$1,846,746.29</p>
             </div>
         </div>
       </div>
@@ -118,14 +118,15 @@
     <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
+            <form [formGroup]="contradinamicafondoinversion"></form>
             <h5 class="titulo-modal">Contraseña dinámica</h5>
             <div class="contenido">
               <p class="mensaje">Desde su dispositivo móvil genera una clave dinamica e ingrésala a continuación</p>
-              <input class="input-token" type="text">
+              <input class="input-token" type="text" formControlName="token">
             </div>
             <div class="modal-footer justifyContent">
                 <button type="button" class="btn btn-outline-danger sinborde btn-radius" data-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-success btn-radius" data-dismiss="modal" data-toggle="modal" data-target="#enviosuccess">Confirmar</button>
+                <button type="button" class="btn btn-success btn-radius" data-dismiss="modal" data-toggle="modal" data-target="#enviosuccess" [disabled]="!contradinamicafondoinversion.valid">Confirmar</button>
               </div>
           </div>
 

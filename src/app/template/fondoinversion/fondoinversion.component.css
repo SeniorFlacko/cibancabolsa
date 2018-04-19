@@ -184,9 +184,9 @@ mat-cell{
 }
 
 
-.modal-backdrop.show{
+.modal-backdrop.show, .modal-backdrop{
   opacity: 1 !important;
-  -webkit-filter: blur(5px) !important;
+  filter: blur(5px) !important;
 }
 
 .inputsverde{
@@ -238,8 +238,18 @@ mat-cell{
 
 .modal1{
   max-width: 800px !important;
+  background: #efeff1 !important;
 }
 
 .modalconfirmacion{
   max-width: 530px !important;
+}
+
+.saldomodal1{
+  margin-bottom: 0px;
+  font-weight: 600;
+}
+
+.catidadsaldomodal1{
+  font-weight: bold;
 }

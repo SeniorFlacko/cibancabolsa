@@ -7,13 +7,16 @@ import { AlertComponent } from './helpers/alert/alert.component';
 import { MaterialModule } from '../material.module';
 import { BuscadorComponent } from './header/buscador/buscador.component';
 import { FechaComponent } from './header/fecha/fecha.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { ComprarvenderComponent } from './header/comprarvender/comprarvender.component';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   declarations: [
     HeaderComponent, 
