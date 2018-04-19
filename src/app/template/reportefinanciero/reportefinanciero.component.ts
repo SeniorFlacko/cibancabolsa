@@ -18,16 +18,16 @@ export class ReportefinancieroComponent implements OnInit {
 
 
   renderGraphic() {
-    this.chart = new Chart(document.getElementById("myChart"),
+    var chart = new Chart(document.getElementById("myChart"),
       {"type":"line",
         "data":{
           "labels":["January","February","March","April","May","June","July",65,59,80,81,56,55,40,65,59,80,81,56,55,40,65,59,80,81,56,55,40],
           "datasets":[
               {
               "label":"My First Dataset",
-              "data":[65,59,80,81,56,55,40,65,59,80,81,56,55,40,65,59,80,81,56,55,40,65,59,80,81,56,55,40,65,59,80,81,56,55,40,65,59,80,81,56,55,40],
+              "data":[6500,5900,8000,8100,5600,5500,4000,6500,5900,8000,8100,5600,5500,4000,6500,5900,8000,8100,5600,5500,4000,6500,65900,8000,8100,5600,5500,4000,6500,5900,8000,8100,5600,5500,4000,6500,5900,8000,8100,5600,5500,4000],
               "fill":false,
-              "borderColor":"rgb(75, 192, 192)",
+              "borderColor":"rgb(79, 146, 214)",
               "lineTension":0.1
               }
             ]
