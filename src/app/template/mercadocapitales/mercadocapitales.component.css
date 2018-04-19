@@ -132,6 +132,7 @@ mat-cell{
 
 .divtwomodalfi{
   width: 30%;
+  margin-left:15px;
 }
 
 .divthreemodalfi{
@@ -163,6 +164,7 @@ mat-cell{
 }
 
 .btn-comprar-modal{
+  margin: 50px 50px;
   border-radius: 20px;
 }
 
@@ -243,7 +245,7 @@ mat-cell{
   align-items: center;
   font-family: OpenSans-Bold;
   font-size: 30px;
-  justify-content: center;
+  justify-content: flex-end;
   margin-bottom: 25px;
 }
 
@@ -338,4 +340,12 @@ mat-cell{
 
 .footer{
   margin-top: -130px;
+}
+.pointer{
+  cursor: pointer;
+}
+
+.icono{
+  font-size: 30px;
+
 }
