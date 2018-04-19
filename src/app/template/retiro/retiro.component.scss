@@ -1,0 +1,175 @@
+.contenedor{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.box{
+    width: calc(100% - 525px);
+    height: calc(100% - 350px);
+    background-color: white;
+    box-shadow: 1px 2px 10px #aaaaaa;
+    margin: 10px 5px;
+}
+
+.titulo{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    font-family: OpenSans-Bold;
+    font-size: 30px;
+    margin: 10px 20px;
+}
+
+.titulo img{
+    width: 0.7em;
+    margin: 5px;
+}
+
+
+.contenedor-content{
+    margin: 10px 30px;
+}
+
+
+
+.punto-label-content{
+  display: flex;
+  justify-content: space-between;
+}
+
+.puntolabel{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.puntolabel-punto{
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background-color: #d8d8d8;
+}
+
+.active{
+  background-color: #00853e;
+}
+
+.puntolabel-label{
+  font-family: OpenSans-Light;
+}
+
+
+.contrato-saldo-container{
+  display: flex;
+}
+
+.contrato-saldo-container > * {
+  margin: 10px 35px;
+}
+
+.contrato-container{
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.saldo-container{
+  display: flex;
+  flex-flow: column wrap;
+}
+
+
+.contrato-label, .saldo-label{
+  font-family: OpenSans-SemiBold;
+}
+
+.contrato-numero, .saldo-cantidad{
+  font-family: OpenSans-Bold;
+}
+
+.contrato-titular{
+  font-size: 14px;
+}
+
+.separador{
+  width: 80%;
+}
+
+form{
+
+  display: flex;
+  flex-flow: column wrap;
+  font-family: OpenSans-SemiBold;
+  font-size: 15px;
+  margin: 0 10px;
+
+  select{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    color: #127947;
+    padding: 0px 4px; 
+    outline: none;
+    background: transparent url(/assets/img/icon_arrowDown_verde.png) right center / 1.4em no-repeat;
+    border: none;
+    border-bottom: 1px solid #7a7a7a;
+    width: 35%;
+    margin: 17px;
+  }
+  
+  .input-monto{
+    border: none;
+    border-bottom: 1px solid #7a7a7a;
+    outline: none;
+    color: #267349;
+    width: 35%;
+    margin: 17px;
+  }
+
+  .retiroForm-botones{
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    align-items: center;
+  }
+
+  .retiroForm-botones > *{
+    margin: 10px;
+  }
+
+  .boton-enviar,.boton-enviar:disabled{
+      border: none;
+      border-radius: 30px;
+      font-family: OpenSans-Light;
+      font-size: 18px;
+      background-color: #9c9c9c;
+      color: white;
+      outline: none;
+      padding: 5px 30px;
+      cursor: pointer;
+      width: max-content;
+      text-align: center;
+  }
+
+  .boton-enviar:hover,.boton-enviar:enabled{
+      background-color: #49aa43;
+  }
+
+  .boton-enviar:disabled{
+      cursor: no-drop;
+  }
+
+
+  .boton-cancelar{
+    border: none;
+    border-radius: 30px;
+    font-family: OpenSans-Light;
+    font-size: 18px;
+    background-color: transparent;
+    color: #cb2a3a;
+    outline: none;
+    padding: 5px 30px;
+    cursor: pointer;
+    width: max-content;
+    text-align: center;
+  }
+}

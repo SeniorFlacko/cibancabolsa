@@ -5,7 +5,92 @@
           <span>Retiro</span>
       </div>
       <div class="contenedor-content">
-          
+            
+            <div class="punto-label-content">
+                <div class="puntolabel">
+                    <div class="puntolabel-punto active"></div>
+                    <label class="puntolabel-label">Selecciona...</label>
+                </div>
+                <div class="puntolabel">
+                    <div class="puntolabel-punto"></div>
+                    <label class="puntolabel-label">Verifica...</label>
+                </div>
+                <div class="puntolabel">
+                    <div class="puntolabel-punto"></div>
+                    <label class="puntolabel-label">Comprobante...</label>
+                </div>
+            </div>
+            
+            <ng-container [ngSwitch]="pantalla">
+                <ng-container *ngSwitchCase="'Seleccionar'">
+
+                    <div class="contrato-saldo-container">
+                        <div class="contrato-container">
+                            <span class="contrato-label">Contrato</span>
+                            <span class="contrato-numero">78355634</span>
+                            <span class="contrato-titular">J*** M**** Z*****</span>
+                        </div>
+                        <div class="saldo-container">
+                            <span class="saldo-label">SALDO DISPONIBLE</span>
+                            <span class="saldo-cantidad">78355634</span>
+                        </div>
+                    </div>
+            
+                    <hr class="separador">
+        
+                    <form  [formGroup]="retiroForm" (ngSubmit)="onRetiroSubmit()">
+                        <select formControlName="cuenta">
+                            <option class="placeholder" value="" disabled selected hidden>CUENTA DESTINO...</option>
+                            <option value="volvo">CIBANCO ****2289</option>
+                            <option value="volvo">INBURSA ****6536</option>
+                            <option value="volvo">BANCOMER ****6457</option>
+                        </select>
+                        
+                        <input class="input-monto" type="text" placeholder="IMPORTE" formControlName="importe">
+        
+                        <div class="retiroForm-botones">
+                            <button class="boton-enviar" type="submit" [disabled]="!retiroForm.valid">SIGUIENTE</button>
+                            <button class="boton-cancelar" (click)="retiroFormCancel()">Cancelar</button>
+                        </div>
+        
+                    </form>
+
+                </ng-container>
+
+                <ng-container *ngSwitchCase="'Verificar'">
+                    <div class="contrato-saldo-container">
+                        <div class="contrato-container">
+                            <span class="contrato-label">Contrato</span>
+                            <span class="contrato-numero">78355634</span>
+                            <span class="contrato-titular">J*** M**** Z*****</span>
+                        </div>
+                        <div class="saldo-container">
+                            <span class="saldo-label">SALDO DISPONIBLE</span>
+                            <span class="saldo-cantidad">78355634</span>
+                        </div>
+                    </div>
+            
+                    <hr class="separador">
+                    
+                    <p>Confima que los datos ingresados sean correctos</p>
+
+                    
+
+
+                </ng-container>
+
+                <ng-container *ngSwitchCase="'Comprobar'">
+                    Comprobando
+                </ng-container>
+
+                <ng-container *ngSwitchDefault>
+                    Algo ocurrio mal, intentelo de nuevo.
+                </ng-container>
+
+            </ng-container>
+            
+            
+    
       </div> 
       <br>
   </div>
