@@ -30,6 +30,11 @@ export class RetiroComponent implements OnInit {
     this.showScreen('Verificar');
   }
 
+  cancelar(){
+    this.retiroForm.reset();
+    this.showScreen('Seleccionar');
+  }
+
   cancel(){
     this.retiroForm.reset();
     this.showScreen('Seleccionar');
