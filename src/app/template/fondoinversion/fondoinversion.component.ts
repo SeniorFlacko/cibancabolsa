@@ -27,7 +27,7 @@ export class FondoinversionComponent implements OnInit {
 
   ngOnInit() {
     this.validarForm1();
-    this.contraDinamicaDondoInversion();
+    this.contraDinamicaFondoInversion();
     this.dataInversion =  this.fondo_inversion_service.getValues();
 
   }
@@ -38,7 +38,7 @@ export class FondoinversionComponent implements OnInit {
     });
   }
 
-  contraDinamicaDondoInversion()
+  contraDinamicaFondoInversion()
   {
     this.contradinamicafondoinversion = this.fb.group({
       token: ['', [Validators.required] ]

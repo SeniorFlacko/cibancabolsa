@@ -118,7 +118,7 @@
     <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
-            <form [formGroup]="contradinamicafondoinversion"></form>
+            <form [formGroup]="contradinamicafondoinversion">
             <h5 class="titulo-modal">Contraseña dinámica</h5>
             <div class="contenido">
               <p class="mensaje">Desde su dispositivo móvil genera una clave dinamica e ingrésala a continuación</p>
@@ -128,6 +128,7 @@
                 <button type="button" class="btn btn-outline-danger sinborde btn-radius" data-dismiss="modal">Cancelar</button>
                 <button type="button" class="btn btn-success btn-radius" data-dismiss="modal" data-toggle="modal" data-target="#enviosuccess" [disabled]="!contradinamicafondoinversion.valid">Confirmar</button>
               </div>
+            </form>
           </div>
 
         </div>
