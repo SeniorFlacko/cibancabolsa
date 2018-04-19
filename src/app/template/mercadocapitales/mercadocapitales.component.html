@@ -25,7 +25,7 @@
                  matSortDisableClear>
         <ng-container matColumnDef="emisora">
           <mat-header-cell *matHeaderCellDef mat-sort-header>Emisora</mat-header-cell>
-          <mat-cell *matCellDef="let capital"><a data-toggle="modal" data-target=".mercado_modal">{{ capital.emisora }}</a></mat-cell>
+          <mat-cell *matCellDef="let capital"><a class="pointer"data-toggle="modal" data-target=".mercado_modal">{{ capital.emisora }}</a></mat-cell>
         </ng-container>
         <ng-container matColumnDef="precio_cierre">
           <mat-header-cell *matHeaderCellDef>Precio Cierre</mat-header-cell>
@@ -107,7 +107,7 @@
                 <label>PRECIO COMPRA</label>
                 <input type="text" placeholder="130.25">
                 <div>
-                    <button class="btn btn-success btn-comprar-modal" data-toggle="modal" data-target="#exampleModalCenter" data-dismiss="modal">ENVIAR</button>
+                    <button class="btn btn-success btn-comprar-modal" data-dismiss="modal" data-toggle="modal" data-target="#enviosuccess">ENVIAR</button>
                 </div>
               <!-- </form> -->
             </div>
@@ -120,6 +120,25 @@
                 <p>Monto: <span>$13,025</span></p>
               </div>
             </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="enviosuccess" tabindex="-1" role="dialog" aria-labelledby="miModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="titulo-modal">
+            <span><i class="material-icons verde">check_circle</i> Envío exitoso</span>
+          </div>
+          <div class="contenido">
+            <p>Operación registrada con éxito</p>
+            <p>Folio: 87652</p>
+          </div>
+          <div class="reportes-footer">
+            <button class="btn btn-success btn-radius" data-dismiss="modal">Confirmar</button>
+          </div>
         </div>
       </div>
     </div>

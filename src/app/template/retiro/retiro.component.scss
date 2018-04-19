@@ -1,0 +1,426 @@
+.contenedor{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.box{
+    width: calc(100% - 525px);
+    height: calc(100% - 350px);
+    background-color: white;
+    box-shadow: 1px 2px 10px #aaaaaa;
+    margin: 10px 5px;
+}
+
+.titulo{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    font-family: OpenSans-Bold;
+    font-size: 30px;
+    margin: 10px 20px;
+}
+
+.titulo img{
+    width: 0.7em;
+    margin: 5px;
+}
+
+
+.contenedor-content{
+    margin: 10px 30px;
+}
+
+
+
+.punto-label-content{
+  display: flex;
+  justify-content: space-between;
+}
+
+.puntolabel{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.puntolabel-punto{
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background-color: #d8d8d8;
+}
+
+.active{
+  background-color: #00853e;
+}
+
+.puntolabel-label{
+  font-family: OpenSans-Light;
+}
+
+
+.contrato-saldo-container{
+  display: flex;
+}
+
+.contrato-saldo-container > * {
+  margin: 10px 35px;
+}
+
+.contrato-container{
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.saldo-container{
+  display: flex;
+  flex-flow: column wrap;
+}
+
+
+.contrato-label, .saldo-label{
+  font-family: OpenSans-SemiBold;
+}
+
+.contrato-numero, .saldo-cantidad{
+  font-family: OpenSans-Bold;
+}
+
+.contrato-titular{
+  font-size: 14px;
+}
+
+.separador{
+  width: 80%;
+}
+
+form{
+
+  display: flex;
+  flex-flow: column wrap;
+  font-family: OpenSans-SemiBold;
+  font-size: 15px;
+  margin: 0 10px;
+
+  select{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    color: #127947;
+    padding: 0px 4px; 
+    outline: none;
+    background: transparent url(/assets/img/icon_arrowDown_verde.png) right center / 1.4em no-repeat;
+    border: none;
+    border-bottom: 1px solid #7a7a7a;
+    width: 35%;
+    margin: 17px;
+  }
+  
+  .input-monto{
+    border: none;
+    border-bottom: 1px solid #7a7a7a;
+    outline: none;
+    color: #267349;
+    width: 35%;
+    margin: 17px;
+  }
+
+  .retiroForm-botones{
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    align-items: center;
+  }
+
+  .retiroForm-botones > *{
+    margin: 10px;
+  }
+
+  .boton-enviar,.boton-enviar:disabled{
+      border: none;
+      border-radius: 30px;
+      font-family: OpenSans-Light;
+      font-size: 18px;
+      background-color: #9c9c9c;
+      color: white;
+      outline: none;
+      padding: 5px 30px;
+      cursor: pointer;
+      width: max-content;
+      text-align: center;
+  }
+
+  .boton-enviar:hover,.boton-enviar:enabled{
+      background-color: #49aa43;
+  }
+
+  .boton-enviar:disabled{
+      cursor: no-drop;
+  }
+
+
+  .boton-cancelar{
+    border: none;
+    border-radius: 30px;
+    font-family: OpenSans-Light;
+    font-size: 18px;
+    background-color: transparent;
+    color: #cb2a3a;
+    outline: none;
+    padding: 5px 30px;
+    cursor: pointer;
+    width: max-content;
+    text-align: center;
+  }
+}
+
+
+.cuenta-destino{
+  font-family: OpenSans-SemiBold;
+  font-size: 16px;
+
+  .cuenta, .destino{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: 35px 0;
+  }
+}
+
+
+.botones{
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  align-items: center;
+}
+
+.botones > *{
+  margin: 10px;
+}
+
+.boton-enviar,.boton-enviar:disabled{
+    border: none;
+    border-radius: 30px;
+    font-family: OpenSans-Light;
+    font-size: 18px;
+    background-color: #9c9c9c;
+    color: white;
+    outline: none;
+    padding: 5px 30px;
+    cursor: pointer;
+    width: max-content;
+    text-align: center;
+}
+
+.boton-enviar:hover,.boton-enviar:enabled{
+    background-color: #49aa43;
+}
+
+.boton-enviar:disabled{
+    cursor: no-drop;
+}
+
+
+.boton-cancelar{
+  border: none;
+  border-radius: 30px;
+  font-family: OpenSans-Light;
+  font-size: 18px;
+  background-color: transparent;
+  color: #cb2a3a;
+  outline: none;
+  padding: 5px 30px;
+  cursor: pointer;
+  width: max-content;
+  text-align: center;
+}
+
+
+.titulo-modal{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  font-family: OpenSans-Bold;
+  font-size: 30px;
+  justify-content: center;
+  margin-bottom: 25px;    
+}
+
+.titulo-modal img{
+  width: 0.7em;
+  margin: 5px;
+}
+
+.modal-content{
+  border-radius: 0 ;
+  border: none;
+}
+
+.caja_reportes{
+  border-radius: 0.3em;
+  border: 1px solid #efefef;
+}
+
+
+.reportes{
+  font-family: OpenSans-Bold;
+  font-size: 23px;
+}
+
+.privado{
+  font-family: OpenSans-Bold;
+  font-size: 15px;
+  margin: 0 20%;
+}
+
+.reportes-heading{
+  display: flex;
+  margin: 15px;
+}
+
+.reportes-content{
+  display: flex;
+  justify-content: space-around;
+  margin: 15px;
+}
+
+.monto, .tasa-interes{
+  font-family: OpenSans-Regular;
+}
+
+.cantidad{
+  font-family: OpenSans-Bold;
+}
+
+.reportes-total{
+  background-color: #efefef;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  color: #02833c;
+  font-family: OpenSans-Bold;
+}
+
+
+/* .modal-content{
+  width: 650px;
+}
+
+.modal-body{
+  padding: 40px;
+} */
+
+
+@media (min-width: 576px){
+  .modal-dialog {
+      max-width: 600px;
+      margin: 1.75rem auto;
+  }
+}
+
+.modal-body{
+  padding: 1rem 50px;
+}
+
+.cancelar{
+  border: none;
+  border-radius: 30px;
+  font-family: OpenSans-Light;
+  font-size: 18px;
+  background-color: transparent;
+  color: #cb2a3a;
+  outline: none;
+  padding: 5px 30px;
+  cursor: pointer;
+}
+.confirmar{
+  border: none;
+  border-radius: 30px;
+  font-family: OpenSans-Light;
+  font-size: 18px;
+  background-color: #49aa43;
+  color: white;
+  outline: none;
+  padding: 5px 30px;
+  cursor: pointer;
+}
+
+.reportes-footer{
+  text-align: center;
+  margin: 30px;
+}
+
+.mensaje{
+  font-family: OpenSans-Light;
+  font-size: 14px;
+}
+
+.input-token{
+  height: 40px;
+  background-color: transparent;
+  border: 1px solid #147942;
+  display: block;
+  margin: 0 auto;
+  border-radius: 0.3em;
+}
+
+.contenido p{
+  text-align: center;
+
+}
+
+.comprobacion{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.comprobacion-transferencia{
+  font-family: OpenSans-BoldItalic;
+  font-size: 22px;
+}
+
+.comprobacion-operacion{
+  font-size: 17px;
+}
+
+.ticket{
+  display: flex;
+  flex-flow: column wrap;
+  font-family: OpenSans-SemiBold;
+  font-size: 16px;
+  margin: 15px 0;
+}
+
+.ticket > * {
+  margin: 10px 0px;
+}
+
+.ticket > * > *{
+  margin: 5px 100px
+}
+
+.ticket-block{
+  display: flex;
+}
+
+.comprobacion-footer{
+  display: flex;
+  justify-content: space-evenly;
+  margin: 15px 0;
+}
+
+.comprobacion-footer > span{
+  text-decoration: underline;
+  font-family: OpenSans-SemiBold;
+  font-size: 18px;
+  color: #4da74c;
+  cursor: pointer;
+  
+}
+
+.verde{
+  color: #00853e;
+}

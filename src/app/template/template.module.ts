@@ -17,7 +17,7 @@ import { TablaMercadoCapitalesPendientesComponent } from './portafolio/ordenes-p
 import { TablaMercadoDineroPendientesComponent } from './portafolio/ordenes-pendientes-tabs/tabla-mercado-dinero-pendientes/tabla-mercado-dinero-pendientes.component';
 import { TablaFondosInversionPendientesComponent } from './portafolio/ordenes-pendientes-tabs/tabla-fondos-inversion-pendientes/tabla-fondos-inversion-pendientes.component';
 import { TablaMercadoCapitalesUsdComponent } from './portafolio/portafolio-usd/tabla-mercado-capitales-usd/tabla-mercado-capitales-usd.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { RetiroComponent } from './retiro/retiro.component';
 import { EstadocuentaComponent } from './estadocuenta/estadocuenta.component';
 
@@ -27,7 +27,8 @@ import { EstadocuentaComponent } from './estadocuenta/estadocuenta.component';
     TemplateRoutingModule,
     MaterialModule,
     SharedModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   declarations: [
     PortafolioComponent,
