@@ -8,15 +8,25 @@
             
             <div class="punto-label-content">
                 <div class="puntolabel">
-                    <div class="puntolabel-punto active"></div>
+                    <i class="material-icons verde" *ngIf="pantalla=='Verificar' || pantalla=='Comprobar'; else selecionar">check_circle</i>
+
+                    <ng-template #selecionar>
+                        <div class="puntolabel-punto" [class.active]="pantalla=='Seleccionar'"></div>
+                    </ng-template>
+
                     <label class="puntolabel-label">Selecciona...</label>
                 </div>
                 <div class="puntolabel">
-                    <div class="puntolabel-punto"></div>
+                    <i class="material-icons verde" *ngIf="pantalla=='Comprobar'; else verified">check_circle</i>
+                
+                    <ng-template #verified>
+                        <div class="puntolabel-punto" [class.active]="pantalla=='Verificar'"></div>
+                    </ng-template>
+                    
                     <label class="puntolabel-label">Verifica...</label>
                 </div>
                 <div class="puntolabel">
-                    <div class="puntolabel-punto"></div>
+                        <i class="material-icons verde" *ngIf="pantalla=='Comprobar'">check_circle</i>
                     <label class="puntolabel-label">Comprobante...</label>
                 </div>
             </div>
@@ -41,9 +51,9 @@
                     <form  [formGroup]="retiroForm" (ngSubmit)="onRetiroSubmit()">
                         <select formControlName="cuenta">
                             <option class="placeholder" value="" disabled selected hidden>CUENTA DESTINO...</option>
-                            <option value="volvo">CIBANCO ****2289</option>
-                            <option value="volvo">INBURSA ****6536</option>
-                            <option value="volvo">BANCOMER ****6457</option>
+                            <option value="CIBANCO ****2289">CIBANCO ****2289</option>
+                            <option value="INBURSA ****6536">INBURSA ****6536</option>
+                            <option value="BANCOMER ****6457">BANCOMER ****6457</option>
                         </select>
                         
                         <input class="input-monto" type="text" placeholder="IMPORTE" formControlName="importe">
@@ -74,13 +84,74 @@
                     
                     <p>Confima que los datos ingresados sean correctos</p>
 
-                    
+                    <div class="cuenta-destino">
+                        <div class="cuenta">
+                            <span>Cuenta Destino:</span>
+                            <span>{{ cuenta }}</span>
+                        </div>
+    
+                        <div class="destino">
+                            <span>Importe:</span>
+                            <span>${{ importe }}</span>
+                        </div>
+                    </div>
+
+                    <div class="botones">
+                        <button class="boton-enviar" (click)="showTokenValidate()">SIGUIENTE</button>
+                        <button class="boton-cancelar" (click)="cancel()">Cancelar</button>
+                    </div>
 
 
                 </ng-container>
 
                 <ng-container *ngSwitchCase="'Comprobar'">
-                    Comprobando
+                    
+                    <div class="comprobacion">
+                        <span class="comprobacion-transferencia">
+                            <i class="material-icons verde">check_circle</i>
+                            Transferencia en Proceso</span>
+                        <span class="comprobacion-operacion">Operación Registrada con éxito</span>
+                    </div>
+
+                    <div class="ticket">
+                        <div>
+                            <span>Folio</span>
+                            <span>897798797</span>
+                        </div>
+
+                        <div>
+                            <span>Cuenta Destino</span>
+                            <span>{{ cuenta }}</span>
+                        </div>
+                        <div>
+                            <span>Importe</span>
+                            <span>{{ importe }}</span>
+                        </div>
+                        <div>
+                            <span>Fecha</span>
+                            <span>06/12/18</span>
+                        </div>
+                        <div>
+                            <span>Hora</span>
+                            <span>12:35</span>
+                        </div>
+
+
+                    </div>
+                        <div class="comprobacion-footer">
+                            <span>
+                                Imprimir
+                            </span> 
+
+                            <span>
+                                Guardar
+                            </span>
+
+                            <span (click)="cancel()">
+                                Realizar otro retiro
+                            </span>
+                    
+                        </div>
                 </ng-container>
 
                 <ng-container *ngSwitchDefault>
@@ -94,4 +165,30 @@
       </div> 
       <br>
   </div>
+</div>
+
+
+
+<div class="modal fade" id="contrasenia-dinamica" tabindex="-1" role="dialog" aria-labelledby="miModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="titulo-modal">
+                    <span>Contraseña Dinámica</span>
+                </div>
+
+                <div class="contenido">
+                    <span class="mensaje"> 
+                        Desde tu dispositivo móvil genera una clave dinámica e ingrésala a continuación.
+                    </span>
+                    <input class="input-token" type="text">
+                </div>
+                
+                <div class="reportes-footer">
+                    <button class="cancelar" data-dismiss="modal">Cancelar</button>
+                    <button class="confirmar" (click)="onTokenValidate()">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
