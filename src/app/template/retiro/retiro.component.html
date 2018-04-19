@@ -26,7 +26,9 @@
                     <label class="puntolabel-label">Verifica...</label>
                 </div>
                 <div class="puntolabel">
-                        <i class="material-icons verde" *ngIf="pantalla=='Comprobar'">check_circle</i>
+                    <i class="material-icons verde" *ngIf="pantalla=='Comprobar'">check_circle</i>            
+                    <div class="puntolabel-punto" *ngIf="pantalla!='Comprobar'"></div>
+                    
                     <label class="puntolabel-label">Comprobante...</label>
                 </div>
             </div>
