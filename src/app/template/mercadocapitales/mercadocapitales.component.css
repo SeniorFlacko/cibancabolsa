@@ -102,3 +102,240 @@ mat-cell{
 .verde{
   color: #49aa43;
 }
+
+.rowMonetizacion{
+  cursor: pointer;
+}
+
+.btn-row{
+  border-radius: 20px 20px 20px 20px !important;
+}
+
+.modal-content{
+  background: #ffffff;
+  height: auto;
+  padding: 25px;
+
+}
+
+.modalbordeizquierda{
+  border-left: 10px solid #fbd437;
+}
+
+.generalmodalfi{
+  display: flex;
+}
+
+.divonemodalfi{
+  width: 40%;
+}
+
+.divtwomodalfi{
+  width: 30%;
+}
+
+.divthreemodalfi{
+  width: 30%;
+  display: flex;
+  flex-flow: column wrap;
+  align-content: flex-end;
+  justify-content: space-between;
+}
+
+.texto1modal{
+  font-weight: 900;
+  font-size: 25px;
+  margin-bottom: -5px;
+}
+
+.texto2modal{
+  font-weight: bolder;
+  font-size: 13px;
+}
+
+.texto3modal{
+  font-size: 12px;
+  color: #aaaaaa;
+}
+
+.linkmodal{
+  color: #00863b;
+}
+
+.btn-comprar-modal{
+  border-radius: 20px;
+}
+
+.btn-radius{
+  border-radius: 20px;
+}
+
+.centrado{
+  text-align: center;
+}
+
+.justifyContent{
+  justify-content: center;
+}
+
+.flex{
+  display: flex;
+
+}
+
+.modal-lg{
+  max-width: 600px !important;
+}
+
+.detalleConfirmacion{
+  border: 2px solid #efefef;
+  border-radius: 5px 5px 0px 0px;
+  padding: 10px;
+}
+
+.totalconfirmacion{
+  background: #efefef;
+  color: #49aa43;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.tituloconfirmacion{
+  font-weight: bold;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.textolateralconfirmacion{
+  position: absolute;
+  left: -26px;
+  background: #fbd437;
+  border-radius: 0px 20px 20px 0px;
+  padding: 1px 10px;
+}
+
+.titulocontrasena{
+  font-weight: bold;
+}
+
+
+.modal-backdrop.show{
+  opacity: 1 !important;
+  -webkit-filter: blur(5px) !important;
+}
+
+.inputsverde{
+  color: #49aa43;
+}
+
+.contenido p{
+  text-align: center;
+}
+
+.reportes-footer{
+  text-align: center;
+  margin: 30px;
+}
+
+.titulo-modal{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  font-family: OpenSans-Bold;
+  font-size: 30px;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.mensaje{
+  font-family: OpenSans-Light;
+  font-size: 14px;
+}
+
+.input-token{
+  height: 40px;
+  background-color: transparent;
+  border: 1px solid #147942;
+  display: block;
+  margin: 0 auto;
+  border-radius: 0.3em;
+  text-align: center;
+}
+
+.sinborde{
+  border: 0px;
+}
+
+.vigencia, .vigencia i{
+  font-size: 11px;
+  text-align: center;
+}
+
+.modal1{
+  max-width: 800px !important;
+}
+
+.modalconfirmacion{
+  max-width: 530px !important;
+}
+
+.grafica{
+  max-width: 70%;
+}
+
+.ult_actualizacion{
+  padding-left: 30px;
+}
+
+.inf_actualizacion{
+  font-family: OpenSans-Bold;
+}
+
+.grap_superior{
+  color: #a9afbe;
+  font-family: OpenSans-Bold;
+  font-size: 12px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.margin_bottom{
+  margin-bottom: 30px;
+}
+
+.grap_derecha{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  margin-left: 20px;
+}
+
+.grap_sub_title{
+  color: #598b5f;
+  font-family: Roboto-Bold;
+  font-size: 12px;
+}
+
+.grap_sub_title_data{
+  color: #5c5c5f ;
+  font-family: OpenSans-Bold;
+  font-size: 16px;
+  margin-top: -8px;
+}
+
+.grap_footer{
+  color: #bd261f;
+  font-size: 12px;
+  font-family: OpenSans-Bold;
+  margin-left: 75px;
+}
+
+.flex_izq{
+  margin-left: 55px;
+  justify-content: start;
+}
+
+.footer{
+  margin-top: -130px;
+}

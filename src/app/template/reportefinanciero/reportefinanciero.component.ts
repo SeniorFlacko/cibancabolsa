@@ -18,7 +18,7 @@ export class ReportefinancieroComponent implements OnInit {
 
 
   renderGraphic() {
-    this.chart = new Chart(document.getElementById("myChart"),
+    var chart = new Chart(document.getElementById("myChart"),
       {"type":"line",
         "data":{
           "labels":["January","February","March","April","May","June","July",65,59,80,81,56,55,40,65,59,80,81,56,55,40,65,59,80,81,56,55,40],
