@@ -1,0 +1,32 @@
+.contenedor{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.box{
+    width: calc(100% - 525px);
+    height: calc(100% - 350px);
+    background-color: white;
+    box-shadow: 1px 2px 10px #aaaaaa;
+    margin: 10px 5px;
+}
+
+.titulo{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    font-family: OpenSans-Bold;
+    font-size: 30px;
+    margin: 10px 20px;
+}
+
+.titulo img{
+    width: 0.7em;
+    margin: 5px;
+}
+
+
+.contenedor-content{
+    margin: 10px 30px;
+}

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PortafolioComponent, MercadocapitalesComponent, MercadodineroComponent, FondoinversionComponent, OrdenesComponent, ReportefinancieroComponent, RetiroComponent, EstadocuentaComponent} from './index.templatecmpts';
+import { HistorialmovimientosComponent } from './historialmovimientos/historialmovimientos.component';
 
 const routes: Routes = [
   { path: 'portafolio', component: PortafolioComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'reportes', component: ReportefinancieroComponent },
   { path: 'retiro', component: RetiroComponent },
   { path: 'estado-cuenta', component: EstadocuentaComponent },
+  { path: 'historial', component: HistorialmovimientosComponent },
   { path: '', redirectTo: 'portafolio', pathMatch: 'full' }
 ];
 
