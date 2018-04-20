@@ -25,7 +25,7 @@ export class EstadocuentaComponent implements OnInit {
 
   validarEstadoCuenta(){
     this.formEstadoCuenta = this.fb.group({
-      buscarEstadoCuenta: ['', [Validators.required] ]
+      buscarEstadoCuenta: ['', [Validators.required] ]  
     });
   }
 
