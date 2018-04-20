@@ -20,6 +20,7 @@ import { TablaMercadoCapitalesUsdComponent } from './portafolio/portafolio-usd/t
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { RetiroComponent } from './retiro/retiro.component';
 import { EstadocuentaComponent } from './estadocuenta/estadocuenta.component';
+import { HistorialmovimientosComponent } from './historialmovimientos/historialmovimientos.component';
 
 @NgModule({
   imports: [
@@ -51,6 +52,7 @@ import { EstadocuentaComponent } from './estadocuenta/estadocuenta.component';
     TablaMercadoCapitalesUsdComponent,
     RetiroComponent,
     EstadocuentaComponent,
+    HistorialmovimientosComponent,
 
   ]
 })

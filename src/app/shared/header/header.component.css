@@ -249,3 +249,8 @@ app-fecha{
     flex: 1 1 100%;
   }
 }
+
+
+.dropdown-item{
+  cursor: pointer;
+}
