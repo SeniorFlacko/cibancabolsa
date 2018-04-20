@@ -84,8 +84,8 @@
             <div class="divonemodalfi">
               <p class="texto1modal">Alfa A</p>
               <span class="texto2modal">Alfa Financial Software Holdings PLC</span>
-              <div class="">
-                <canvas id="myChart" width="200px" height="200px"></canvas>
+              <div class="grafica_modal">
+                <canvas id="myChart" width="250px" height="250px"></canvas>
               </div>
             </div>
             <div class="divtwomodalfi">
@@ -103,9 +103,9 @@
                 </select> <br>
                 <!-- </mat-form-field> -->
                 <label>TÍTULOS</label>
-                <input type="text" placeholder="100">
+                <input class="input_form" type="text" pattern="[0-9]+[.]?[0-9]+" placeholder="100">
                 <label>PRECIO COMPRA</label>
-                <input type="text" placeholder="130.25">
+                <input class="input_form" type="text" pattern="[0-9]+[.]?[0-9]+" placeholder="130.25">
                 <div>
                     <button class="btn btn-success btn-comprar-modal" data-dismiss="modal" data-toggle="modal" data-target="#enviosuccess">ENVIAR</button>
                 </div>

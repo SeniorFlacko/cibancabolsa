@@ -50,9 +50,10 @@ export class MercadocapitalesComponent implements OnInit {
               {
               "label":"My First Dataset",
               "data":[6500,5900,8000,8100,5600,5500,4000,6500,5900,8000,8100,5600,5500,4000,6500,5900,8000,8100,5600,5500,4000,6500,65900,8000,8100,5600,5500,4000,6500,5900,8000,8100,5600,5500,4000,6500,5900,8000,8100,5600,5500,4000],
-              "fill":false,
-              "borderColor":"rgb(79, 146, 214)",
-              "lineTension":0.1
+              "fill":true,
+              "backgroundColor":"rgb(70,70,70)",
+              "borderColor":"rgb(125, 125, 125)",
+              "lineTension":0.8
               }
             ]
         },

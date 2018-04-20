@@ -245,7 +245,7 @@ mat-cell{
   align-items: center;
   font-family: OpenSans-Bold;
   font-size: 30px;
-  justify-content: flex-end;
+  justify-content: center;
   margin-bottom: 25px;
 }
 
@@ -348,4 +348,40 @@ mat-cell{
 .icono{
   font-size: 30px;
 
+}
+
+.input_form,.input_form:active,.input_form:focus{
+  font-family: OpenSans-Regular;
+  font-size: 18px;
+  border: none;
+  border-bottom: 1px solid #7a7a7a;
+  outline: none;
+  color: #267349;
+  margin-right: 10px;
+  width: 100%;
+  background-color: #efeff1;
+}
+
+select{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    font-family: OpenSans-Regular;
+    font-size: 18px;
+    color: #267349;
+    padding: 0px 4px;
+    outline: none;
+    background: transparent url(/assets/img/icon_arrowDown_verde.png) right center / 1.4em no-repeat;
+    border: none;
+    border-bottom: 1px solid #7a7a7a;
+    margin-right: 10px;
+    width: 100%;
+    background-color: #efeff1;
+}
+
+.modal-content{
+  background-color: #efeff1;
+}
+
+.grafica_modal{
+  background-color: #000000;
 }
