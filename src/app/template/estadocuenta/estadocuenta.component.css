@@ -46,3 +46,9 @@ select{
 .placeholder{
     color: gray;
 }
+
+.centrar{
+    text-align: center;
+    color: 267349;
+    font-weight: bold;
+}
