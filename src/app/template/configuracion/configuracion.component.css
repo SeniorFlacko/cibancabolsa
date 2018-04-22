@@ -1,0 +1,56 @@
+.contenedor{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.box{
+    background-color: white;
+    box-shadow: 1px 2px 10px #aaaaaa;
+}
+
+.titulo{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    font-family: OpenSans-Bold;
+    font-size: 30px;
+    margin: 10px 20px;
+}
+
+.negrita{
+    font-weight: bold;
+}
+
+.flex{
+    display: flex;
+}
+
+.contratoText{
+    font-size: 13px;
+}
+
+.interlineado3{
+    line-height: 3px;
+}
+
+.anchoinfo1{
+    width: 40%;
+}
+
+.centrado{
+    text-align: center;
+}
+
+.configuracion{
+    font-family: OpenSans;
+}
+
+.top{
+    margin-top: 30px;
+}
+
+.segu1{
+    width: 90%;
+    margin-right: 10%;
+}

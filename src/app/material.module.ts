@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import {MatButtonModule, MatCheckboxModule, MatInputModule, MatSortModule, MatProgressSpinnerModule, MatTabsModule, MatDatepickerModule, MatNativeDateModule} from '@angular/material';
+import {MatButtonModule, MatCheckboxModule, MatInputModule, MatSortModule, MatProgressSpinnerModule, MatTabsModule, MatDatepickerModule, MatNativeDateModule, MatSlideToggleModule} from '@angular/material';
 import {MatTableModule} from '@angular/material/table';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatPaginatorModule} from '@angular/material/paginator'; 
@@ -14,7 +14,8 @@ import {MatSelectModule} from '@angular/material/select';
     MatSelectModule,
     MatDatepickerModule,
     MatTabsModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatSlideToggleModule
   ],
   exports:[
     MatButtonModule, 
@@ -28,7 +29,8 @@ import {MatSelectModule} from '@angular/material/select';
     MatSelectModule,
     MatTabsModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatSlideToggleModule
   ],
   declarations: []
 })
