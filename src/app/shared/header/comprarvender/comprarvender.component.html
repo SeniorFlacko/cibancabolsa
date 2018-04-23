@@ -38,11 +38,11 @@
 
 
           <div class="row centrarBotones">
-            <button (click)="seleccionBotones('capitales')" type="button" class="btn btn-outline-success botonesModal3 botonesModal31">Mercado
+            <button (click)="seleccionBotones('capitales')" [ngClass]="{ 'botonSeleccionado': capitales }" type="button" class="btn btn-outline-success botonesModal3 botonesModal31">Mercado
               <br>de Capitales</button>
-            <button (click)="seleccionBotones('dinero')" type="button" class="btn btn-outline-success botonesModal3 botonesModal32">Mercado
+            <button (click)="seleccionBotones('dinero')" [ngClass]="{ 'botonSeleccionado': dinero }" type="button" class="btn btn-outline-success botonesModal3 botonesModal32">Mercado
               <br>de Dinero</button>
-            <button (click)="seleccionBotones('inversion')" type="button" class="btn btn-outline-success botonesModal3 botonesModal33">Fondos
+            <button (click)="seleccionBotones('inversion')" [ngClass]="{ 'botonSeleccionado': inversion }" type="button" class="btn btn-outline-success botonesModal3 botonesModal33">Fondos
               <br>de Inversión</button>
           </div>
           

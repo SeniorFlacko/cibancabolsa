@@ -27,7 +27,7 @@
 }
 
 .contratoText{
-    font-size: 13px;
+    font-size: 11px;
 }
 
 .interlineado3{
@@ -43,14 +43,22 @@
 }
 
 .configuracion{
-    font-family: OpenSans;
+    font-family: OpenSans-Regular;
 }
 
 .top{
     margin-top: 30px;
 }
 
+.lineHeight{
+    line-height: 50px;
+}
+
 .segu1{
     width: 90%;
     margin-right: 10%;
+}
+
+.altoLineaSlideToggle{
+    line-height: 65px !important;
 }

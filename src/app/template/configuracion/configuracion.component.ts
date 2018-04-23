@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConfiguracionComponent implements OnInit {
 
-  color = 'green';
+  color = "warm";
 
   constructor() { }
 

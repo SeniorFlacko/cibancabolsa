@@ -173,3 +173,16 @@ select{
 .modaltamano{
     height: 547px !important;
 }
+
+.botonSeleccionado{
+    background: #00853e;
+    color: white;   
+}
+
+.formulario2{
+    line-height: 50px !important;
+} 
+
+.formulario3{
+    line-height: 60px !important;
+}

@@ -71,3 +71,27 @@ body{
 .mat-paginator-container{
     /* display: none !important; */
 }
+
+.mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar{
+    background-color: #6dec41 !important;
+}
+
+.mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb{
+    background-color: #00853f !important;
+}
+
+.mat-slide-toggle-thumb{
+    height: 30px !important;
+    width: 30px !important;
+}
+
+.mat-slide-toggle-bar{
+    width: 46px !important;
+    height: 30px !important;
+    border-radius: 20px !important;
+}
+
+.mat-slide-toggle-thumb-container{  
+    top: 0px !important;
+    left: 0px !important;
+}
