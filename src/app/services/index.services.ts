@@ -1,9 +1,7 @@
+export { HistorialService } from './historial.service';
 export {FondosinversionpendientesService} from './fondosinversionpendientes.service';
-
 export { OrdenesService } from './ordenes.service';
-
 export { MercadocapitalesservicioService } from './mercadocapitalesservicio.service';
-
 export { MarcadorServicioService } from './marcador-servicio.service';
 export { MercadoCapitalesDolaresService } from './mercado-capitales-dolares.service';
 export { OrdenesPendientesService } from './ordenes-pendientes.service';
@@ -18,5 +16,3 @@ export { SessionService } from './session.service';
 export { LoaderService } from './loader.service';
 export { AuthGuard } from './auth.guard';
 export { FondosinversionService } from './fondosinversion.service';
-
-

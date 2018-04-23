@@ -22,6 +22,7 @@ import { RetiroComponent } from './retiro/retiro.component';
 import { EstadocuentaComponent } from './estadocuenta/estadocuenta.component';
 import { HistorialmovimientosComponent } from './historialmovimientos/historialmovimientos.component';
 import { ConfiguracionComponent } from './configuracion/configuracion.component';
+import { TablaHistorialComponent } from './historialmovimientos/tabla-historial/tabla-historial.component';
 
 @NgModule({
   imports: [
@@ -55,6 +56,7 @@ import { ConfiguracionComponent } from './configuracion/configuracion.component'
     EstadocuentaComponent,
     HistorialmovimientosComponent,
     ConfiguracionComponent,
+    TablaHistorialComponent,
 
   ]
 })
