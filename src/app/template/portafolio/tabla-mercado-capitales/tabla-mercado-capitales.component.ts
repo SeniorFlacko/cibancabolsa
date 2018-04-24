@@ -21,7 +21,9 @@ export class TablaMercadoCapitalesComponent implements OnInit {
   }
 
   getOrdenesPendientes(){
-    this.mercadoCapService.getCapitales().subscribe(response =>{
+    // this.mercadoCapService.getCapitales().subscribe(response => console.log(response));
+
+    this.mercadoCapService.getAllItems(response => {
       this.dataCapitales = new MatTableDataSource(response)
       this.dataCapitales.sort = this.sort;
     });
