@@ -71,8 +71,6 @@
         <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
         <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
       </mat-table>
-
-
     </div>
   </div>
 </div>
@@ -125,7 +123,7 @@
     </div>
   </div>
 
-  <div class="modal fade" id="enviosuccess" tabindex="-1" role="dialog" aria-labelledby="miModalLabel" aria-hidden="true">
+<div class="modal fade" id="enviosuccess" tabindex="-1" role="dialog" aria-labelledby="miModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-body">
@@ -143,3 +141,52 @@
       </div>
     </div>
   </div>
+
+<div class="modal fade mercado_modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal2">
+    <div class="modal-content modalbordeizquierda">
+      <div class="generalmodalfi">
+      <div class="generalmodalfi">
+        <div class="divonemodalfi">
+          <p class="texto1modal">Alfa A</p>
+          <span class="texto2modal">Alfa Financial Software Holdings PLC</span>
+          <div class="grafica_modal">
+            <canvas id="myChart" width="250px" height="250px"></canvas>
+          </div>
+        </div>
+        <div class="divtwomodalfi">
+          <!-- <form [formGroup]="fondoinversion1Form" (ngSubmit)="onSubmit()"> -->
+          <div>
+            <button class="btn btn-warning">COMPRA</button>
+            <button class="btn btn-outline-secondary">VENTA</button>
+          </div>
+          <label>TIPO DE ORDEN</label>
+          <!-- <mat-form-field class="example-full-width"> -->
+          <select>
+            <option value="mercado">MERCADO</option>
+            <option value="apertura">APERTURA</option>
+            <option value="cierre">CIERRE</option>
+          </select> <br>
+          <!-- </mat-form-field> -->
+          <label>TÍTULOS</label>
+          <input class="input_form" type="text" pattern="[0-9]+[.]?[0-9]+" placeholder="100">
+          <label>PRECIO COMPRA</label>
+          <input class="input_form" type="text" pattern="[0-9]+[.]?[0-9]+" placeholder="130.25">
+          <div>
+            <button class="btn btn-success btn-comprar-modal" data-dismiss="modal" data-toggle="modal" data-target="#enviosuccess">ENVIAR</button>
+          </div>
+          <!-- </form> -->
+        </div>
+        <div class="divthreemodalfi">
+          <div>
+            <p>Saldo disponible</p>
+            <p>$1,846,746.29</p>
+          </div>
+          <div class="footer">
+            <p>Monto: <span>$13,025</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

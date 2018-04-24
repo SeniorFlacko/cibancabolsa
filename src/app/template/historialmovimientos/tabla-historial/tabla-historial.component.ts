@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { HistorialService } from '../../../services/index.services';
+import { HistorialService, MovimientosPorContratoService } from '../../../services/index.services';
+
+import { MovimientosPorContrato } from '../../../models/index.models';
 
 @Component({
   selector: 'app-tabla-historial',
@@ -7,12 +9,17 @@ import { HistorialService } from '../../../services/index.services';
   styleUrls: ['./tabla-historial.component.css']
 })
 export class TablaHistorialComponent implements OnInit {
-
-
-  constructor(private hs: HistorialService) { }
+  displayedColumns = ['fecha_op', 'fecha_liq', 'descripcion', 'emisora','serie','cupon','titulos','plazo','tasa','precio','comision','iva','isr','importe','saldo'];
+  dataHistorialMovimientos:MovimientosPorContrato[];
+  constructor(private hs: MovimientosPorContratoService) { }
 
   ngOnInit() {
-    this.hs.historial$.subscribe(data => console.log(data));
+    this.getDataHistorial();
+  }
+
+
+  getDataHistorial(){
+    this.dataHistorialMovimientos=this.hs.getHistorialData();
   }
 
 }
