@@ -70,3 +70,74 @@ mat-cell{
   margin: 15px 15px;
   border-radius: 6px ;
 }
+
+input{
+  font-family: OpenSans-Regular;
+  font-size: 18px;
+  border: none;
+  border-bottom: 1px solid #7a7a7a;
+  outline: none;
+  color: #267349;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+.button-en{
+    display: flex;
+    justify-content: flex-end;
+    flex-flow: row wrap;
+    margin: 10px 50px;
+    border: none;
+    border-radius: 30px;
+    font-family: OpenSans-Light;
+    font-size: 18px;
+    background-color: #49aa43;
+    color: white;
+    outline: none;
+    padding: 5px 30px;
+    cursor: pointer;
+}
+
+.dis{
+  background-color: #9c9c9c;
+}
+
+.buscador{
+  width: 30%;
+  display: flex;
+  flex-flow: row;
+  justify-content: left;
+  align-content: space-around;
+  margin: 30px 20px;
+  margin-top: 40px;
+}
+
+.encabezado{
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-content: center;
+  margin: 0px 20px;
+}
+
+.h1{
+  font-family: OpenSans-Bold;
+  font-size: 22px;
+}
+
+.descargar{
+  font-size: 16px;
+}
+
+
+.formato,.formato:hover{
+  font-size: 18px;
+  font-family: OpenSans-Bold;
+  color: #49aa43;
+  text-decoration: none;
+}
+
+.vl{
+  color: #7a7a7a;
+  font-family: OpenSans-Light;
+  font-weight: lighter;
+}
