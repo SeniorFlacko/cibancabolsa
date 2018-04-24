@@ -1,3 +1,4 @@
+export {MovimientosPorContrato} from './movimientos-por-contrato';
 export {FondosInversionPendientes} from './fondos-inversion-pendientes';
 export { MercadoCapitales } from './mercado-capitales';
 export { Token } from './token';

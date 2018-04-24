@@ -1,0 +1,62 @@
+mat-table{
+  margin: 0 20px;
+}
+
+mat-header-row{
+  background-color: #f5f5f5;
+  border: none;
+}
+
+mat-row:nth-child(odd){
+  background-color: #f5f5f5;
+}
+mat-header-cell{
+  font-family: OpenSans-Bold;
+  font-size: 14px;
+  color: black;
+  text-align: center;
+}
+
+mat-cell{
+  font-family: OpenSans-Regular;
+  font-size: 14px;
+  color: black;
+  text-align: center;
+  justify-content: center;
+}
+.positivo{
+  color:#00863b;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.negativo{
+  color:#e5212f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.pointer{
+  cursor: pointer;
+}
+
+.centrado{
+  display: flex;
+  justify-content: center;
+}
+
+.verde{
+  color: #49aa43;
+}
+
+.rowMonetizacion{
+  cursor: pointer;
+}
+
+.btn-row{
+  border-radius: 20px 20px 20px 20px !important;
+}
