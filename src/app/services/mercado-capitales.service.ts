@@ -2,9 +2,11 @@ import { Injectable } from '@angular/core';
 import { Capital } from '../models/capital';
 import { of } from 'rxjs/observable/of';
 import { Observable } from 'rxjs/Observable';
+import { GenericService } from './generic.service';
+import { Http } from '@angular/http';
 
 @Injectable()
-export class MercadoCapitalesService {
+export class MercadoCapitalesService extends GenericService<Capital>{
   capitales: Capital[] = [
     {
       "id":"1",
@@ -17,7 +19,9 @@ export class MercadoCapitalesService {
       "valuacion": "$116,000.00",
     },
   ];
-  constructor() { }
+  constructor(http:Http) {
+    super(http,'/mercadocapitalesportafolio.json');
+  }
 
   getCapitales(): Observable<Capital[]> {
     return of(this.capitales);
