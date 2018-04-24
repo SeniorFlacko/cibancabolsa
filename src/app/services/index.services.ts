@@ -1,3 +1,4 @@
+export { ConfiguracionService } from './configuracion.service';
 export { HistorialService } from './historial.service';
 export {FondosinversionpendientesService} from './fondosinversionpendientes.service';
 export { OrdenesService } from './ordenes.service';

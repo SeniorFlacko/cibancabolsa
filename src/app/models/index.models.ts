@@ -11,3 +11,4 @@ export { Marcador  } from './marcador';
 export { Fondos  } from './fondos';
 export { FondoInversion } from './fondos-inversion';
 export { Orden } from './orden';
+export { Configuracion } from './configuracion.model';
