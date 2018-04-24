@@ -38,10 +38,11 @@ export abstract class GenericService<T extends Versionable> {
     //   return this.http.get(`${this.actionUrl}${id}`).map(resp=>resp.json() as T);
     // }
   
-    getAllItems(onLoaded: (response: T[]) => void, onComplete?: () => void){
+    getAllItems(onLoaded: (response: T[]) => void, onComplete?: () => void): Observable<T[]>{
       const options = this.getRequestOptions();
       const data: Observable<T[]> = this.http.get(this.getURL(), options).map(this.convertData);
       data.subscribe(onLoaded, (error) => this.handleError(error) , onComplete);
+      return data;
     }
   
     getItem(id: string, onLoaded: (data: T) => void, onComplete?: () => void) {

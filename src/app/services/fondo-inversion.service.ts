@@ -1,33 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Fondos } from '../models/index.models';
+import { Http } from '@angular/http';
+import { GenericService } from './generic.service';
 
 
 
 @Injectable()
-export class FondoInversionService {
-  dataFondos:Fondos[] =[
-    {
-      id:"1",
-      fondo:"CIGUB",
-      serie:"1234",
-      titulos:"500",
-      precio_actual:"$2.38",
-      valuacion:"$342.564"
-    },
-    {
-      id:"2",
-      fondo:"CIBOLSA",
-      serie:"5678",
-      titulos:"100",
-      precio_actual:"$12.38",
-      valuacion:"$1342.564"
-    }
-  ]
-
-  constructor() { }
-
-  getDataFondos():Fondos[]{
-    return this.dataFondos;
+export class FondoInversionService extends GenericService<Fondos>{
+  constructor(http: Http) {
+    super(http,'/fondoinversionportafolio.json');
   }
-
 }

@@ -13,7 +13,9 @@ export class TablaFondosInversionComponent implements OnInit {
   constructor(private fondos_service:FondoInversionService ) { }
   
   ngOnInit() {
-    this.dataFondos=this.fondos_service.getDataFondos();
+    this.fondos_service.getAllItems(response => {
+      this.dataFondos = response;
+    });
   }
 
 }
