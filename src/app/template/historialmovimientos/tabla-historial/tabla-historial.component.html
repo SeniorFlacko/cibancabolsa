@@ -1,77 +1,93 @@
-<div class="table-responsive">
-  <div class="table">
-    <mat-table [dataSource]="dataHistorialMovimientos" matSort matSortActive="fecha_op" matSortDirection="asc"
-               matSortDisableClear>
-      <ng-container matColumnDef="fecha_op">
-        <mat-header-cell *matHeaderCellDef mat-sort-header>Fecha Op.</mat-header-cell>
-        <mat-cell *matCellDef="let capital">{{ capital.fecha_op}}</mat-cell>
-      </ng-container>
-      <ng-container matColumnDef="fecha_liq">
-        <mat-header-cell *matHeaderCellDef>Fecha Liq.</mat-header-cell>
-        <mat-cell *matCellDef="let capital">{{ capital.fecha_liq }}</mat-cell>
-      </ng-container>
-      <ng-container matColumnDef="descripcion">
-        <mat-header-cell *matHeaderCellDef>Descripción</mat-header-cell>
-        <mat-cell *matCellDef="let capital">{{ capital.descripcion }}</mat-cell>
-      </ng-container>
-      <ng-container matColumnDef="emisora">
-        <mat-header-cell *matHeaderCellDef>Emisora</mat-header-cell>
-        <mat-cell  *matCellDef="let capital">{{ capital.emisora }}</mat-cell>
-      </ng-container>
-      <ng-container matColumnDef="serie">
-        <mat-header-cell *matHeaderCellDef>Serie</mat-header-cell>
-        <mat-cell *matCellDef="let capital">{{ capital.serie }}</mat-cell>
-      </ng-container>
-      <ng-container matColumnDef="cupon">
-        <mat-header-cell *matHeaderCellDef>Cupón</mat-header-cell>
-        <mat-cell *matCellDef="let capital">{{capital.cupon }}
-        </mat-cell>
-      </ng-container>
-      <ng-container matColumnDef="titulos">
-        <mat-header-cell *matHeaderCellDef>Títulos</mat-header-cell>
-        <mat-cell *matCellDef="let orden">{{ orden.titulos }}</mat-cell>
-      </ng-container>
-      <ng-container matColumnDef="plazo">
-        <mat-header-cell *matHeaderCellDef>Plazo</mat-header-cell>
-        <mat-cell *matCellDef="let orden">{{ orden.plazo }}</mat-cell>
-      </ng-container>
-      <ng-container matColumnDef="tasa">
-        <mat-header-cell *matHeaderCellDef>Tasa</mat-header-cell>
-        <mat-cell *matCellDef="let orden">{{ orden.tasa }}</mat-cell>
-      </ng-container>
-      <ng-container matColumnDef="precio">
-        <mat-header-cell *matHeaderCellDef>Precio</mat-header-cell>
-        <mat-cell *matCellDef="let orden">{{ orden.precio }}</mat-cell>
-      </ng-container>
-      <ng-container matColumnDef="comision">
-        <mat-header-cell *matHeaderCellDef>Comisión</mat-header-cell>
-        <mat-cell *matCellDef="let orden">{{ orden.comision }}</mat-cell>
-      </ng-container>
-      <ng-container matColumnDef="iva">
-        <mat-header-cell *matHeaderCellDef>IVA</mat-header-cell>
-        <mat-cell *matCellDef="let orden">{{ orden.iva }}</mat-cell>
-      </ng-container>
-      <ng-container matColumnDef="isr">
-        <mat-header-cell *matHeaderCellDef>IVA</mat-header-cell>
-        <mat-cell *matCellDef="let orden">{{ orden.isr }}</mat-cell>
-      </ng-container>
-      <ng-container matColumnDef="importe">
-        <mat-header-cell *matHeaderCellDef>Importe</mat-header-cell>
-        <mat-cell *matCellDef="let orden">{{ orden.importe }}</mat-cell>
-      </ng-container>
-      <ng-container matColumnDef="saldo">
-        <mat-header-cell *matHeaderCellDef>Saldo</mat-header-cell>
-        <mat-cell *matCellDef="let orden">{{ orden.saldo }}</mat-cell>
-      </ng-container>
-      <!--<ng-container matColumnDef="favorita">
-        <mat-header-cell *matHeaderCellDef>Favorita</mat-header-cell>
-        <mat-cell *matCellDef="let orden;">
-          <i class="material-icons pointer centrado verde fav_icon" (click)="toggle(orden)">{{ star_icon(orden.favorita) }}</i>
-        </mat-cell>
-      </ng-container>-->
+<div class="box">
+  <div class="buscador">
+    <input type="text" placeholder="Nombre de la emisora">
+    <button >Buscar</button>
+  </div>
+  <div class="encabezado">
+    <div>Mocimientos operados por contrato</div>
+    <div>
+      <span>Descargar</span>
+      <span>PDF |</span>
+      <span>XML |</span>
+      <span>XLS |</span>
+      <span>Enviar por correo</span>
+    </div>
+  </div>
+  <div class="table-responsive">
+    <div class="table">
+      <mat-table [dataSource]="dataHistorialMovimientos" matSort matSortActive="fecha_op" matSortDirection="asc"
+                 matSortDisableClear>
+        <ng-container matColumnDef="fecha_op">
+          <mat-header-cell *matHeaderCellDef mat-sort-header>Fecha Op.</mat-header-cell>
+          <mat-cell *matCellDef="let capital">{{ capital.fecha_op}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="fecha_liq">
+          <mat-header-cell *matHeaderCellDef>Fecha Liq.</mat-header-cell>
+          <mat-cell *matCellDef="let capital">{{ capital.fecha_liq }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="descripcion">
+          <mat-header-cell *matHeaderCellDef>Descripción</mat-header-cell>
+          <mat-cell *matCellDef="let capital">{{ capital.descripcion }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="emisora">
+          <mat-header-cell *matHeaderCellDef>Emisora</mat-header-cell>
+          <mat-cell *matCellDef="let capital">{{ capital.emisora }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="serie">
+          <mat-header-cell *matHeaderCellDef>Serie</mat-header-cell>
+          <mat-cell *matCellDef="let capital">{{ capital.serie }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="cupon">
+          <mat-header-cell *matHeaderCellDef>Cupón</mat-header-cell>
+          <mat-cell *matCellDef="let capital">{{capital.cupon }}
+          </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="titulos">
+          <mat-header-cell *matHeaderCellDef>Títulos</mat-header-cell>
+          <mat-cell *matCellDef="let orden">{{ orden.titulos }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="plazo">
+          <mat-header-cell *matHeaderCellDef>Plazo</mat-header-cell>
+          <mat-cell *matCellDef="let orden">{{ orden.plazo }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="tasa">
+          <mat-header-cell *matHeaderCellDef>Tasa</mat-header-cell>
+          <mat-cell *matCellDef="let orden">{{ orden.tasa }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="precio">
+          <mat-header-cell *matHeaderCellDef>Precio</mat-header-cell>
+          <mat-cell *matCellDef="let orden">{{ orden.precio }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="comision">
+          <mat-header-cell *matHeaderCellDef>Comisión</mat-header-cell>
+          <mat-cell *matCellDef="let orden">{{ orden.comision }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="iva">
+          <mat-header-cell *matHeaderCellDef>IVA</mat-header-cell>
+          <mat-cell *matCellDef="let orden">{{ orden.iva }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="isr">
+          <mat-header-cell *matHeaderCellDef>IVA</mat-header-cell>
+          <mat-cell *matCellDef="let orden">{{ orden.isr }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="importe">
+          <mat-header-cell *matHeaderCellDef>Importe</mat-header-cell>
+          <mat-cell *matCellDef="let orden">{{ orden.importe }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="saldo">
+          <mat-header-cell *matHeaderCellDef>Saldo</mat-header-cell>
+          <mat-cell *matCellDef="let orden">{{ orden.saldo }}</mat-cell>
+        </ng-container>
+        <!--<ng-container matColumnDef="favorita">
+          <mat-header-cell *matHeaderCellDef>Favorita</mat-header-cell>
+          <mat-cell *matCellDef="let orden;">
+            <i class="material-icons pointer centrado verde fav_icon" (click)="toggle(orden)">{{ star_icon(orden.favorita) }}</i>
+          </mat-cell>
+        </ng-container>-->
 
-      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-      <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
-    </mat-table>
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+      </mat-table>
+    </div>
   </div>
 </div>

@@ -3,6 +3,7 @@ mat-table{
 }
 
 mat-header-row{
+  margin-top: 20px;
   background-color: #f5f5f5;
   border: none;
 }
@@ -59,4 +60,13 @@ mat-cell{
 
 .btn-row{
   border-radius: 20px 20px 20px 20px !important;
+}
+
+.box{
+  /*width: calc(100% - 350px);
+  height: calc(100% - 350px);*/
+  background-color: white;
+  box-shadow: 1px 2px 10px #aaaaaa;
+  margin: 15px 15px;
+  border-radius: 6px ;
 }
