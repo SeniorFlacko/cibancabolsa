@@ -20,7 +20,7 @@
               </ng-container>
               <ng-container matColumnDef="operar">
                 <mat-header-cell *matHeaderCellDef>Operar</mat-header-cell>
-                <mat-cell *matCellDef="let fondos"><button type="button" class="btn btn-primary btn-row" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="material-icons">monetization_on</i></button></mat-cell>
+                <mat-cell *matCellDef="let fondos"><button type="button" class="btn btn-primary btn-row monetizacionImagen" data-toggle="modal" data-target=".bd-example-modal-lg"></button></mat-cell>
                 <button mat-button>Click me!</button>
               </ng-container>
               <ng-container matColumnDef="clasificacion">
@@ -58,7 +58,9 @@
 
 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal1">
+        
       <div class="modal-content modalbordeizquierda ">
+          <i class="material-icons tache" data-dismiss="modal" >clear</i>
         <div class="generalmodalfi">
             <div class="divonemodalfi">
               <p class="texto1modal">+CIGUB</p>
@@ -70,8 +72,8 @@
             <div class="divtwomodalfi">
               <form [formGroup]="fondoinversion1Form" (ngSubmit)="onSubmit()">
               <div>
-                <button class="btn btn-warning">COMPRA</button>
-                <button class="btn btn-outline-secondary">VENTA</button>
+                <button class="btn btn-warning compraFondoInversion">COMPRA</button>
+                <button class="btn btn-outline-secondary ventaFondoInversion">VENTA</button>
               </div>
               <p>Precio: $3.654009</p>
                 <mat-form-field class="example-full-width">
@@ -96,6 +98,7 @@
       <div class="modal-dialog modal-lg modalconfirmacion" role="document">
         <div class="modal-content">
           <div class="modal-body">
+              <i class="material-icons tache" data-dismiss="modal" >clear</i>
             <div class="centrado tituloconfirmacion"><p class="textolateralconfirmacion">Compra</p><i class="material-icons">assignment</i><span>Confirmación</span></div>
             <div class="detalleConfirmacion">
                 <div class="flex"><p>+CIGUB.</p><p>+CIGUB CIGUBERNAMENTAL, S.A. DE C.V, F.I.I.D</p></div>
@@ -103,7 +106,7 @@
                 
               </div>
               <div class="centrado totalconfirmacion"><p>Total: $25,000.00</p></div>
-              <p class="vigencia"><i class="material-icons">alarm</i>La vigencia de tu operación es de hoy 12/12/17 al cierre del mercado</p>
+              <p class="vigencia italica"><i class="material-icons">alarm</i>La vigencia de tu operación es de hoy 12/12/17 al cierre del mercado</p>
           </div>
           <div class="modal-footer justifyContent">
             <button type="button" class="btn btn-outline-danger sinborde btn-radius" data-dismiss="modal">Cancelar</button>
@@ -117,8 +120,10 @@
 
     <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
         <div class="modal-dialog">
-          <div class="modal-content">
+          <div class="modal-content contra">
+              
             <form [formGroup]="contradinamicafondoinversion">
+                <i class="material-icons tache" data-dismiss="modal" >clear</i>
             <h5 class="titulo-modal">Contraseña dinámica</h5>
             <div class="contenido">
               <p class="mensaje">Desde su dispositivo móvil genera una clave dinamica e ingrésala a continuación</p>
@@ -138,6 +143,7 @@
           <div class="modal-dialog" role="document">
               <div class="modal-content">
                   <div class="modal-body">
+                      <i class="material-icons tache" data-dismiss="modal" >clear</i>
                       <div class="titulo-modal">
                           <span>Envío exitoso</span>
                       </div>
@@ -145,11 +151,6 @@
                       <div class="contenido">
                           <p>Operación registrada con éxito</p>
                           <p>Folio: 87652</p>
-                      </div>
-                      
-                      <div class="reportes-footer">
-                          <button class="btn btn-outline-danger  sinborde btn-radius" data-dismiss="modal">Cancelar</button>
-                          <button class="btn btn-success btn-radius" data-dismiss="modal">Confirmar</button>
                       </div>
                   </div>
               </div>

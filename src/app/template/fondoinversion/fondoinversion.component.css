@@ -253,3 +253,41 @@ mat-cell{
 .catidadsaldomodal1{
   font-weight: bold;
 }
+
+.compraFondoInversion{
+  margin-right: -4px !important;
+  border-radius: 5px 0px 0px 5px;
+}
+
+.ventaFondoInversion{
+  border-radius: 0px 5px 5px 0px;
+}
+
+.italica{
+  font-family: OpenSans-Italic;
+}
+
+.tache{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  color: red;
+  cursor: pointer;
+}
+
+.modalbordeizquierda .tache{
+  top: 20px;
+  right: 20px;
+}
+
+.contra .tache{
+  top: 20px;
+  right: 20px;
+}
+
+.monetizacionImagen{
+  background-image: url('/assets/img/pesos.png');
+  height: 32px;
+  width: 38px;
+  border-radius: 0px;
+}
