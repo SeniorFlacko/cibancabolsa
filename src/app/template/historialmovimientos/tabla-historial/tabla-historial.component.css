@@ -134,6 +134,7 @@ input{
   font-family: OpenSans-Bold;
   color: #49aa43;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .vl{
