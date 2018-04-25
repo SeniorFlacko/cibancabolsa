@@ -1,0 +1,252 @@
+.contenedor{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.box{
+    width: 1040px;
+    height: 400px;
+    background-color: white;
+    box-shadow: 1px 2px 10px #aaaaaa;
+    margin: 10px 5px;
+}
+
+.titulo{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    font-family: OpenSans-Bold;
+    font-size: 30px;
+}
+
+.titulo img{
+    width: 0.7em;
+    margin: 5px;
+}
+
+.saldo-disponible{
+    font-family: OpenSans-Regular;
+    font-size: 18px;
+    margin: 20px 0px;
+}
+
+.saldo-disponible-cantidad{
+    font-family: OpenSans-Bold;
+}
+
+.contenedor-content{
+    margin: 10px 30px;
+}
+
+.campos-set{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+select{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    font-family: OpenSans-Regular;
+    font-size: 18px;
+    color: #267349;
+    padding: 0px 4px; 
+    outline: none;
+    background: transparent url(/assets/img/icon_arrowDown_verde.png) right center / 1.4em no-repeat;
+    border: none;
+    border-bottom: 1px solid #7a7a7a;
+    margin-right: 10px;
+    
+}
+
+.sreportes{
+    width: 25%;
+}
+
+.splazo{
+    width: 20%;
+}
+
+.input-monto{
+    font-family: OpenSans-Regular;
+    font-size: 18px;
+    border: none;
+    border-bottom: 1px solid #7a7a7a;
+    outline: none;
+    color: #267349;
+    margin-right: 10px;
+    width: 15%
+}
+
+.tasa{
+    font-family: OpenSans-Bold;
+    font-size: 18px;
+    align-self: center;
+    width: 20%;
+}
+
+.boton_enviar{
+    display: flex;
+    justify-content: flex-end;
+    flex-flow: row wrap;
+    margin: 10px 50px;
+}
+
+.boton-enviar,.boton-enviar:disabled{
+    border: none;
+    border-radius: 30px;
+    font-family: OpenSans-Light;
+    font-size: 18px;
+    background-color: #9c9c9c;
+    color: white;
+    outline: none;
+    padding: 5px 30px;
+    cursor: pointer;
+}
+
+.boton-enviar:hover,.boton-enviar:enabled{
+    background-color: #49aa43;
+}
+
+.boton-enviar:disabled{
+    cursor: no-drop;
+}
+
+
+
+/* Modal */
+
+
+.titulo-modal{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    font-family: OpenSans-Bold;
+    font-size: 30px;
+    justify-content: center;
+    margin-bottom: 25px;    
+}
+
+.titulo-modal img{
+    width: 0.7em;
+    margin: 5px;
+}
+
+.modal-content{
+    border-radius: 0 ;
+    border: none;
+}
+
+.caja_reportes{
+    border-radius: 0.3em;
+    border: 1px solid #efefef;
+}
+
+
+.reportes{
+    font-family: OpenSans-Bold;
+    font-size: 23px;
+}
+
+.privado{
+    font-family: OpenSans-Bold;
+    font-size: 15px;
+    margin: 0 20%;
+}
+
+.reportes-heading{
+    display: flex;
+    margin: 15px;
+}
+
+.reportes-content{
+    display: flex;
+    justify-content: space-around;
+    margin: 15px;
+}
+
+.monto, .tasa-interes{
+    font-family: OpenSans-Regular;
+}
+
+.cantidad{
+    font-family: OpenSans-Bold;
+}
+
+.reportes-total{
+    background-color: #efefef;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    color: #02833c;
+    font-family: OpenSans-Bold;
+}
+
+
+/* .modal-content{
+    width: 650px;
+}
+
+.modal-body{
+    padding: 40px;
+} */
+
+
+@media (min-width: 576px){
+    .modal-dialog {
+        max-width: 600px;
+        margin: 1.75rem auto;
+    }
+}
+
+.modal-body{
+    padding: 1rem 50px;
+}
+
+.cancelar{
+    border: none;
+    border-radius: 30px;
+    font-family: OpenSans-Light;
+    font-size: 18px;
+    background-color: transparent;
+    color: #cb2a3a;
+    outline: none;
+    padding: 5px 30px;
+    cursor: pointer;
+}
+.confirmar{
+    border: none;
+    border-radius: 30px;
+    font-family: OpenSans-Light;
+    font-size: 18px;
+    background-color: #49aa43;
+    color: white;
+    outline: none;
+    padding: 5px 30px;
+    cursor: pointer;
+}
+
+.reportes-footer{
+    text-align: center;
+    margin: 30px;
+}
+
+.mensaje{
+    font-family: OpenSans-Light;
+    font-size: 14px;
+}
+
+.input-token{
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid #147942;
+    display: block;
+    margin: 0 auto;
+    border-radius: 0.3em;
+}
+
+.contenido p{
+    text-align: center;
+
+}

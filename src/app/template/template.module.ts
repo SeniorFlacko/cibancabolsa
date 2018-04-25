@@ -23,6 +23,7 @@ import { EstadocuentaComponent } from './estadocuenta/estadocuenta.component';
 import { HistorialmovimientosComponent } from './historialmovimientos/historialmovimientos.component';
 import { ConfiguracionComponent } from './configuracion/configuracion.component';
 import { TablaHistorialComponent } from './historialmovimientos/tabla-historial/tabla-historial.component';
+import { ModalConfirmacionComponent } from './modal-confirmacion/modal-confirmacion.component';
 
 @NgModule({
   imports: [
@@ -57,7 +58,7 @@ import { TablaHistorialComponent } from './historialmovimientos/tabla-historial/
     HistorialmovimientosComponent,
     ConfiguracionComponent,
     TablaHistorialComponent,
-
+    ModalConfirmacionComponent
   ]
 })
 export class TemplateModule { }
