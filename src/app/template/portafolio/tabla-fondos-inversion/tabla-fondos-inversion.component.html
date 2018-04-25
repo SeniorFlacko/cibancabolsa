@@ -1,5 +1,5 @@
 
-<div class="table-responsive">
+<div class="table-responsive" *ngIf="(dataFondos$ | async) as dataFondos; else loading">
 <div class="table">
 <mat-table [dataSource]="dataFondos" matSort matSortActive="fondo" matSortDirection="asc" matSortDisableClear>
 <ng-container matColumnDef="fondo">
@@ -30,3 +30,8 @@
 
 </div>
 </div>
+
+
+<ng-template #loading>
+  <mat-spinner></mat-spinner>
+</ng-template>
