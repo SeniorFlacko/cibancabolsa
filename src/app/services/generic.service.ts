@@ -19,7 +19,7 @@ export abstract class GenericService<T extends Versionable> {
     }
   
     protected handleError(error: Response) {
-      console.log(error.json());
+      console.error(error.json());
     }
     
     public getURL( id?:string ): string {
