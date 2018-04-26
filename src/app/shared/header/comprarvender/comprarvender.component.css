@@ -186,3 +186,12 @@ select{
 .formulario3{
     line-height: 60px !important;
 }
+
+
+.modal{
+    filter: blur(0px) !important;
+}
+
+.fondo{
+    background: red;
+}
