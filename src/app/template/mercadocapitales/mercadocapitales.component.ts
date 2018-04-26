@@ -1,21 +1,27 @@
-import { Component, OnInit,ViewChild } from '@angular/core';
+import { Component, OnInit,ViewChild, AfterViewInit } from '@angular/core';
 import { DataSource } from '@angular/cdk/table';
 import { MatSort, MatTableDataSource, MatPaginator } from '@angular/material';
 import { MercadocapitalesservicioService } from '../../services/index.services';
 import { MercadoCapitales } from '../../models/index.models';
 import { Chart } from 'chart.js';
+import { ModalConfirmacionComponent } from '../modal-confirmacion/modal-confirmacion.component';
+declare var $ : any;
 
 @Component({
   selector: 'app-mercadocapitales',
   templateUrl: './mercadocapitales.component.html',
   styleUrls: ['./mercadocapitales.component.css']
 })
-export class MercadocapitalesComponent implements OnInit {
+export class MercadocapitalesComponent implements OnInit, AfterViewInit {
+
   displayedColumns = ['emisora', 'precio_cierre', 'precio_ultimo', 'precio_variacion','precio_compra','precio_venta','volumen','maximo','minimo','favorita'];
   dataCapitales:MercadoCapitales[];
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
+  @ViewChild(ModalConfirmacionComponent) confirmar:ModalConfirmacionComponent;
+  @ViewChild(ModalConfirmacionComponent) modal_confirmacion: ModalConfirmacionComponent;
+
 
   constructor(private  dataCapService:MercadocapitalesservicioService) { }
 
@@ -23,6 +29,17 @@ export class MercadocapitalesComponent implements OnInit {
     this.getDataCapitales();
     this.renderGraphic();
   }
+
+  ngAfterViewInit(): void {
+    this.modal_confirmacion.functionValidate = this.validarToken;
+  }
+
+  validarToken = (token: string) => {
+    if (token=="123") {
+      return true;
+    }
+    return false;
+  };
 
   getDataCapitales(){
     this.dataCapService.getMercadoCapitalesData().subscribe(response=>{
@@ -120,6 +137,17 @@ export class MercadocapitalesComponent implements OnInit {
       );
   }
 
+  confirmarModal(){
+    $("#modal_mercado").modal("hide");
+    this.confirmar.show();
+  }
 
+  modalEmisora(){
+    $("#modal_mercado").modal("show");
+  }
+
+  onSubmit(){
+    this.modal_confirmacion.show();
+  }
 
 }

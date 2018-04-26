@@ -385,3 +385,51 @@ select{
 .grafica_modal{
   background-color: #000000;
 }
+
+.caja_reportes{
+  border: 1px solid #9c9c9c;
+}
+
+.reportes{
+  font-family: OpenSans-Bold;
+  font-size: 20px;
+}
+.privado{
+  font-family: OpenSans-Regular;
+  font-size: 14px;
+}
+.reportes-content{
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  text-align: center;
+}
+
+.tabla{
+  width: 80%;
+  margin: 25px 0px;
+}
+.mercado{
+  font-family: OpenSans-Bold;
+}
+td{
+  font-family: OpenSans-Bold;
+}
+.reportes-heading, .tipo_orden{
+  margin-left: 15px;
+  margin-top: 5px;
+}
+.reportes-total{
+  width: 100%;
+  background-color: #e5e5e5;
+  color: #00853f;
+  text-align: center;
+  font-family: OpenSans-Bold;
+  font-size: 20px;
+}
+.modal_footer{
+  font-family: OpenSans-Italic;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 5px;
+}

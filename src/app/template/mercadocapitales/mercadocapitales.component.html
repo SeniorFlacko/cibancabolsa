@@ -25,7 +25,7 @@
                  matSortDisableClear>
         <ng-container matColumnDef="emisora">
           <mat-header-cell *matHeaderCellDef mat-sort-header>Emisora</mat-header-cell>
-          <mat-cell *matCellDef="let capital"><a class="pointer"data-toggle="modal" data-target=".mercado_modal">{{ capital.emisora }}</a></mat-cell>
+          <mat-cell *matCellDef="let capital"><a class="pointer" (click)="modalEmisora()">{{ capital.emisora }}</a></mat-cell>
         </ng-container>
         <ng-container matColumnDef="precio_cierre">
           <mat-header-cell *matHeaderCellDef>Precio Cierre</mat-header-cell>
@@ -75,7 +75,7 @@
   </div>
 </div>
 
-<div class="modal fade mercado_modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div id="modal_mercado" class="modal fade mercado_modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal1">
       <div class="modal-content modalbordeizquierda">
         <div class="generalmodalfi">
@@ -84,7 +84,7 @@
               <span class="texto2modal">Alfa Financial Software Holdings PLC</span>
               <div class="grafica_modal">
                 <canvas id="myChart" width="250px" height="250px"></canvas>
-              </div>
+              </div>º
             </div>
             <div class="divtwomodalfi">
               <!-- <form [formGroup]="fondoinversion1Form" (ngSubmit)="onSubmit()"> -->
@@ -105,7 +105,7 @@
                 <label>PRECIO COMPRA</label>
                 <input class="input_form" type="text" pattern="[0-9]+[.]?[0-9]+" placeholder="130.25">
                 <div>
-                    <button class="btn btn-success btn-comprar-modal" data-dismiss="modal" data-toggle="modal" data-target="#enviosuccess">ENVIAR</button>
+                    <button class="btn btn-success btn-comprar-modal"  (click)="confirmarModal()" >ENVIAR</button>
                 </div>
               <!-- </form> -->
             </div>
@@ -123,70 +123,44 @@
     </div>
   </div>
 
-<div class="modal fade" id="enviosuccess" tabindex="-1" role="dialog" aria-labelledby="miModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-body">
-          <div class="titulo-modal">
-            <span><i class="material-icons verde">check_circle</i> Envío exitoso</span>
-          </div>
-          <div class="contenido">
-            <p>Operación registrada con éxito</p>
-            <p>Folio: 87652</p>
-          </div>
-          <div class="reportes-footer">
-            <button class="btn btn-success btn-radius" data-dismiss="modal">Confirmar</button>
-          </div>
+<modal-confirmacion>
+    <div class="caja_reportes">
+        <div class="reportes-heading">
+            <span class="reportes">ALFA A</span>
+            <span class="privado">Alfa Financial Software Holdings PLC</span>
         </div>
-      </div>
-    </div>
-  </div>
+       <div class="tipo_orden">
+         <span>Tipo de orden: </span>
+         <span class="mercado">Mercado</span>
+       </div>
+        <div class="reportes-content">
+          <table class="tabla">
+            <tr>
+              <th>TÍTULOS</th>
+              <th>PRECIO</th>
+              <th>MONTO</th>
+              <th>COMISIÓN</th>
+              <th>IVA</th>
 
-<div class="modal fade mercado_modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal2">
-    <div class="modal-content modalbordeizquierda">
-      <div class="generalmodalfi">
-      <div class="generalmodalfi">
-        <div class="divonemodalfi">
-          <p class="texto1modal">Alfa A</p>
-          <span class="texto2modal">Alfa Financial Software Holdings PLC</span>
-          <div class="grafica_modal">
-            <canvas id="myChart" width="250px" height="250px"></canvas>
-          </div>
+            </tr>
+            <tr>
+              <td>100</td>
+              <td>$130.25</td>
+              <td>$13,025</td>
+              <td>$100</td>
+              <td>$180</td>
+            </tr>
+          </table>
+
         </div>
-        <div class="divtwomodalfi">
-          <!-- <form [formGroup]="fondoinversion1Form" (ngSubmit)="onSubmit()"> -->
-          <div>
-            <button class="btn btn-warning">COMPRA</button>
-            <button class="btn btn-outline-secondary">VENTA</button>
-          </div>
-          <label>TIPO DE ORDEN</label>
-          <!-- <mat-form-field class="example-full-width"> -->
-          <select>
-            <option value="mercado">MERCADO</option>
-            <option value="apertura">APERTURA</option>
-            <option value="cierre">CIERRE</option>
-          </select> <br>
-          <!-- </mat-form-field> -->
-          <label>TÍTULOS</label>
-          <input class="input_form" type="text" pattern="[0-9]+[.]?[0-9]+" placeholder="100">
-          <label>PRECIO COMPRA</label>
-          <input class="input_form" type="text" pattern="[0-9]+[.]?[0-9]+" placeholder="130.25">
-          <div>
-            <button class="btn btn-success btn-comprar-modal" data-dismiss="modal" data-toggle="modal" data-target="#enviosuccess">ENVIAR</button>
-          </div>
-          <!-- </form> -->
+        <div class="reportes-total">
+            <span>TOTAL: $12,845.00</span>
         </div>
-        <div class="divthreemodalfi">
-          <div>
-            <p>Saldo disponible</p>
-            <p>$1,846,746.29</p>
-          </div>
-          <div class="footer">
-            <p>Monto: <span>$13,025</span></p>
-          </div>
-        </div>
+    </div>
+    <div class="modal_footer">
+      <div>
+        <span>La vigencia de tu operación es de hoy <span>12/12/18</span> al cierre de mercado</span>
       </div>
     </div>
-  </div>
-</div>
+
+</modal-confirmacion>
