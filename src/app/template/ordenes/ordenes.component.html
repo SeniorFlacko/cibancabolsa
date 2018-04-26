@@ -5,7 +5,7 @@
             <span>Órdenes</span>
         </div>
         <div class="contenedor-content">
-            <div class="table-responsive">
+            <div class="table-responsive" *ngIf="(dataOrdenes$ | async) as dataOrdenes; else loading">
                 <div class="table">
             
                     <mat-table [dataSource]="dataOrdenes" matSort matSortActive="fecha" matSortDirection="asc" matSortDisableClear>
@@ -111,6 +111,10 @@
                     </mat-table>
                 </div>
             </div>
+
+            <ng-template #loading>
+                <mat-spinner></mat-spinner>
+            </ng-template>
         </div> 
         <br>
     </div>

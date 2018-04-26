@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Orden } from '../../models/index.models';
 import { OrdenesService } from '../../services/index.services';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-ordenes',
@@ -9,7 +10,7 @@ import { OrdenesService } from '../../services/index.services';
 })
 export class OrdenesComponent implements OnInit {
 
-  dataOrdenes: Orden[];
+  dataOrdenes$: Observable<Orden[]>;
 
   displayedOrdenesColumn = [
     'fecha',
@@ -31,7 +32,7 @@ export class OrdenesComponent implements OnInit {
   constructor(private ordenesService: OrdenesService) { }
 
   ngOnInit() {
-    this.dataOrdenes = this.ordenesService.getOrdenes();
+    this.dataOrdenes$ = this.ordenesService.getAllItems(response => console.log( response ));
   }
 
 }
