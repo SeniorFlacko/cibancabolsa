@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, NgForm  } from '@angular/forms';
 import * as $ from 'jquery';
-import { ComprarVenderUnoModel } from '../../../models/index.models';
+import { ComprarVenderUnoModel, ComprarVenderDosModel } from '../../../models/index.models';
 import { GenericService } from '../../../services/generic.service';
 import { ComprarvenderunoService } from '../../../services/comprarvenderuno.service';
+import { ComprarvenderdosService } from '../../../services/comprarvenderdos.service';
 
 
 @Component({
@@ -13,18 +14,24 @@ import { ComprarvenderunoService } from '../../../services/comprarvenderuno.serv
 })
 export class ComprarvenderComponent implements OnInit {
 
-  foods = [
-    {value: 'CEMEX', viewValue: 'Steak'},
-    {value: 'TELMEX', viewValue: 'Pizza'},
-    {value: 'PEMEX', viewValue: 'Tacos'}
+  opciones = [
+    {value: 'CEMEX', viewValue: 'CEMEX'},
+    {value: 'TELMEX', viewValue: 'TELMEX'},
+    {value: 'PEMEX', viewValue: 'PEMEX'}
   ];
 
-  objeto: ComprarVenderUnoModel = {
+  objetoUno: ComprarVenderUnoModel = {
     id: "1",
     emisora: "",
     precio_compra: "",
     titulos: "",
     tipo_orden: ""
+  };
+
+  objetoDos: ComprarVenderDosModel = {
+    id: "1",
+    reportes: "Privado",
+    plazo: "220"
   };
 
   capitales:boolean = true;
@@ -38,26 +45,19 @@ export class ComprarvenderComponent implements OnInit {
   private formularioTres: FormGroup;
 
   constructor(
+
     private fb: FormBuilder,
-    private servicio: ComprarvenderunoService
-  ) { 
+    private servicio: ComprarvenderunoService,
+    private servicioDos: ComprarvenderdosService
 
-   
-
-  }
+  ) {}
 
   ngOnInit() {
-    
-    //  setTimeout(() => {
-//   $(document).ready(function(){
-    
-//     $('#exampleModal').modal('show');
 
-//   });
-//  }, 5000);
-this.validarFormularioUno();
-this.validarFormularioDos();
-this.validarFormularioTres();
+    this.validarFormularioUno();
+    this.validarFormularioDos();
+    this.validarFormularioTres();
+  
   }
 
   validarFormularioUno() {
@@ -72,8 +72,8 @@ this.validarFormularioTres();
 
   validarFormularioDos() {
     this.formularioDos = this.fb.group({
-      reportesDos: ['', [Validators.required] ],
-      plazoDos: ['', [Validators.required] ]
+      reportes: ['', [Validators.required] ],
+      plazo: ['', [Validators.required] ]
 
     });
   }
@@ -107,9 +107,13 @@ this.validarFormularioTres();
     }
   }
 
-  guardar(objeto: ComprarVenderUnoModel ){
+  guardarUno(objetoUno: ComprarVenderUnoModel ){
+    this.servicio.createItem(objetoUno, res => console.log(res));
+  }
 
-    this.servicio.createItem(objeto, res => console.log(res));
+  guardarDos(){
+    let objetoDos = this.formularioDos.value;
+    this.servicioDos.createItem(objetoDos, res => console.log(res));
   }
 
  

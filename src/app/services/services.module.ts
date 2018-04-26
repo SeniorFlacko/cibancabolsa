@@ -4,8 +4,8 @@ import { AuthService,SessionService,LoaderService,AuthGuard,TickerService, Fondo
   MercadoDineroService, PortafolioGraficaService, MercadoDineroPendieteService, OrdenesPendientesService,
    MercadoCapitalesDolaresService, MarcadorServicioService, FondosinversionService, MercadocapitalesservicioService, 
    OrdenesService, FondosinversionpendientesService, HistorialService, MovimientosPorContratoService, 
-   ConfiguracionService } from './index.services';
-import { ComprarvenderunoService } from './comprarvenderuno.service';
+   ConfiguracionService, ComprarvenderunoService, ComprarvenderdosService} from './index.services';
+
 
 
 @NgModule({
@@ -34,7 +34,8 @@ import { ComprarvenderunoService } from './comprarvenderuno.service';
     HistorialService,
     ConfiguracionService,
     MovimientosPorContratoService,
-    ComprarvenderunoService
+    ComprarvenderunoService,
+    ComprarvenderdosService
   ]
 })
 export class ServicesModule { }
