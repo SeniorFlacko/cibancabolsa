@@ -21,7 +21,12 @@ export class TablaMercadoDineroComponent implements OnInit {
   }
 
   getOrdenesPendientes(){
-    this.mercadoDinService.getDinero().subscribe(response =>{
+    // this.mercadoDinService.getDinero().subscribe(response =>{
+    //   this.dataDinero = new MatTableDataSource(response)
+    //   this.dataDinero.sort = this.sort;
+    // });
+
+    this.mercadoDinService.getAllItems(response => {
       this.dataDinero = new MatTableDataSource(response)
       this.dataDinero.sort = this.sort;
     });
