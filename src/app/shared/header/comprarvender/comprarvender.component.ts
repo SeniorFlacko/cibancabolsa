@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators  } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, NgForm  } from '@angular/forms';
 import * as $ from 'jquery';
+import { ComprarVenderUnoModel } from '../../../models/index.models';
+import { GenericService } from '../../../services/generic.service';
+import { ComprarvenderunoService } from '../../../services/comprarvenderuno.service';
+
 
 @Component({
   selector: 'app-comprarvender',
@@ -10,23 +14,32 @@ import * as $ from 'jquery';
 export class ComprarvenderComponent implements OnInit {
 
   foods = [
-    {value: 'steak-0', viewValue: 'Steak'},
-    {value: 'pizza-1', viewValue: 'Pizza'},
-    {value: 'tacos-2', viewValue: 'Tacos'}
+    {value: 'CEMEX', viewValue: 'Steak'},
+    {value: 'TELMEX', viewValue: 'Pizza'},
+    {value: 'PEMEX', viewValue: 'Tacos'}
   ];
+
+  objeto: ComprarVenderUnoModel = {
+    id: "1",
+    emisora: "",
+    precio_compra: "",
+    titulos: "",
+    tipo_orden: ""
+  };
 
   capitales:boolean = true;
   dinero :boolean = false;
   inversion:boolean = false;
 
+  modal: boolean = false;
 
   private formularioUno: FormGroup; 
   private formularioDos: FormGroup;
   private formularioTres: FormGroup;
 
   constructor(
-    private fb: FormBuilder
-
+    private fb: FormBuilder,
+    private servicio: ComprarvenderunoService
   ) { 
 
    
@@ -75,6 +88,8 @@ this.validarFormularioTres();
 
   seleccionBotones(id:string){
 
+    this.modal = true;
+
     if(id == 'capitales'){
       this.capitales = true;
       this.dinero = false;
@@ -90,6 +105,11 @@ this.validarFormularioTres();
       this.dinero = false;
       this.inversion = true;
     }
+  }
+
+  guardar(objeto: ComprarVenderUnoModel ){
+
+    this.servicio.createItem(objeto, res => console.log(res));
   }
 
  

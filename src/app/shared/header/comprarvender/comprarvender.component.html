@@ -4,8 +4,9 @@
   <i class="material-icons arrows">first_page</i>
 </div>
 
+<div class="fondo">
 <!-- Modal -->
-<div class="modal modal-compra-venta modal-hover fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+<div [ngClass]=" {  'blur' : modal }" class="modal modal-compra-venta modal-hover fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
   aria-hidden="true">
 
   <div class="modal-body">
@@ -53,9 +54,9 @@
           <!-- FORMULARIO 1 -->
 
           <div class="formulario1" *ngIf="capitales==true">
-            <form [formGroup]="formularioUno">
+            <form [formGroup]="formularioUno" >
               <div class="row">
-                <select class="seleccion inputsSeleccion" id="inputGroupSelect01" formControlName="emisoraUno" required>
+                <select class="seleccion inputsSeleccion" id="inputGroupSelect01" formControlName="emisoraUno" [(ngModel)]="objeto.emisora" required>
                   <option class="placeholder" value="" disabled selected hidden>EMISORA</option>
                   <option *ngFor="let food of foods" [value]="food.value">
                     {{ food.viewValue }}
@@ -63,7 +64,7 @@
                 </select>
               </div>
               <div class="row">
-                <select class="seleccion inputsSeleccion" id="inputGroupSelect01" formControlName="tipoOrdenUno" required>
+                <select class="seleccion inputsSeleccion" id="inputGroupSelect01" formControlName="tipoOrdenUno" [(ngModel)]="objeto.tipo_orden" required>
                   <option class="placeholder" value="" disabled selected hidden>Tipo de orden</option>
                   <option *ngFor="let food of foods" [value]="food.value">
                     {{ food.viewValue }}
@@ -72,17 +73,17 @@
               </div>
               <div class="row">
                 <mat-form-field class="example-full-width">
-                  <input matInput placeholder="Títulos" formControlName="titulosUno" required>
+                  <input matInput placeholder="Títulos" [(ngModel)]="objeto.titulos" formControlName="titulosUno" required>
                 </mat-form-field>
                 <p class="monto">Monto:</p>
               </div>
               <div class="row">
                 <mat-form-field class="example-full-width">
-                  <input matInput placeholder="Precio Compra" formControlName="precioCompraUno" required>
+                  <input matInput placeholder="Precio Compra" [(ngModel)]="objeto.precio_compra" formControlName="precioCompraUno" required>
                 </mat-form-field>
               </div>
               <div class="row botonenviar">
-                <button type="button" class="btn btn-success enviar" [disabled]="!formularioUno.valid">Enviar</button>
+                <button type="button" class="btn btn-success enviar" [disabled]="!formularioUno.valid" (click)="guardar(objeto)">Enviar</button>
               </div>
             </form>
           </div>
@@ -151,4 +152,6 @@
 
     </div>
   </div>
+</div>
+
 </div>
