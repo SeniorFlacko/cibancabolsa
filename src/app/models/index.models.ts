@@ -17,4 +17,4 @@ export { Orden } from './orden';
 export { Configuracion } from './configuracion.model';
 export { Versionable } from './versionable';
 export { ComprarVenderUnoModel } from './comprarvenderunomodel';
-
+export { ComprarVenderDosModel } from './comprarvenderdosmodel';
