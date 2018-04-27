@@ -1,3 +1,4 @@
+export {OperacionesRecientesService} from "./operaciones-recientes.service";
 export { ConfiguracionService } from './configuracion.service';
 export {MovimientosPorContratoService} from './movimientos-por-contrato.service';
 export { HistorialService } from './historial.service';
@@ -18,4 +19,5 @@ export { SessionService } from './session.service';
 export { LoaderService } from './loader.service';
 export { AuthGuard } from './auth.guard';
 export { FondosinversionService } from './fondosinversion.service';
+
 

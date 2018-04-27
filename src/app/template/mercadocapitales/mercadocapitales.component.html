@@ -82,9 +82,11 @@
             <div class="divonemodalfi">
               <p class="texto1modal">Alfa A</p>
               <span class="texto2modal">Alfa Financial Software Holdings PLC</span>
+              <p class="texto_operaciones" (click)="modal_tablas()">OPERACIONES MÁS RECIENTES</p>
+              <input type="date" class="date" placeholder="05/DIC">
               <div class="grafica_modal">
-                <canvas id="myChart" width="250px" height="250px"></canvas>
-              </div>º
+                <canvas id="myChart" width="250px" height="150px"></canvas>
+              </div>
             </div>
             <div class="divtwomodalfi">
               <!-- <form [formGroup]="fondoinversion1Form" (ngSubmit)="onSubmit()"> -->
@@ -162,5 +164,28 @@
         <span>La vigencia de tu operación es de hoy <span>12/12/18</span> al cierre de mercado</span>
       </div>
     </div>
-
 </modal-confirmacion>
+
+<div id="modal_tablas" class="modal fade mercado_modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal1">
+    <div class="modal-content modalbordeizquierda">
+      <div>
+        <button class="regresar" (click)="regresar()"> <span class="left_arrow">⟨</span> Regresar</button>
+      </div>
+      <div class="generalmodalfi">
+        <br>
+        <div class="divonemodalfi">
+        <p class="titulo_tabla">Operaciones más recientes</p>
+          <app-operaciones-recientes-tabla></app-operaciones-recientes-tabla>
+        </div>
+        <div class="divtwomodalfi">
+
+
+        </div>
+        <div class="divthreemodalfi">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

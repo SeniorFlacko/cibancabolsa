@@ -24,6 +24,7 @@ import { HistorialmovimientosComponent } from './historialmovimientos/historialm
 import { ConfiguracionComponent } from './configuracion/configuracion.component';
 import { TablaHistorialComponent } from './historialmovimientos/tabla-historial/tabla-historial.component';
 import { ModalConfirmacionComponent } from './modal-confirmacion/modal-confirmacion.component';
+import { OperacionesRecientesTablaComponent } from './mercadocapitales/operaciones-recientes-tabla/operaciones-recientes-tabla.component';
 
 @NgModule({
   imports: [
@@ -58,7 +59,8 @@ import { ModalConfirmacionComponent } from './modal-confirmacion/modal-confirmac
     HistorialmovimientosComponent,
     ConfiguracionComponent,
     TablaHistorialComponent,
-    ModalConfirmacionComponent
+    ModalConfirmacionComponent,
+    OperacionesRecientesTablaComponent
   ]
 })
 export class TemplateModule { }

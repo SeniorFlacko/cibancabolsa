@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AuthService,SessionService,LoaderService,AuthGuard,TickerService, FondoInversionService, MercadoCapitalesService,
+import {
+  AuthService, SessionService, LoaderService, AuthGuard, TickerService, FondoInversionService, MercadoCapitalesService,
   MercadoDineroService, PortafolioGraficaService, MercadoDineroPendieteService, OrdenesPendientesService,
-   MercadoCapitalesDolaresService, MarcadorServicioService, FondosinversionService, MercadocapitalesservicioService, 
-   OrdenesService, FondosinversionpendientesService, HistorialService, MovimientosPorContratoService, 
-   ConfiguracionService } from './index.services';
+  MercadoCapitalesDolaresService, MarcadorServicioService, FondosinversionService, MercadocapitalesservicioService,
+  OrdenesService, FondosinversionpendientesService, HistorialService, MovimientosPorContratoService,
+  ConfiguracionService, OperacionesRecientesService
+} from './index.services';
 import { ComprarvenderunoService } from './comprarvenderuno.service';
 
 
@@ -34,7 +36,8 @@ import { ComprarvenderunoService } from './comprarvenderuno.service';
     HistorialService,
     ConfiguracionService,
     MovimientosPorContratoService,
-    ComprarvenderunoService
+    ComprarvenderunoService,
+    OperacionesRecientesService
   ]
 })
 export class ServicesModule { }

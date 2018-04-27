@@ -433,3 +433,40 @@ td{
   text-align: center;
   margin-top: 5px;
 }
+.texto_operaciones{
+  color: #227f49;
+  margin: 15px auto ;
+  font-family: OpenSans-Bold;
+  cursor: pointer;
+}
+.date,.date:hover,.date:active{
+  font-family: OpenSans-Regular;
+  font-size: 14px;
+  color: #267349;
+  outline: none;
+  border: none;
+  margin-right: 10px;
+  width: 50%;
+  background-color: #efeff1;
+  -webkit-appearance: none;
+  margin-bottom: 15px;
+}
+.titulo_tabla{
+  font-family: OpenSans-Regular;
+  font-size: 16px;
+  text-align: center;
+}
+
+.regresar{
+  outline: none;
+  color: #00853f;
+  font-family: OpenSans-Regular;
+  background-color: transparent;
+  border: 0px solid;
+  cursor: pointer;
+}
+.left_arrow{
+  color: #00853f;
+  font-family: OpenSans-Bold;
+  font-size: 20px;
+}

@@ -146,6 +146,16 @@ export class MercadocapitalesComponent implements OnInit, AfterViewInit {
     $("#modal_mercado").modal("show");
   }
 
+  modal_tablas(){
+    $("#modal_tablas").modal("show");
+    $("#modal_mercado").modal("hide");
+  }
+
+  regresar(){
+    $("#modal_tablas").modal("hide");
+    $("#modal_mercado").modal("show");
+  }
+
   onSubmit(){
     this.modal_confirmacion.show();
   }
