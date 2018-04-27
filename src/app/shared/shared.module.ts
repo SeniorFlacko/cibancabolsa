@@ -9,6 +9,9 @@ import { BuscadorComponent } from './header/buscador/buscador.component';
 import { FechaComponent } from './header/fecha/fecha.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { ComprarvenderComponent } from './header/comprarvender/comprarvender.component';
+import { ModalConfirmacionComponent } from '../template/modal-confirmacion/modal-confirmacion.component';
+
+
 
 @NgModule({
   imports: [
@@ -24,11 +27,13 @@ import { ComprarvenderComponent } from './header/comprarvender/comprarvender.com
     AlertComponent,
     BuscadorComponent,
     FechaComponent,
-    ComprarvenderComponent
+    ComprarvenderComponent,
+    ModalConfirmacionComponent
   ],
   exports:[
     HeaderComponent,
-    AlertComponent
+    AlertComponent,
+    ModalConfirmacionComponent
   ]
 })
 export class SharedModule { }

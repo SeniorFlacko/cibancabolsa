@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, NgForm  } from '@angular/forms';
 import * as $ from 'jquery';
 import { ComprarVenderUnoModel, ComprarVenderDosModel } from '../../../models/index.models';
 import { GenericService } from '../../../services/generic.service';
 import { ComprarvenderunoService } from '../../../services/comprarvenderuno.service';
 import { ComprarvenderdosService } from '../../../services/comprarvenderdos.service';
+import { ModalConfirmacionComponent } from '../../../template/modal-confirmacion/modal-confirmacion.component';
 
 
 @Component({
@@ -12,7 +13,7 @@ import { ComprarvenderdosService } from '../../../services/comprarvenderdos.serv
   templateUrl: './comprarvender.component.html',
   styleUrls: ['./comprarvender.component.css']
 })
-export class ComprarvenderComponent implements OnInit {
+export class ComprarvenderComponent implements OnInit, AfterViewInit {
 
   opciones = [
     {value: 'CEMEX', viewValue: 'CEMEX'},
@@ -44,8 +45,11 @@ export class ComprarvenderComponent implements OnInit {
   private formularioDos: FormGroup;
   private formularioTres: FormGroup;
 
-  constructor(
+  @ViewChild(ModalConfirmacionComponent) modal_confirmacion: ModalConfirmacionComponent;
+  
 
+  constructor(
+    
     private fb: FormBuilder,
     private servicio: ComprarvenderunoService,
     private servicioDos: ComprarvenderdosService
@@ -58,6 +62,19 @@ export class ComprarvenderComponent implements OnInit {
     this.validarFormularioDos();
     this.validarFormularioTres();
   
+  }
+
+  ngAfterViewInit(): void {
+    this.modal_confirmacion.functionValidate = this.validarToken;
+  }
+
+  validarToken(token: string){
+
+    if(token == "1234"){
+      return true;
+    }
+    return false;
+    
   }
 
   validarFormularioUno() {
@@ -108,7 +125,8 @@ export class ComprarvenderComponent implements OnInit {
   }
 
   guardarUno(objetoUno: ComprarVenderUnoModel ){
-    this.servicio.createItem(objetoUno, res => console.log(res));
+    this.modal_confirmacion.show();
+    //this.servicio.createItem(objetoUno, res => console.log(res));
   }
 
   guardarDos(){
@@ -116,6 +134,8 @@ export class ComprarvenderComponent implements OnInit {
     this.servicioDos.createItem(objetoDos, res => console.log(res));
   }
 
- 
+
+
+  
 
 }
