@@ -5,195 +5,208 @@
 </div>
 
 <div class="fondo">
-<!-- Modal -->
-<div [ngClass]=" {  'blur' : modal }" class="modal modal-compra-venta modal-hover fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-  aria-hidden="true">
+  <!-- Modal -->
+  <div [ngClass]=" {  'blur' : modal }" class="modal modal-compra-venta modal-hover fade" id="exampleModal" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
 
-  <div class="modal-body">
+    <div class="modal-body">
 
-    <div class="modal-dialog" role="document">
+      <div class="modal-dialog" role="document">
 
-      <div class="modal-content modaltamano">
-        <div id="ComprarVenderModal" data-toggle="modal" data-target="#exampleModal">
-          <i class="material-icons moneyfixed">monetization_on</i>
-          <p class="textoCV">Comprar Vender</p>
-          <i class="material-icons arrows">first_page</i>
-        </div>
-        <!-- <div class="modal-header">
+        <div class="modal-content modaltamano">
+          <div id="ComprarVenderModal" data-toggle="modal" data-target="#exampleModal">
+            <i class="material-icons moneyfixed">monetization_on</i>
+            <p class="textoCV">Comprar Vender</p>
+            <i class="material-icons arrows">first_page</i>
+          </div>
+          <!-- <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Comprar o Vender</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div> -->
 
-        <!-- Contenido Modal -->
-        <h5 class="tituloModal">Comprar o Vender</h5>
-        <div>
-          <p class="saldoletra">SALDO DISPONIBLE:
-            <span class="bold"> $12,000,000.00</span>
-          </p>
-        </div>
-        <div class="container-fluid">
-          <p class="bold selecciona">Selecciona</p>
-
-
-
-          <div class="row centrarBotones">
-            <button (click)="seleccionBotones('capitales')" [ngClass]="{ 'botonSeleccionado': capitales }" type="button" class="btn btn-outline-success botonesModal3 botonesModal31">Mercado
-              <br>de Capitales</button>
-            <button (click)="seleccionBotones('dinero')" [ngClass]="{ 'botonSeleccionado': dinero }" type="button" class="btn btn-outline-success botonesModal3 botonesModal32">Mercado
-              <br>de Dinero</button>
-            <button (click)="seleccionBotones('inversion')" [ngClass]="{ 'botonSeleccionado': inversion }" type="button" class="btn btn-outline-success botonesModal3 botonesModal33">Fondos
-              <br>de Inversión</button>
+          <!-- Contenido Modal -->
+          <h5 class="tituloModal">Comprar o Vender</h5>
+          <div>
+            <p class="saldoletra">SALDO DISPONIBLE:
+              <span class="bold"> $12,000,000.00</span>
+            </p>
           </div>
-          
-          <div class="row centrarBotones botones2">
-            <button type="button" class="btn btn-warning botonesModal2 botonesModal21 ">COMPRA</button>
-            <button type="button" class="btn btn-outline-warning botonesModal2 botonesModal22">VENTA</button>
-          </div>
-          <!-- FORMULARIO 1 -->
+          <div class="container-fluid">
+            <p class="bold selecciona">Selecciona</p>
 
-          <div class="formulario1" *ngIf="capitales==true">
-            <form [formGroup]="formularioUno" >
-              <div class="row">
-                <select class="seleccion inputsSeleccion" formControlName="emisoraUno" [(ngModel)]="objetoUno.emisora" required>
-                  <option class="placeholder" value="" disabled selected hidden>EMISORA</option>
-                  <option *ngFor="let opcion of opciones" [value]="opcion.value">
-                    {{ opcion.viewValue }}
-                  </option>
-                </select>
-              </div>
-              <div class="row">
-                <select class="seleccion inputsSeleccion" formControlName="tipoOrdenUno" [(ngModel)]="objetoUno.tipo_orden" required>
-                  <option class="placeholder" value="" disabled selected hidden>TIPO DE ORDEN</option>
-                  <option *ngFor="let opcion of opciones" [value]="opcion.value">
-                    {{ opcion.viewValue }}
-                  </option>
-                </select>
-              </div>
-              <div class="row">
-                <mat-form-field class="example-full-width">
-                  <input matInput placeholder="TITULOS" [(ngModel)]="objetoUno.titulos" formControlName="titulosUno" required>
-                </mat-form-field>
-                <p class="monto">Monto:</p>
-              </div>
-              <div class="row">
-                <mat-form-field class="example-full-width">
-                  <input matInput placeholder="PRECIO COMPRA" [(ngModel)]="objetoUno.precio_compra" formControlName="precioCompraUno" required>
-                </mat-form-field>
-              </div>
-              <div class="row botonenviar">
-                <button type="button" class="btn btn-success enviar" [disabled]="!formularioUno.valid" (click)="guardarUno(objetoUno)" data-dismiss="modal">Enviar</button>
-              </div>
-            </form>
-          </div>
 
-          <!-- FORMULARIO 2 -->
-          <form [formGroup]="formularioDos" (ngSubmit)="guardarDos()">
-            <div class="formulario2" *ngIf="dinero==true">
-              <div class="row">
-                <select class="seleccion inputsSeleccion"  formControlName="reportes" required>
-                    <option class="placeholder" value="" disabled selected hidden>REPORTOS</option>
-                  <option *ngFor="let opcion of opciones" [value]="opcion.value">
-                    {{ opcion.viewValue }}
-                  </option>
-                </select>
-              </div>
-              <div class="row">
-                <p>TASA: 3.30%</p>
-              </div>
-              <div class="row">
-                <select class="mitad" formControlName="plazo"  required>
-                    <option class="placeholder" value="" disabled selected hidden>PLAZOS</option>
-                  <option *ngFor="let opcion of opciones" [value]="opcion.value">
-                    {{ opcion.viewValue }}
-                  </option>
-                </select>
-                <p>MONTO: $10,000.00</p>
-              </div>
-              <div class="row botonenviar">
-                <button type="submit" class="btn btn-success enviar" [disabled]="!formularioDos.valid">Enviar</button>
-              </div>
+
+            <div class="row centrarBotones">
+              <button (click)="seleccionBotones('capitales')" [ngClass]="{ 'botonSeleccionado': capitales }" type="button" class="btn btn-outline-success botonesModal3 botonesModal31">Mercado
+                <br>de Capitales</button>
+              <button (click)="seleccionBotones('dinero')" [ngClass]="{ 'botonSeleccionado': dinero }" type="button" class="btn btn-outline-success botonesModal3 botonesModal32">Mercado
+                <br>de Dinero</button>
+              <button (click)="seleccionBotones('inversion')" [ngClass]="{ 'botonSeleccionado': inversion }" type="button" class="btn btn-outline-success botonesModal3 botonesModal33">Fondos
+                <br>de Inversión</button>
             </div>
 
-          </form>
+            <div class="row centrarBotones botones2">
+              <button type="button" class="btn btn-warning botonesModal2 botonesModal21 ">COMPRA</button>
+              <button type="button" class="btn btn-outline-warning botonesModal2 botonesModal22">VENTA</button>
+            </div>
+            <!-- FORMULARIO 1 -->
 
-          <pre>
+            <div class="formulario1" *ngIf="capitales==true">
+              <form [formGroup]="formularioUno">
+                <div class="row">
+                  <select class="seleccion inputsSeleccion" formControlName="emisoraUno" [(ngModel)]="objetoUno.emisora" required>
+                    <option class="placeholder" value="" disabled selected hidden>EMISORA</option>
+                    <option *ngFor="let opcion of opciones" [value]="opcion.value">
+                      {{ opcion.viewValue }}
+                    </option>
+                  </select>
+                </div>
+                <div class="row">
+                  <select class="seleccion inputsSeleccion" formControlName="tipoOrdenUno" [(ngModel)]="objetoUno.tipo_orden" required>
+                    <option class="placeholder" value="" disabled selected hidden>TIPO DE ORDEN</option>
+                    <option *ngFor="let opcion of opciones" [value]="opcion.value">
+                      {{ opcion.viewValue }}
+                    </option>
+                  </select>
+                </div>
+                <div class="row">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="TITULOS" [(ngModel)]="objetoUno.titulos" formControlName="titulosUno" required>
+                  </mat-form-field>
+                  <p class="monto">Monto:</p>
+                </div>
+                <div class="row">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="PRECIO COMPRA" [(ngModel)]="objetoUno.precio_compra" formControlName="precioCompraUno" required>
+                  </mat-form-field>
+                </div>
+                <div class="row botonenviar">
+                  <button type="button" class="btn btn-success enviar" [disabled]="!formularioUno.valid" (click)="guardarUno(objetoUno)" data-dismiss="modal">Enviar</button>
+                </div>
+              </form>
+            </div>
+
+            <!-- FORMULARIO 2 -->
+            <form [formGroup]="formularioDos" (ngSubmit)="guardarDos()">
+              <div class="formulario2" *ngIf="dinero==true">
+                <div class="row">
+                  <select class="seleccion inputsSeleccion" formControlName="reportes" required>
+                    <option class="placeholder" value="" disabled selected hidden>REPORTOS</option>
+                    <option *ngFor="let opcion of opciones" [value]="opcion.value">
+                      {{ opcion.viewValue }}
+                    </option>
+                  </select>
+                </div>
+                <div class="row">
+                  <p>TASA: 3.30%</p>
+                </div>
+                <div class="row">
+                  <select class="mitad" formControlName="plazo" required>
+                    <option class="placeholder" value="" disabled selected hidden>PLAZOS</option>
+                    <option *ngFor="let opcion of opciones" [value]="opcion.value">
+                      {{ opcion.viewValue }}
+                    </option>
+                  </select>
+                  <p>MONTO: $10,000.00</p>
+                </div>
+                <div class="row botonenviar">
+                  <button type="submit" class="btn btn-success enviar" [disabled]="!formularioDos.valid">Enviar</button>
+                </div>
+              </div>
+
+            </form>
+
+            <pre>
             {{ formularioDos.value | json }}
           </pre>
 
-          <!-- FORMULARIO 3 -->
-          <form [formGroup]="formularioTres">
-          <div class="formulario3" *ngIf="inversion==true">
-            <div class="row">
-              <select class="seleccion inputsSeleccion" id="inputGroupSelect01" formControlName="fondoTres" required>
-                  <option class="placeholder" value="" disabled selected hidden>FONDO</option>
-                <option *ngFor="let food of foods" [value]="food.value">
-                  {{ food.viewValue }}
-                </option>
-              </select>
-            </div>
-            <div class="row">
-              <p>PRECIO: 3.30097687</p>
-            </div>
-            <div class="row">
-              <mat-form-field class="example-full-width">
-                <input matInput placeholder="CANTIDAD A CONVERTIR" formControlName="catidadinvertirTres" required>
-              </mat-form-field>
-            </div>
-            <div class="row botonenviar">
-                <button type="button" class="btn btn-success enviar" [disabled]="!formularioTres.valid">Enviar</button>
+            <!-- FORMULARIO 3 -->
+            <form [formGroup]="formularioTres">
+              <div class="formulario3" *ngIf="inversion==true">
+                <div class="row">
+                  <select class="seleccion inputsSeleccion" id="inputGroupSelect01" formControlName="fondoTres" required>
+                    <option class="placeholder" value="" disabled selected hidden>FONDO</option>
+                    <option *ngFor="let food of foods" [value]="food.value">
+                      {{ food.viewValue }}
+                    </option>
+                  </select>
+                </div>
+                <div class="row">
+                  <p>PRECIO: 3.30097687</p>
+                </div>
+                <div class="row">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="CANTIDAD A CONVERTIR" formControlName="catidadinvertirTres" required>
+                  </mat-form-field>
+                </div>
+                <div class="row botonenviar">
+                  <button type="button" class="btn btn-success enviar" [disabled]="!formularioTres.valid">Enviar</button>
+                </div>
               </div>
+
+            </form>
+
+
           </div>
-          
-        </form>
+          <!-- Fin Contenido Modal -->
 
 
         </div>
-        <!-- Fin Contenido Modal -->
-
 
       </div>
-
     </div>
   </div>
-</div>
 
 </div>
+
+
 
 <modal-confirmacion identificador="miModal">
-  <div>
-      <p>ALFA A <small>Alfa  Financial Software Holdings PLC</small></p>
-      <p>TIPO DE ORDEN <strong>Mercado</strong></p>
-  </div>
-  <div class="flex">
-      <div>
+
+  <div  *ngIf="capitales==true">
+  <p class="textolateralconfirmacion">Compra</p>
+  <div class="border">
+    
+    <p class="negritas">ALFA A
+      <small>Alfa Financial Software Holdings PLC</small>
+    </p>
+    <p>TIPO DE ORDEN
+      <strong class="negritas"> {{ objetoUno.tipo_orden }} </strong>
+    </p>
+
+    <div class="flex">
+      <div class="cuarto">
         <p>TÍTULOS</p>
-        <p>100</p>
+        <p class="negritas">100</p>
       </div>
-      <div>
+      <div class="cuarto">
         <p>PRECIO</p>
-        <p>$130.25</p>
+        <p class="negritas">$130.25</p>
       </div>
-      <div>
+      <div class="cuarto">
         <p>MONTO</p>
-        <p>$13,025</p>
+        <p class="negritas">$13,025</p>
       </div>
-      <div>
+      <div class="cuarto">
         <p>COMISIÓN:</p>
-        <p>$100</p>
+        <p class="negritas">$100</p>
       </div>
-      <div>
+      <div class="cuarto">
         <P>IVA:</P>
-        <P>$80</P>
+        <P class="negritas">$80</P>
       </div>
+    </div>
   </div>
-  <div>
+  <div class="backgroundGris">
     <p>TOTAL: $12,845</p>
   </div>
-  <div>
+
+  <div class="vigencia">
     <p>La vigencia de tu operación es de hoy 12/12/12 al cierre de mercado</p>
   </div>
-  
-  
+
+</div>
+
 </modal-confirmacion>

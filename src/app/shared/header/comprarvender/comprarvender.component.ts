@@ -71,7 +71,18 @@ export class ComprarvenderComponent implements OnInit, AfterViewInit {
   validarToken(token: string){
 
     if(token == "1234"){
-      return true;
+      if( this.capitales){
+        this.guardarUno(this.objetoUno);
+        return true;
+      }
+      // }if( this.dinero){
+      //   this.guardardos(this.objetoUno);
+      //   return true;
+      // }if( this.inversion){
+      //   this.guardarUno(this.objetoUno);
+      //   return true;
+      // }
+      
     }
     return false;
     

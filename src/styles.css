@@ -95,3 +95,7 @@ body{
     top: 0px !important;
     left: 0px !important;
 }
+
+.negritas{
+    font-weight: bold;
+}
