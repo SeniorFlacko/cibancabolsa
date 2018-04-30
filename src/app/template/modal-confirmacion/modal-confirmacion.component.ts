@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 declare var $ : any;
 @Component({
   selector: 'modal-confirmacion',
@@ -9,15 +9,18 @@ export class ModalConfirmacionComponent implements OnInit {
 
   private tokenValue: string;
 
+  @Input() identificador: string;
+  hid: string;
   constructor() { }
 
   ngOnInit() {
+    this.hid = "#" + this.identificador;
   }
 
   onConfirmacion = () =>{ console.log('Confirmado...'); }
 
   show(){
-    $('#miModal').modal('show');
+    $(this.hid).modal('show');
   }
 
   hide(){

@@ -58,7 +58,7 @@ import { OperacionesRecientesTablaComponent } from './mercadocapitales/operacion
     HistorialmovimientosComponent,
     ConfiguracionComponent,
     TablaHistorialComponent,
-    OperacionesRecientesTablaComponent
+    OperacionesRecientesTablaComponent 
   ]
 })
 export class TemplateModule { }
