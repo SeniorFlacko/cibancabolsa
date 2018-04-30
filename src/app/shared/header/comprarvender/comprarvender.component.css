@@ -198,4 +198,39 @@ select{
 
 .flex{
     display: flex;
+    text-align: center;
 }
+
+.cuarto{
+    width: 25% !important;
+}
+
+.backgroundGris{
+    background-color: #efefef;
+    text-align: center;
+    color: green;
+    margin-top: 0px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.border{
+    border: 1.4px solid #fefefe;
+    padding: 10px 20px 5px 20px;
+}
+
+.vigencia{
+    font-size: 10px;
+    text-align: center;
+}
+
+.textolateralconfirmacion{
+    position: absolute;
+    left: 0px;
+    background: #fbd437;
+    border-radius: 0px 20px 20px 0px;
+    padding: 1px 10px;
+    top: 23px;
+    font-weight: bold;
+    font-size: 22px;
+  }
