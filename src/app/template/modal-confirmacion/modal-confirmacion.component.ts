@@ -24,7 +24,7 @@ export class ModalConfirmacionComponent implements OnInit {
   }
 
   hide(){
-    $('#miModal').modal('hide');
+    $(this.hid).modal('hide');
   }
 
 
