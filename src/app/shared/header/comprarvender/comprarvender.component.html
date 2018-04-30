@@ -83,7 +83,7 @@
                 </mat-form-field>
               </div>
               <div class="row botonenviar">
-                <button type="button" class="btn btn-success enviar" [disabled]="!formularioUno.valid" (click)="guardarUno(objetoUno)">Enviar</button>
+                <button type="button" class="btn btn-success enviar" [disabled]="!formularioUno.valid" (click)="guardarUno(objetoUno)" data-dismiss="modal">Enviar</button>
               </div>
             </form>
           </div>
@@ -160,3 +160,42 @@
 </div>
 
 </div>
+
+
+
+    <modal-confirmacion>
+      <div>
+          <p>ALFA A <small>Alfa  Financial Software Holdings PLC</small></p>
+          <p>TIPO DE ORDEN <strong>Mercado</strong></p>
+      </div>
+      <div class="flex">
+          <div>
+            <p>TÍTULOS</p>
+            <p>100</p>
+          </div>
+          <div>
+            <p>PRECIO</p>
+            <p>$130.25</p>
+          </div>
+          <div>
+            <p>MONTO</p>
+            <p>$13,025</p>
+          </div>
+          <div>
+            <p>COMISIÓN:</p>
+            <p>$100</p>
+          </div>
+          <div>
+            <P>IVA:</P>
+            <P>$80</P>
+          </div>
+      </div>
+      <div>
+        <p>TOTAL: $12,845</p>
+      </div>
+      <div>
+        <p>La vigencia de tu operación es de hoy 12/12/12 al cierre de mercado</p>
+      </div>
+      
+      
+    </modal-confirmacion>

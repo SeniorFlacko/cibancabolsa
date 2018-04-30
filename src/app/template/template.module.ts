@@ -23,7 +23,6 @@ import { EstadocuentaComponent } from './estadocuenta/estadocuenta.component';
 import { HistorialmovimientosComponent } from './historialmovimientos/historialmovimientos.component';
 import { ConfiguracionComponent } from './configuracion/configuracion.component';
 import { TablaHistorialComponent } from './historialmovimientos/tabla-historial/tabla-historial.component';
-import { ModalConfirmacionComponent } from './modal-confirmacion/modal-confirmacion.component';
 import { OperacionesRecientesTablaComponent } from './mercadocapitales/operaciones-recientes-tabla/operaciones-recientes-tabla.component';
 
 @NgModule({
@@ -59,7 +58,6 @@ import { OperacionesRecientesTablaComponent } from './mercadocapitales/operacion
     HistorialmovimientosComponent,
     ConfiguracionComponent,
     TablaHistorialComponent,
-    ModalConfirmacionComponent,
     OperacionesRecientesTablaComponent
   ]
 })
