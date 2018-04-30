@@ -28,7 +28,7 @@ export class ModalConfirmacionComponent implements OnInit {
   confirmar(validate: () => void = this.onConfirmacion){
     this.hide();
     validate();
-    $('#contrasenia-dinamica').modal('show');
+    $('#envio-exitoso').modal('show');
   }
 
   functionValidate = (token?: string) => { return false };
