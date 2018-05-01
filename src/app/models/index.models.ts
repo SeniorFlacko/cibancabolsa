@@ -1,5 +1,6 @@
+export { PosturasVenta } from "./posturas-venta";
+export { PosturasCompra } from "./posturas-compra";
 export {OperacionesRecientesTabla} from "./operaciones-recientes-tabla";
-
 export {MovimientosPorContrato} from './movimientos-por-contrato';
 export {FondosInversionPendientes} from './fondos-inversion-pendientes';
 export { MercadoCapitales } from './mercado-capitales';

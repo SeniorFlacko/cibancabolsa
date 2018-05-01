@@ -1,7 +1,8 @@
+export { PosturasVentaService } from "./posturas-venta.service";
+export { PosturasCompraService } from "./posturas-compra.service";
 export {OperacionesRecientesService} from "./operaciones-recientes.service";
 export { ComprarvenderunoService } from './comprarvenderuno.service';
 export { ComprarvenderdosService } from './comprarvenderdos.service';
-
 export { ConfiguracionService } from './configuracion.service';
 export {MovimientosPorContratoService} from './movimientos-por-contrato.service';
 export { HistorialService } from './historial.service';

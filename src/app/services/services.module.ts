@@ -5,7 +5,7 @@ import {
   MercadoDineroService, PortafolioGraficaService, MercadoDineroPendieteService, OrdenesPendientesService,
    MercadoCapitalesDolaresService, MarcadorServicioService, FondosinversionService, MercadocapitalesservicioService, 
    OrdenesService, FondosinversionpendientesService, HistorialService, MovimientosPorContratoService, 
-   ConfiguracionService, ComprarvenderunoService, ComprarvenderdosService,OperacionesRecientesService} from './index.services';
+   ConfiguracionService, ComprarvenderunoService, ComprarvenderdosService,OperacionesRecientesService, PosturasCompraService, PosturasVentaService} from './index.services';
 
 
 
@@ -37,7 +37,9 @@ import {
     MovimientosPorContratoService,
     ComprarvenderunoService,
     OperacionesRecientesService,
-    ComprarvenderdosService
+    ComprarvenderdosService,
+    PosturasCompraService,
+    PosturasVentaService
   ]
 })
 export class ServicesModule { }

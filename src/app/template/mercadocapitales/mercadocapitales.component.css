@@ -127,16 +127,16 @@ mat-cell{
 }
 
 .divonemodalfi{
-  width: 40%;
+  width: 33.33%;
 }
 
 .divtwomodalfi{
-  width: 30%;
+  width: 33.33%;
   margin-left:15px;
 }
 
 .divthreemodalfi{
-  width: 30%;
+  width: 33.33%;
   display: flex;
   flex-flow: column wrap;
   align-content: flex-end;
@@ -455,6 +455,18 @@ td{
   font-family: OpenSans-Regular;
   font-size: 16px;
   text-align: center;
+}
+.titulo_tabla1{
+  font-family: OpenSans-Regular;
+  font-size: 16px;
+  text-align: center;
+  color: #fbd437;
+}
+.titulo_tabla2{
+  font-family: OpenSans-Regular;
+  font-size: 16px;
+  text-align: center;
+  color: #3c85f2;
 }
 
 .regresar{

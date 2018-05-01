@@ -1,0 +1,20 @@
+<div class="table-responsive">
+  <div class="table">
+    <mat-table [dataSource]="dataRecientes" matSort matSortActive="precio" matSortDirection="asc" matSortDisableClear>
+      <ng-container matColumnDef="precio">
+        <mat-header-cell *matHeaderCellDef>Precio</mat-header-cell>
+        <mat-cell *matCellDef="let fondos">{{ fondos.precio }}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="monto">
+        <mat-header-cell *matHeaderCellDef>Monto</mat-header-cell>
+        <mat-cell *matCellDef="let fondos">{{ fondos.monto }}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="valor">
+        <mat-header-cell *matHeaderCellDef>Valor</mat-header-cell>
+        <mat-cell *matCellDef="let fondos">{{fondos.valor}}</mat-cell>
+      </ng-container>
+      <mat-header-row *matHeaderRowDef="displayedColumn"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumn"></mat-row>
+    </mat-table>
+  </div>
+</div>

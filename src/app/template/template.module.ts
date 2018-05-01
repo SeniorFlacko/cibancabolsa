@@ -24,6 +24,8 @@ import { HistorialmovimientosComponent } from './historialmovimientos/historialm
 import { ConfiguracionComponent } from './configuracion/configuracion.component';
 import { TablaHistorialComponent } from './historialmovimientos/tabla-historial/tabla-historial.component';
 import { OperacionesRecientesTablaComponent } from './mercadocapitales/operaciones-recientes-tabla/operaciones-recientes-tabla.component';
+import { PosturasCompraComponent } from './mercadocapitales/posturas-compra/posturas-compra.component';
+import { PosturasVentaComponent } from './mercadocapitales/posturas-venta/posturas-venta.component';
 
 @NgModule({
   imports: [
@@ -58,7 +60,9 @@ import { OperacionesRecientesTablaComponent } from './mercadocapitales/operacion
     HistorialmovimientosComponent,
     ConfiguracionComponent,
     TablaHistorialComponent,
-    OperacionesRecientesTablaComponent 
+    OperacionesRecientesTablaComponent,
+    PosturasCompraComponent,
+    PosturasVentaComponent 
   ]
 })
 export class TemplateModule { }
