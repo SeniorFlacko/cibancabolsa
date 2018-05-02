@@ -199,6 +199,7 @@ select{
 .flex{
     display: flex;
     text-align: center;
+    justify-content: center;
 }
 
 .cuarto{
@@ -243,3 +244,17 @@ select{
   .segundoInput1{
     width: 39%;
   }
+
+  .separador{
+    display: flex;
+    align-items: center;
+  }
+  .linea{
+    border: 1px solid #eeeeee;
+    height: 80%;
+  }
+
+  .titulares{
+      display: flex;
+  }
+  

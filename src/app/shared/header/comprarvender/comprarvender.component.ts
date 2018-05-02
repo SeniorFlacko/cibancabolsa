@@ -65,7 +65,16 @@ export class ComprarvenderComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.modal_confirmacion.onConfirmacion = () => console.log("Confirmo el modal");
+    this.modal_confirmacion.onConfirmacion = () => {
+      if(this.capitales){
+        let objetoUno = this.formularioUno.value;
+        this.servicio.createItem(objetoUno, res => console.log(res));
+      }
+      if(this.dinero){
+        let objetoDos = this.formularioDos.value;
+        this.servicioDos.createItem(objetoDos, res => console.log(res));
+      }
+    }
     
   }
 
@@ -136,14 +145,16 @@ export class ComprarvenderComponent implements OnInit, AfterViewInit {
     }
   }
 
-  guardarUno(objetoUno: ComprarVenderUnoModel ){
+  guardarUno(){
     this.modal_confirmacion.show();
+    // let objetoUno = this.formularioUno.value;
     //this.servicio.createItem(objetoUno, res => console.log(res));
   }
 
   guardarDos(){
-    let objetoDos = this.formularioDos.value;
-    this.servicioDos.createItem(objetoDos, res => console.log(res));
+    // let objetoDos = this.formularioDos.value;
+    // this.servicioDos.createItem(objetoDos, res => console.log(res));
+    this.modal_confirmacion.show();
   }
 
 

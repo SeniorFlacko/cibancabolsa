@@ -90,7 +90,7 @@
             </div>
 
             <!-- FORMULARIO 2 -->
-            <form [formGroup]="formularioDos" (ngSubmit)="guardarDos()">
+            <form [formGroup]="formularioDos" >
               <div class="formulario2" *ngIf="dinero==true">
                 <div class="row">
                   <select class="seleccion inputsSeleccion" formControlName="reportes" required>
@@ -113,15 +113,13 @@
                   <p>MONTO: $10,000.00</p>
                 </div>
                 <div class="row botonenviar">
-                  <button type="submit" class="btn btn-success enviar" [disabled]="!formularioDos.valid">Enviar</button>
+                  <button type="submit" class="btn btn-success enviar" [disabled]="!formularioDos.valid" data-dismiss="modal" (click)="guardarDos()">Enviar</button>
                 </div>
               </div>
 
             </form>
 
-            <pre>
-            {{ formularioDos.value | json }}
-          </pre>
+            
 
             <!-- FORMULARIO 3 -->
             <form [formGroup]="formularioTres">
@@ -180,11 +178,11 @@
     <div class="flex">
       <div class="cuarto">
         <p>TÍTULOS</p>
-        <p class="negritas">100</p>
+        <p class="negritas">{{ objetoUno.titulos }}</p>
       </div>
       <div class="cuarto">
         <p>PRECIO</p>
-        <p class="negritas">$130.25</p>
+        <p class="negritas"> {{ objetoUno.precio_compra }} </p>
       </div>
       <div class="cuarto">
         <p>MONTO</p>
@@ -209,5 +207,34 @@
   </div>
 
 </div>
+
+<div *ngIf="dinero==true">
+  <div class="border">
+    
+    <div class="titulares">
+      <p>REPORTOS</p> <span>Privado</span>
+    </div>
+    
+
+    <div class="flex">
+      <div class="cuarto">
+        <p>MONTO</p>
+        <p class="negritas">$10,000.00</p>
+      </div>
+      <div class="separador">
+        <div class="linea"></div>
+      </div>
+      <div class="cuarto">
+        <p>TASA</p>
+        <p class="negritas">3.30%</p>
+      </div>  
+    </div>
+  </div>
+  <div class="backgroundGris">
+    <p>TOTAL: $10,000.00</p>
+  </div>
+</div>
+
+
 
 </modal-confirmacion>
