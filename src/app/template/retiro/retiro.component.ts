@@ -54,12 +54,12 @@ export class RetiroComponent implements OnInit {
   }
 
   showTokenValidate(){
-    $('#contrasenia-dinamica').modal('show');
+    $('#contraseniaDinamica').modal('show');
   }
 
   onTokenValidate(){
     this.showScreen('Comprobar');
-    $('#contrasenia-dinamica').modal('hide');
+    $('#contraseniaDinamica').modal('hide');
   }
 
 }
