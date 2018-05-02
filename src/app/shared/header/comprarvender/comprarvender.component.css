@@ -234,3 +234,12 @@ select{
     font-weight: bold;
     font-size: 22px;
   }
+
+  .primerInput1{
+    width: 35%;
+    margin-right: 18px;
+  }
+
+  .segundoInput1{
+    width: 39%;
+  }

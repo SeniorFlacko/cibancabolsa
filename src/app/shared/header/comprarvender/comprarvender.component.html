@@ -72,15 +72,16 @@
                   </select>
                 </div>
                 <div class="row">
-                  <mat-form-field class="example-full-width">
+                  <mat-form-field class="example-full-width primerInput1">
                     <input matInput placeholder="TITULOS" [(ngModel)]="objetoUno.titulos" formControlName="titulosUno" required>
                   </mat-form-field>
-                  <p class="monto">Monto:</p>
+                  <mat-form-field class="example-full-width segundoInput1">
+                      <input matInput placeholder="PRECIO COMPRA" [(ngModel)]="objetoUno.precio_compra" formControlName="precioCompraUno" required>
+                    </mat-form-field>
+                  
                 </div>
                 <div class="row">
-                  <mat-form-field class="example-full-width">
-                    <input matInput placeholder="PRECIO COMPRA" [(ngModel)]="objetoUno.precio_compra" formControlName="precioCompraUno" required>
-                  </mat-form-field>
+                    <p class="monto">Monto:</p>
                 </div>
                 <div class="row botonenviar">
                   <button type="button" class="btn btn-success enviar" [disabled]="!formularioUno.valid" (click)="guardarUno(objetoUno)" data-dismiss="modal">Enviar</button>

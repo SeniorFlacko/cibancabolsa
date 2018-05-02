@@ -65,28 +65,29 @@ export class ComprarvenderComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.modal_confirmacion.functionValidate = this.validarToken;
-  }
-
-  validarToken(token: string){
-
-    if(token == "1234"){
-      if( this.capitales){
-        this.guardarUno(this.objetoUno);
-        return true;
-      }
-      // }if( this.dinero){
-      //   this.guardardos(this.objetoUno);
-      //   return true;
-      // }if( this.inversion){
-      //   this.guardarUno(this.objetoUno);
-      //   return true;
-      // }
-      
-    }
-    return false;
+    this.modal_confirmacion.onConfirmacion = () => console.log("Confirmo el modal");
     
   }
+
+  // validarToken(token: string){
+
+  //   if(token == "1234"){
+  //     if( this.capitales){
+  //       this.guardarUno(this.objetoUno);
+  //       return true;
+  //     }
+  //     // }if( this.dinero){
+  //     //   this.guardardos(this.objetoUno);
+  //     //   return true;
+  //     // }if( this.inversion){
+  //     //   this.guardarUno(this.objetoUno);
+  //     //   return true;
+  //     // }
+      
+  //   }
+  //   return false;
+    
+  // }
 
   validarFormularioUno() {
     this.formularioUno = this.fb.group({
