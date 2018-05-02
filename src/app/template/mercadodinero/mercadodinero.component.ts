@@ -26,7 +26,20 @@ export class MercadodineroComponent implements OnInit, AfterViewInit  {
 
   ngAfterViewInit() {
     this.modal_confirmacion.functionValidate = this.validarToken;
+    this.modal_confirmacion.onConfirmacion = this.sendInfo;
   }
+
+  sendInfo(): boolean{
+    //TO-DO: Call To Service and return true if response was succesfully or false if response failed.
+    let response = true; 
+    if (response) {
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
+
 
   validarToken = (token: string) => {
     if (token=="123") {

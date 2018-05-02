@@ -17,7 +17,10 @@ export class ModalConfirmacionComponent implements OnInit {
     this.hid = "#" + this.identificador;
   }
 
-  onConfirmacion = () =>{ console.log('Confirmado...'); }
+  onConfirmacion = ():boolean =>{ 
+    console.log('Confirmado...'); 
+    return false;
+  }
 
   show(){
     $(this.hid).modal('show');
@@ -28,10 +31,11 @@ export class ModalConfirmacionComponent implements OnInit {
   }
 
 
-  confirmar(validate: () => void = this.onConfirmacion){
+  confirmar(validate: () => boolean = this.onConfirmacion){
     this.hide();
-    validate();
-    $('#envio-exitoso').modal('show');
+    // validate();
+    // $('#envio-exitoso').modal('show');
+    this.showModalResponse(validate());
   }
 
   functionValidate = (token?: string) => { return false };
@@ -42,10 +46,12 @@ export class ModalConfirmacionComponent implements OnInit {
 
   showModalResponse( response: boolean ){
     if (response) {
-      $('#contrasenia-dinamica').modal('hide');
+      // $('#contrasenia-dinamica').modal('hide');
       $('#envio-exitoso').modal('show');
     }else{
-      console.error("Token Erroneo");
+      console.error("Error");
+
+      //TO-DO: Mostrar modal de envio erroneo
     }
   }
 

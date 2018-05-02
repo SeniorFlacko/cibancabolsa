@@ -65,8 +65,10 @@ export class ComprarvenderComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.modal_confirmacion.onConfirmacion = () => console.log("Confirmo el modal");
-    
+    this.modal_confirmacion.onConfirmacion = () => {
+      console.log("Confirmo el modal");
+      return true;
+    };    
   }
 
   // validarToken(token: string){
