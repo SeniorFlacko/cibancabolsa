@@ -45,10 +45,11 @@
 }
 
 .puntolabel-punto{
-  width: 1em;
-  height: 1em;
+  width: 1.3em;
+  height: 1.3em;
   border-radius: 50%;
   background-color: #d8d8d8;
+  z-index: 1;
 }
 
 .active{
@@ -107,7 +108,7 @@ form{
     -moz-appearance: none;
     -webkit-appearance: none;
     color: #127947;
-    padding: 0px 4px; 
+    padding: 0px 4px;
     outline: none;
     background: transparent url(/assets/img/icon_arrowDown_verde.png) right center / 1.4em no-repeat;
     border: none;
@@ -115,7 +116,7 @@ form{
     width: 35%;
     margin: 17px;
   }
-  
+
   .input-monto{
     border: none;
     border-bottom: 1px solid #7a7a7a;
@@ -244,7 +245,7 @@ form{
   font-family: OpenSans-Bold;
   font-size: 30px;
   justify-content: center;
-  margin-bottom: 25px;    
+  margin-bottom: 25px;
 }
 
 .titulo-modal img{
@@ -418,9 +419,25 @@ form{
   font-size: 18px;
   color: #4da74c;
   cursor: pointer;
-  
+
 }
 
 .verde{
   color: #00853e;
+}
+
+.linea-horizontal{
+  border-bottom: solid 1px;
+  border-color: #a9afbe;
+  position: relative;
+  top: -43px;
+  margin: 0 auto;
+  max-width: 88%;
+  z-index: 0;
+}
+
+
+.material-icons{
+  z-index: 1;
+  background-color: white;
 }

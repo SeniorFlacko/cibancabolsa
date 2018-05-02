@@ -5,7 +5,7 @@
           <span>Retiro</span>
       </div>
       <div class="contenedor-content">
-            
+
             <div class="punto-label-content">
                 <div class="puntolabel">
                     <i class="material-icons verde" *ngIf="pantalla=='Verificar' || pantalla=='Comprobar'; else selecionar">check_circle</i>
@@ -18,21 +18,22 @@
                 </div>
                 <div class="puntolabel">
                     <i class="material-icons verde" *ngIf="pantalla=='Comprobar'; else verified">check_circle</i>
-                
+
                     <ng-template #verified>
                         <div class="puntolabel-punto" [class.active]="pantalla=='Verificar'"></div>
                     </ng-template>
-                    
+
                     <label class="puntolabel-label">Verifica...</label>
                 </div>
                 <div class="puntolabel">
-                    <i class="material-icons verde" *ngIf="pantalla=='Comprobar'">check_circle</i>            
+                    <i class="material-icons verde" *ngIf="pantalla=='Comprobar'">check_circle</i>
                     <div class="puntolabel-punto" *ngIf="pantalla!='Comprobar'"></div>
-                    
+
                     <label class="puntolabel-label">Comprobante...</label>
                 </div>
             </div>
-            
+            <div class="linea-horizontal"></div>
+
             <ng-container [ngSwitch]="pantalla">
                 <ng-container *ngSwitchCase="'Seleccionar'">
 
@@ -47,9 +48,9 @@
                             <span class="saldo-cantidad">78355634</span>
                         </div>
                     </div>
-            
+
                     <hr class="separador">
-        
+
                     <form  [formGroup]="retiroForm" (ngSubmit)="onRetiroSubmit()">
                         <select formControlName="cuenta">
                             <option class="placeholder" value="" disabled selected hidden>CUENTA DESTINO...</option>
@@ -57,14 +58,14 @@
                             <option value="INBURSA ****6536">INBURSA ****6536</option>
                             <option value="BANCOMER ****6457">BANCOMER ****6457</option>
                         </select>
-                        
+
                         <input class="input-monto" type="text" placeholder="IMPORTE" formControlName="importe">
-        
+
                         <div class="retiroForm-botones">
                             <button class="boton-enviar" type="submit" [disabled]="!retiroForm.valid">SIGUIENTE</button>
                             <button class="boton-cancelar" type="button" (click)="cancel()">Cancelar</button>
                         </div>
-        
+
                     </form>
 
                 </ng-container>
@@ -81,9 +82,9 @@
                             <span class="saldo-cantidad">78355634</span>
                         </div>
                     </div>
-            
+
                     <hr class="separador">
-                    
+
                     <p>Confima que los datos ingresados sean correctos</p>
 
                     <div class="cuenta-destino">
@@ -91,7 +92,7 @@
                             <span>Cuenta Destino:</span>
                             <span>{{ cuenta }}</span>
                         </div>
-    
+
                         <div class="destino">
                             <span>Importe:</span>
                             <span>${{ importe }}</span>
@@ -107,7 +108,7 @@
                 </ng-container>
 
                 <ng-container *ngSwitchCase="'Comprobar'">
-                    
+
                     <div class="comprobacion">
                         <span class="comprobacion-transferencia">
                             <i class="material-icons verde">check_circle</i>
@@ -143,7 +144,7 @@
                         <div class="comprobacion-footer">
                             <span>
                                 Imprimir
-                            </span> 
+                            </span>
 
                             <span>
                                 Guardar
@@ -152,7 +153,7 @@
                             <span (click)="cancel()">
                                 Realizar otro retiro
                             </span>
-                    
+
                         </div>
                 </ng-container>
 
@@ -161,10 +162,10 @@
                 </ng-container>
 
             </ng-container>
-            
-            
-    
-      </div> 
+
+
+
+      </div>
       <br>
   </div>
 </div>
@@ -180,12 +181,12 @@
                 </div>
 
                 <div class="contenido">
-                    <span class="mensaje"> 
+                    <span class="mensaje">
                         Desde tu dispositivo móvil genera una clave dinámica e ingrésala a continuación.
                     </span>
                     <input class="input-token" type="text">
                 </div>
-                
+
                 <div class="reportes-footer">
                     <button class="cancelar" data-dismiss="modal">Cancelar</button>
                     <button class="confirmar" (click)="onTokenValidate()">Confirmar</button>
