@@ -41,6 +41,8 @@ export class ComprarvenderComponent implements OnInit, AfterViewInit {
 
   modal: boolean = false;
 
+  res:boolean = true;
+
   private formularioUno: FormGroup; 
   private formularioDos: FormGroup;
   private formularioTres: FormGroup;
@@ -66,16 +68,30 @@ export class ComprarvenderComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     this.modal_confirmacion.onConfirmacion = () => {
+      let flag = 0;
       if(this.capitales){
         let objetoUno = this.formularioUno.value;
-        this.servicio.createItem(objetoUno, res => console.log(res));
+        this.servicio.createItem(objetoUno,()=>{
+          this.res = false;
+          let flag = 1;
+          console.log("ERROR");
+        },(data:ComprarVenderUnoModel)=>{
+          console.log("LOADED");
+        },()=>{
+          this.res = true;
+          let flag = 1;
+          console.log("COMPLETE");
+        }); 
+        return this.res;
       }
-      if(this.dinero){
-        let objetoDos = this.formularioDos.value;
-        this.servicioDos.createItem(objetoDos, res => console.log(res));
-      }
+      
+      // if(this.dinero){
+      //   let objetoDos = this.formularioDos.value;
+      //   this.servicioDos.createItem(objetoDos, res => console.log(res));
+      //   return true;
+      // }
+      // return false;
     }
-    
   }
 
   // validarToken(token: string){

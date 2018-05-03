@@ -50,7 +50,7 @@ export class ModalConfirmacionComponent implements OnInit {
       $('#envio-exitoso').modal('show');
     }else{
       console.error("Error");
-
+      $('#envioErroneo').modal('show');
       //TO-DO: Mostrar modal de envio erroneo
     }
   }

@@ -28,8 +28,9 @@
           <p class="contratoText">Para realizar cualquier operación será necesario ingresar clave dinámica</p>
         </div>
         <div class="segu2">
-          <mat-slide-toggle [color]="green" [ngClass]=" { 'mat-cheked' : false } "></mat-slide-toggle>
+          <mat-slide-toggle [color]="green" [(ngModel)]="silde1" [ngClass]=" { 'mat-cheked' : false } "></mat-slide-toggle>
         </div>
+        <pre>{{ silde1 }}</pre>
       </div>
     </div>
     <div class="col-lg-6 offset-lg-1  top">

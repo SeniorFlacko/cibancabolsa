@@ -16,6 +16,8 @@ export class ConfiguracionComponent implements OnInit {
 
   private configuracion; 
 
+  private silde1: boolean = true;
+
   constructor(private configuracion_service: ConfiguracionService) { }
 
   ngOnInit() {

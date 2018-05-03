@@ -51,10 +51,10 @@ export abstract class GenericService<T extends Versionable> {
       data.subscribe(onLoaded, (error) => { this.handleError(error); }, onComplete);
     }
   
-    createItem(item: T, onLoaded: (data: T) => void, onComplete?: () => void) {
+    createItem(item: T,onError: () => void, onLoaded: (data: T) => void, onComplete?: () => void){
       const options = this.getRequestOptions();
       const data: Observable<T> = this.http.post(this.getURL(), item, options).map(this.convertData);
-      data.subscribe(onLoaded, (error) => { this.handleError(error); }, onComplete);
+      data.subscribe(onLoaded, onError, onComplete);
     }
   
     updateItem(item: T, onLoaded: (data: T) => void, onComplete?: () => void) {
