@@ -8,7 +8,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class EstadocuentaComponent implements OnInit {
 
-  private formEstadoCuenta: FormGroup;
+  formEstadoCuenta: FormGroup;
 
   constructor(
     private fb: FormBuilder

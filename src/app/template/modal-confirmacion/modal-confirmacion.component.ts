@@ -7,7 +7,7 @@ declare var $ : any;
 })
 export class ModalConfirmacionComponent implements OnInit {
 
-  private tokenValue: string;
+  tokenValue: string;
 
   @Input() identificador: string;
   hid: string;

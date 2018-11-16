@@ -12,7 +12,7 @@ declare var $ : any;
 export class HistorialmovimientosComponent implements OnInit {
 
   private historialForm: FormGroup;
-  private selecFormGroup: FormGroup;
+  selecFormGroup: FormGroup;
 
   constructor(private fb: FormBuilder, private hs: HistorialService) { }
 

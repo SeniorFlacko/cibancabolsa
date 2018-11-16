@@ -16,8 +16,8 @@ export class FondoinversionComponent implements OnInit {
   displayedFondosColumn = ['fondo', 'serie', 'operar', 'clasificacion','liquidacion','horizonte','maxima','calificacion','horario'];
   dataInversion: Observable<FondoInversion[]>;
 
-  private fondoinversion1Form: FormGroup;
-  private contradinamicafondoinversion: FormGroup;
+  fondoinversion1Form: FormGroup;
+  contradinamicafondoinversion: FormGroup;
 
   constructor(
     private fondo_inversion_service:FondosinversionService,

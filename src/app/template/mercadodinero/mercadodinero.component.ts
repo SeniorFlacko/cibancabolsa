@@ -10,7 +10,7 @@ declare var $ : any;
 })
 export class MercadodineroComponent implements OnInit, AfterViewInit  {
   
-  private mercadoDineroForm: FormGroup;
+  mercadoDineroForm: FormGroup;
   @ViewChild(ModalConfirmacionComponent) modal_confirmacion: ModalConfirmacionComponent;
 
   constructor(private fb: FormBuilder) { }

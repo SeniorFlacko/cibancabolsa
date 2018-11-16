@@ -43,9 +43,9 @@ export class ComprarvenderComponent implements OnInit, AfterViewInit {
 
   res:boolean = true;
 
-  private formularioUno: FormGroup; 
-  private formularioDos: FormGroup;
-  private formularioTres: FormGroup;
+   formularioUno: FormGroup; 
+   formularioDos: FormGroup;
+   formularioTres: FormGroup;
 
   @ViewChild(ModalConfirmacionComponent) modal_confirmacion: ModalConfirmacionComponent;
   

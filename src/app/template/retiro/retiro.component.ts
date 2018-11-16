@@ -9,7 +9,7 @@ declare var $ : any;
 })
 export class RetiroComponent implements OnInit {
 
-  private pantalla: string;
+  pantalla: string;
   private retiroForm: FormGroup;
   private ok = false;
   constructor(private fb: FormBuilder) { }

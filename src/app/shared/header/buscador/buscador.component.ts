@@ -9,7 +9,7 @@ import 'rxjs/add/operator/filter';
 })
 export class BuscadorComponent implements OnInit {
 
-  private oculto: boolean = true;
+  oculto: boolean = true;
 
   constructor(private router: Router) { }
 
