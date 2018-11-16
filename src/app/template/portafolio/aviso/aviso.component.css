@@ -3,7 +3,7 @@
 }
 
 .header_aviso{
-    background-image: url("/assets/img/header_BG.jpg");
+    background-image: url("assets/img/header_BG.jpg");
     height: 50px;
     color: whitesmoke;
     font-size: 25px;

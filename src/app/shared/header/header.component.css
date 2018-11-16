@@ -1,6 +1,6 @@
 header{
     margin: 0 35px;
-    background-image: url("/assets/img/header_BG.jpg");
+    background-image: url("assets/img/header_BG.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     color: whitesmoke;
@@ -24,7 +24,7 @@ header{
 }
 select{
     -webkit-appearance: caret;
-    background-image: url("/assets/img/icono_arrow_down.png");
+    background-image: url("assets/img/icono_arrow_down.png");
     background-repeat: no-repeat;
     background-size: 17px;
     background-position: right;

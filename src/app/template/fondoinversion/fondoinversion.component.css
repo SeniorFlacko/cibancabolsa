@@ -286,7 +286,7 @@ mat-cell{
 }
 
 .monetizacionImagen{
-  background-image: url('/assets/img/pesos.png');
+  background-image: url('assets/img/pesos.png');
   height: 32px;
   width: 38px;
   border-radius: 0px;

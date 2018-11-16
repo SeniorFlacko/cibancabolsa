@@ -163,7 +163,7 @@ select{
     color: #267349;
     padding: 0px 4px; 
     outline: none;
-    background: transparent url(/assets/img/icon_arrowDown_verde.png) right center / 1.4em no-repeat;
+    background: transparent url(assets/img/icon_arrowDown_verde.png) right center / 1.4em no-repeat;
     border: none;
     border-bottom: 1px solid #7a7a7a;
     margin-right: 10px;
